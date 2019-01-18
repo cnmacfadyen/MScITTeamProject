@@ -1,3 +1,4 @@
+package commandline;
 
 public class FWTestMain {
 	static FileWriterClass f = new FileWriterClass();
