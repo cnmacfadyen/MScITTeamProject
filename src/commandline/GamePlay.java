@@ -12,15 +12,14 @@ public class GamePlay {
 	String selectedCategory;
 	int selectedCategoryValue;
 	
-	int maxArraySize = 40;
+	int maxSize = 40;
 	//Player winnerPlayer = new Player();
 	
-	
-//	private ArrayList<Card> unshuffledDeck = new ArrayList<Card>();
-//	private ArrayList<Card> shuffledDeck = new ArrayList<Card>();
-//	private ArrayList<Card> playerDeck = new ArrayList<Card>();
-//	private ArrayList<Card> communalPile = new ArrayList<Card>();
-//	private ArrayList<Card> currentCardsInRound = new ArrayList<Card>();
+//	private ArrayList<Card> unshuffledDeck = new ArrayList<Card>(maxSize);
+//	private ArrayList<Card> shuffledDeck = new ArrayList<Card>(maxSize);
+//	private ArrayList<Card> playerDeck = new ArrayList<Card>(maxSize);
+//	private ArrayList<Card> communalPile = new ArrayList<Card>(maxSize);
+//	private ArrayList<Card> currentCardsInRound = new ArrayList<Card>(maxSize);
 
 	
 	
