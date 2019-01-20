@@ -62,6 +62,29 @@ public class Card {
 		return c5;
 	}
 	
+	
+	//temporary method, to get the selected category with the corresponding value ... for testing 
+	public String getCatInfo(int indx) {
+		String s = "";
+		if(indx == 0) {
+			s = "category: " + getCat1Name() + " " + getC1();
+		}
+		else if(indx == 1) {
+			s = "category: " + getCat2Name() + " " + getC2();
+		}
+		else if(indx == 2) {
+			s = "category: " + getCat3Name() + " " + getC3();
+		}
+		else if(indx == 3) {
+			s = "category: " + getCat4Name() + " " + getC4();
+		}
+		else if(indx == 4) {
+			s = "category: " + getCat5Name() + " " + getC5();
+		}
+		return s;
+	}
+	
+	
 	public String toString() {
 		return "\n\n" + name + ": \n" + cat1 + " - " + c1 + "\n" + cat2 + " - " 
 	+ c2 + "\n" + cat3 + " - " + c3 + "\n" + cat4 + " - " + c4 + "\n" + cat5 + " - " + c5;

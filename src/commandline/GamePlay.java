@@ -1,10 +1,26 @@
 package commandline;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
 public class GamePlay {
+	
+	//this is to test the methods in this class...
+	public static void main(String[] args) {
+		Card c = new Card();
+		ArrayList<Card> deck = c.getDeck(); 
+		Collections.shuffle(deck);
+		//System.out.println(deck);
+		System.out.println("card 1: " + deck.get(2)+ "\n\ncard 2: " + deck.get(4) + "\n\n result");
+		getHighestValue(deck.get(2), deck.get(4));
+//		for(Card card : deck) {
+//			//viewCardData(card);
+//		}
+	}
+	
+	
 	int numOfGamesPlayed =0; // number of games a player played.
 	int totalScore; 	// total score of each game for a player.
 	
@@ -156,7 +172,10 @@ public class GamePlay {
 	}
 
 	
-	public void addToCommunalPile() {
+	public void addToCommunalPile(Card c) {
+		
+		//adding the specified card to the communalPile arraylist.
+		communalPile.add(c);
 		
 	}
 	
@@ -164,12 +183,60 @@ public class GamePlay {
 		
 	}
 	
-	public void viewCardData(Player p)
+	//public void viewCardData(Player p)
+	public static void viewCardData(Card c)
 	{
-		
+		c.toString();
 	}
 	
-	public void getHighestValue() {
+	public static int getHighestValue(Card c1, Card c2) {
+		int highestVal =0;
+		
+		if(c1.getC1() > c2.getC1()) {
+			System.out.println(c1.getCat1Name() + ": " + c1.getC1() + "  > " + c2.getCat1Name() + ": " + c2.getC1());
+			highestVal = c1.getC1();
+		}
+		else if(c1.getC2() > c2.getC2()) {
+			System.out.println(c1.getCat2Name() + ": " + c1.getC2() + "  > " + c2.getCat2Name() + ": " + c2.getC2());
+			highestVal = c1.getC2();
+		}
+		else if(c1.getC3() > c2.getC3()) {
+			System.out.println(c1.getCat3Name() + ": " + c1.getC3() + "  > " + c2.getCat3Name() + ": " + c2.getC3());
+			highestVal = c1.getC3();
+		}
+		else if(c1.getC4() > c1.getC4()) {
+			System.out.println(c1.getCat4Name() + ": " + c1.getC4() +"  > " + c2.getCat4Name() + ": " + c2.getC4());
+			highestVal = c1.getC4();
+		}
+		else if(c1.getC5() > c2.getC5()) {
+			System.out.println(c1.getCat5Name() + ": " + c1.getC5() + "  > " + c2.getCat5Name() + ": " + c2.getC5());
+			highestVal = c1.getC5();
+		}
+		else if(c1.getC1() < c2.getC1()) {
+			System.out.println(c1.getCat1Name() + ": " + c1.getC1() + "  < " + c2.getCat1Name() + ": " + c2.getC1());
+			highestVal = c2.getC1();
+		}
+		else if(c1.getC2() < c2.getC2()) {
+			System.out.println(c1.getCat2Name() + ": " + c1.getC2() + "  < " + c2.getCat2Name() + ": " + c2.getC2());
+			highestVal = c2.getC2();
+		}
+		else if(c1.getC3() < c2.getC3()) {
+			System.out.println(c1.getCat3Name() + ": " + c1.getC3() + "  < " + c2.getCat3Name() + ": " + c2.getC3());
+			highestVal = c2.getC3();
+		}
+		else if(c1.getC4() < c1.getC4()) {
+			System.out.println(c1.getCat4Name() + ": " + c1.getC4() +"  < " + c2.getCat4Name() + ": " + c2.getC4());
+			highestVal = c2.getC4();
+		}
+		else if(c1.getC5() < c2.getC5()) {
+			System.out.println(c1.getCat5Name() + ": " + c1.getC5() + "  < " + c2.getCat5Name() + ": " + c2.getC5());
+			highestVal = c2.getC5();
+		}
+		else {
+			System.out.println("it is a draw");
+		}
+		System.out.println(highestVal);
+		return highestVal;
 		
 	}
 	//will be needed for keeping track of stats
