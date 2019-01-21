@@ -13,8 +13,10 @@ public class GamePlay {
 		ArrayList<Card> deck = c.getDeck(); 
 		Collections.shuffle(deck);
 		//System.out.println(deck);
-		System.out.println("card 1: " + deck.get(2)+ "\n\ncard 2: " + deck.get(4) + "\n\n result");
-		getHighestValue(deck.get(2), deck.get(4));
+		//System.out.println("card 1: " + deck.get(2)+ "\n\ncard 2: " + deck.get(4) + "\n\n result");
+		//getHighestValue();
+		currentCardsInRound.addAll(deck);
+		System.out.println(getHighestValue());
 //		for(Card card : deck) {
 //			//viewCardData(card);
 //		}
@@ -44,10 +46,10 @@ public class GamePlay {
 	private ArrayList<Card> shuffledDeck = new ArrayList<Card>(maxSize);
 	private ArrayList<Card> playerDeck = new ArrayList<Card>(maxSize);
 	private ArrayList<Card> communalPile = new ArrayList<Card>(maxSize);
-	private ArrayList<Card> currentCardsInRound = new ArrayList<Card>(maxSize);
+	private static ArrayList<Card> currentCardsInRound = new ArrayList<Card>();
 	private ArrayList<Player> players = new ArrayList<Player>(5);
 	
-	
+	static int selectedCat;
 	//-------------------------------------------------------------
 	
 	public void getNumberOfGames() {
@@ -134,7 +136,7 @@ public class GamePlay {
 
 	public int selectCategory() {
 		int selectRandomCategory = random.nextInt(5);
-		int selectedCat =0;
+		selectedCat =0;
 		//human player
 		if(indx == 0) {
 			Scanner in = new Scanner(System.in);
@@ -189,53 +191,124 @@ public class GamePlay {
 		c.toString();
 	}
 	
-	public static int getHighestValue(Card c1, Card c2) {
+	public static int getHighestValue() {
 		int highestVal =0;
 		
-		if(c1.getC1() > c2.getC1()) {
-			System.out.println(c1.getCat1Name() + ": " + c1.getC1() + "  > " + c2.getCat1Name() + ": " + c2.getC1());
-			highestVal = c1.getC1();
+		ArrayList<Integer> newA = new ArrayList<Integer>();
+		
+		if(selectedCat == 0) {
+			//currentCardsInRound.get(1);
+			newA.add(0, currentCardsInRound.get(0).getC1());
+			newA.add(1,currentCardsInRound.get(1).getC1());
+			newA.add(2, currentCardsInRound.get(2).getC1());
+			newA.add(3, currentCardsInRound.get(3).getC1());
+			newA.add(4, currentCardsInRound.get(4).getC1());
+			
+			highestVal = Collections.max(newA);
+			
+
 		}
-		else if(c1.getC2() > c2.getC2()) {
-			System.out.println(c1.getCat2Name() + ": " + c1.getC2() + "  > " + c2.getCat2Name() + ": " + c2.getC2());
-			highestVal = c1.getC2();
+		
+		if(selectedCat == 1) {
+			//currentCardsInRound.get(1);
+			newA.add(0, currentCardsInRound.get(0).getC2());
+			newA.add(1, currentCardsInRound.get(1).getC2());
+			newA.add(2, currentCardsInRound.get(2).getC2());
+			newA.add(3, currentCardsInRound.get(3).getC2());
+			newA.add(4, currentCardsInRound.get(4).getC2());
+			
+			highestVal = Collections.max(newA);
+			
+
 		}
-		else if(c1.getC3() > c2.getC3()) {
-			System.out.println(c1.getCat3Name() + ": " + c1.getC3() + "  > " + c2.getCat3Name() + ": " + c2.getC3());
-			highestVal = c1.getC3();
+	
+		
+		if(selectedCat == 2) {
+			//currentCardsInRound.get(1);
+			newA.add(0, currentCardsInRound.get(0).getC3());
+			newA.add(1, currentCardsInRound.get(1).getC3());
+			newA.add(2, currentCardsInRound.get(2).getC3());
+			newA.add(3, currentCardsInRound.get(3).getC3());
+			newA.add(4, currentCardsInRound.get(4).getC3());
+			
+			highestVal = Collections.max(newA);
+			
+
 		}
-		else if(c1.getC4() > c1.getC4()) {
-			System.out.println(c1.getCat4Name() + ": " + c1.getC4() +"  > " + c2.getCat4Name() + ": " + c2.getC4());
-			highestVal = c1.getC4();
+		
+		
+		if(selectedCat == 3) {
+			//currentCardsInRound.get(1);
+			newA.add(0, currentCardsInRound.get(0).getC4());
+			newA.add(1, currentCardsInRound.get(1).getC4());
+			newA.add(2, currentCardsInRound.get(2).getC4());
+			newA.add(3, currentCardsInRound.get(3).getC4());
+			newA.add(4, currentCardsInRound.get(4).getC4());
+			
+			highestVal = Collections.max(newA);
+			
+
 		}
-		else if(c1.getC5() > c2.getC5()) {
-			System.out.println(c1.getCat5Name() + ": " + c1.getC5() + "  > " + c2.getCat5Name() + ": " + c2.getC5());
-			highestVal = c1.getC5();
+		
+		
+		if(selectedCat == 4) {
+			//currentCardsInRound.get(1);
+			newA.add(0, currentCardsInRound.get(0).getC5());
+			newA.add(1, currentCardsInRound.get(1).getC5());
+			newA.add(2, currentCardsInRound.get(2).getC5());
+			newA.add(3, currentCardsInRound.get(3).getC5());
+			newA.add(4, currentCardsInRound.get(4).getC5());
+			
+			highestVal = Collections.max(newA);
+			
+
 		}
-		else if(c1.getC1() < c2.getC1()) {
-			System.out.println(c1.getCat1Name() + ": " + c1.getC1() + "  < " + c2.getCat1Name() + ": " + c2.getC1());
-			highestVal = c2.getC1();
-		}
-		else if(c1.getC2() < c2.getC2()) {
-			System.out.println(c1.getCat2Name() + ": " + c1.getC2() + "  < " + c2.getCat2Name() + ": " + c2.getC2());
-			highestVal = c2.getC2();
-		}
-		else if(c1.getC3() < c2.getC3()) {
-			System.out.println(c1.getCat3Name() + ": " + c1.getC3() + "  < " + c2.getCat3Name() + ": " + c2.getC3());
-			highestVal = c2.getC3();
-		}
-		else if(c1.getC4() < c1.getC4()) {
-			System.out.println(c1.getCat4Name() + ": " + c1.getC4() +"  < " + c2.getCat4Name() + ": " + c2.getC4());
-			highestVal = c2.getC4();
-		}
-		else if(c1.getC5() < c2.getC5()) {
-			System.out.println(c1.getCat5Name() + ": " + c1.getC5() + "  < " + c2.getCat5Name() + ": " + c2.getC5());
-			highestVal = c2.getC5();
-		}
-		else {
-			System.out.println("it is a draw");
-		}
-		System.out.println(highestVal);
+		
+		
+//		if(c1.getC1() > c2.getC1()) {
+//			System.out.println(c1.getCat1Name() + ": " + c1.getC1() + "  > " + c2.getCat1Name() + ": " + c2.getC1());
+//			highestVal = c1.getC1();
+//		}
+//		else if(c1.getC2() > c2.getC2()) {
+//			System.out.println(c1.getCat2Name() + ": " + c1.getC2() + "  > " + c2.getCat2Name() + ": " + c2.getC2());
+//			highestVal = c1.getC2();
+//		}
+//		else if(c1.getC3() > c2.getC3()) {
+//			System.out.println(c1.getCat3Name() + ": " + c1.getC3() + "  > " + c2.getCat3Name() + ": " + c2.getC3());
+//			highestVal = c1.getC3();
+//		}
+//		else if(c1.getC4() > c1.getC4()) {
+//			System.out.println(c1.getCat4Name() + ": " + c1.getC4() +"  > " + c2.getCat4Name() + ": " + c2.getC4());
+//			highestVal = c1.getC4();
+//		}
+//		else if(c1.getC5() > c2.getC5()) {
+//			System.out.println(c1.getCat5Name() + ": " + c1.getC5() + "  > " + c2.getCat5Name() + ": " + c2.getC5());
+//			highestVal = c1.getC5();
+//		}
+//		else if(c1.getC1() < c2.getC1()) {
+//			System.out.println(c1.getCat1Name() + ": " + c1.getC1() + "  < " + c2.getCat1Name() + ": " + c2.getC1());
+//			highestVal = c2.getC1();
+//		}
+//		else if(c1.getC2() < c2.getC2()) {
+//			System.out.println(c1.getCat2Name() + ": " + c1.getC2() + "  < " + c2.getCat2Name() + ": " + c2.getC2());
+//			highestVal = c2.getC2();
+//		}
+//		else if(c1.getC3() < c2.getC3()) {
+//			System.out.println(c1.getCat3Name() + ": " + c1.getC3() + "  < " + c2.getCat3Name() + ": " + c2.getC3());
+//			highestVal = c2.getC3();
+//		}
+//		else if(c1.getC4() < c1.getC4()) {
+//			System.out.println(c1.getCat4Name() + ": " + c1.getC4() +"  < " + c2.getCat4Name() + ": " + c2.getC4());
+//			highestVal = c2.getC4();
+//		}
+//		else if(c1.getC5() < c2.getC5()) {
+//			System.out.println(c1.getCat5Name() + ": " + c1.getC5() + "  < " + c2.getCat5Name() + ": " + c2.getC5());
+//			highestVal = c2.getC5();
+//		}
+//		else {
+//			System.out.println("it is a draw");
+//		}
+		//System.out.println(highestVal);
 		return highestVal;
 		
 	}
