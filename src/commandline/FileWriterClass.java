@@ -1,3 +1,5 @@
+package commandline;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -7,7 +9,7 @@ public class FileWriterClass {
 	FileWriter writeToLog;
 	FakeData fd = new FakeData();
 	Card c = new Card();
-	Gameplay gp = new Gameplay();
+	GameplayEdits gp = new GameplayEdits();
 	public void returnTrumpsLog() {
 		try {
 			 writeToLog = new FileWriter(log, false);

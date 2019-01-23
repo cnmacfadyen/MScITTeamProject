@@ -1,9 +1,11 @@
+package commandline;
+
 	import java.util.ArrayList;
 	import java.util.Collections;
 	import java.util.Random;
 	import java.util.Scanner;
 
-	public class Gameplay {
+	public class GameplayEdits {
 		static Card c = new Card();
 		 //this is to test the methods in this class...
 		static ArrayList<Card> deck =  (ArrayList<Card>) c.getDeck().clone();
