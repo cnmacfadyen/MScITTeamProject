@@ -12,6 +12,6 @@ public class Player {
 	 }
 	 
 	 public void setPlayerNumber(int num) {
-		 playerNumber=num;
+		 playerNumber=num;  
 	 }
 }
