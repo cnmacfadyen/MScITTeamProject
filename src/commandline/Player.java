@@ -3,7 +3,7 @@ package commandline;
 import java.util.ArrayList;
 
 public class Player {
-<<<<<<< HEAD
+
 	public boolean gameWinner(ArrayList<Player> p) {
 		if (p.size() >= 2) {
 			return false;
@@ -31,7 +31,7 @@ public class Player {
 		 */
 		return false;
 	}
-=======
+
 	private int playerNumber;
 	
 	 public Player(int pNumber) {
@@ -45,5 +45,4 @@ public class Player {
 	 public void setPlayerNumber(int num) {
 		 playerNumber=num;  
 	 }
->>>>>>> db1bfdd2e2def2ab9fdb905810e15fdeabbca7d2
 }
