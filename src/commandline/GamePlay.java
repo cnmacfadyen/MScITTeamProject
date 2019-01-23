@@ -190,7 +190,7 @@ public class GamePlay {
 		for(int i=0;i<shuffledDeck.size();i=i+nPlayers) { //iterate over the deck increasing by the number of players each time (deal cards one at a time)
 				playerDeck.add(shuffledDeck.get(i+playerNumber-1));
 			}
-		return playerDeck;
+		return playerDeck; 
 	}
 	
 	public void playRound() {
