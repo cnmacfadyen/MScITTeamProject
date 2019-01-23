@@ -65,7 +65,6 @@ package commandline;
 		int selectedCategoryValue;
 		
 		static int maxSize = 40; //size of the ArrayList
-		Player winnerPlayer = new Player();
 		
 		private ArrayList<Card> unshuffledDeck = new ArrayList<Card>(maxSize);
 		private static ArrayList<Card> shuffledDeck = new ArrayList<Card>(maxSize);
@@ -380,7 +379,9 @@ package commandline;
 				} 
 			} else {
 				cardsToCommunal = false;
-				System.out.println("The winner is Player " + (returnHighestIndex(getNewA()) + 1));
+				System.out.println("The winner of the round is Player " + (returnHighestIndex(getNewA()) + 1));
+				Player winnerPlayer = new Player((returnHighestIndex(getNewA()) + 1));
+			 
 			}
 
 		}

@@ -25,7 +25,7 @@ public class GamePlay {
 	
 	int numOfGamesPlayed =0; // number of games a player played.
 	int totalScore; 	// total score of each game for a player.
-	
+	static int winningNumber;
 	// in player class we'll need score count for each player.
 	
 	boolean playNewGame; // when user select to play again/new game
@@ -40,7 +40,7 @@ public class GamePlay {
 	int selectedCategoryValue;
 	
 	int maxSize = 40; //size of the ArrayList
-	Player winnerPlayer = new Player();
+	Player winnerPlayer = new Player(winningNumber);
 	
 	private ArrayList<Card> unshuffledDeck = new ArrayList<Card>(maxSize);
 	private ArrayList<Card> shuffledDeck = new ArrayList<Card>(maxSize);
