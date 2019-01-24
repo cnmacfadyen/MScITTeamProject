@@ -12,11 +12,32 @@ public class Player {
 		}
 
 	}
+<<<<<<< HEAD
 	//
 	public boolean isEmpty(ArrayList<Card>c, ArrayList<Player>p) {
 		if(c.isEmpty()) {
 			p.remove(p.indexOf(playerNumber));
 			return true;
+=======
+	public boolean isEmpty(ArrayList<Card> x,ArrayList<Player> p) {
+		if (x.isEmpty()){
+			p.remove(p.indexOf(playerNumber));
+		return true;
+		}else {
+		return false;
+	}
+	}
+	public boolean removeLoser(ArrayList<Integer> p) {
+		boolean lost = true;
+		if (lost) {
+			for (int i = 0; i < p.size(); i++) {
+				if (p.get(i) == 0) {
+					p.remove(i);
+					return true;
+				}
+
+			}
+>>>>>>> 604dde5a9fe0ce1ea92cc0b7c0895a10d74f6a90
 		}
 		else {
 			return false;
@@ -55,5 +76,8 @@ public class Player {
 	 public void setPlayerNumber(int num) {
 		 playerNumber=num;  
 	 }
-
+//<<<<<<< HEAD
+//=======
+//
+//>>>>>>> e15554c0b8a5951bfafd8ef3fab7cb7b19e379b6
 }
