@@ -9,7 +9,7 @@ public class FileWriterClass {
 	FileWriter writeToLog;
 	FakeData fd = new FakeData();
 	Card c = new Card();
-	GameplayEdits gp = new GameplayEdits();
+	PlayGame gp = new PlayGame();
 	public void returnTrumpsLog() {
 		try {
 			 writeToLog = new FileWriter(log, false);

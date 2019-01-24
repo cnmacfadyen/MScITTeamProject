@@ -40,7 +40,7 @@ public class GamePlay {
 	int selectedCategoryValue;
 	
 	int maxSize = 40; //size of the ArrayList
-	Player winnerPlayer = new Player(winningNumber);
+//	Player winnerPlayer = new Player(winningNumber);
 	
 	private ArrayList<Card> unshuffledDeck = new ArrayList<Card>(maxSize);
 	private ArrayList<Card> shuffledDeck = new ArrayList<Card>(maxSize);
