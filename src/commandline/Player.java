@@ -10,11 +10,16 @@ public class Player {
 		} else {
 			return true;
 		}
-
 	}
-	public boolean isEmpty(ArrayList<Card> x) {
-		
-		return false;
+
+
+	public boolean isEmpty(ArrayList<Card> x,ArrayList<Player> p) {
+		if (x.isEmpty()){
+			p.remove(p.indexOf(playerNumber));
+		return true;
+		}else {
+			return false;
+		}
 	}
 	public boolean removeLoser(ArrayList<Integer> p) {
 		boolean lost = true;
@@ -26,7 +31,24 @@ public class Player {
 				}
 
 			}
+
 		}
+		else {
+			return false;
+		}
+	
+
+//	public boolean removeLoser(ArrayList<Integer> p) {
+//		boolean lost = true;
+//		if (lost) {
+//			for (int i = 0; i < p.size(); i++) {
+//				if (p.get(i) == 0) {
+//					p.remove(i);
+//					return true;
+//				}
+//
+//			}
+//		}
 		/*
 		 * in game play put this in if (Player.gameWinner(){ arraylist.get(0).getName();
 		 * - to get the winner })
@@ -48,8 +70,5 @@ public class Player {
 	 public void setPlayerNumber(int num) {
 		 playerNumber=num;  
 	 }
-//<<<<<<< HEAD
-//=======
-//
-//>>>>>>> e15554c0b8a5951bfafd8ef3fab7cb7b19e379b6
+
 }
