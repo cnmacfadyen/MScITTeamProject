@@ -90,7 +90,7 @@ public class Card {
 	+ c2 + "\n" + cat3 + " - " + c3 + "\n" + cat4 + " - " + c4 + "\n" + cat5 + " - " + c5;
 	}
 	
-	private void setAttNames() { //change method so we can pass it a file
+	protected void setAttNames() { //change method so we can pass it a file
 		FileReader fr = null;		
 		String firstLine = "";
 		try {
@@ -152,6 +152,18 @@ public class Card {
                 }
             }
         }return deck; 
+	}
+	
+	//pass it the number of players, the player number (e.g. player1), and the shuffled deck
+	//IF THERE ARE 3 PLAYERS WE SHOULD ADD THE TOP CARD TO THE COMMUNAL PILE BEFORE WE CALL THE dealCards() METHOD// 
+	//I.E. WE SHOULD REMOVE IT FROM THE SHUFFLED DECK SO WE CAN DIVIDE BY 3//
+	//didn't add this functionality to the method because it removes a card each time it is called
+	public ArrayList<Card> dealCards(int nPlayers, int playerNumber, ArrayList<Card> shuffledDeck) { 
+		ArrayList<Card> playerDeck = new ArrayList<Card>();
+		for(int i=0;i<shuffledDeck.size();i=i+nPlayers) {
+				playerDeck.add(shuffledDeck.get(i+playerNumber-1));
+			}
+		return playerDeck;
 	}
 	
 
