@@ -12,9 +12,13 @@ public class Player {
 		}
 
 	}
-	public boolean isEmpty(ArrayList<Card> x) {
-		
+	public boolean isEmpty(ArrayList<Card> x,ArrayList<Player> p) {
+		if (x.isEmpty()){
+			p.remove(p.indexOf(playerNumber));
+		return true;
+		}else {
 		return false;
+	}
 	}
 	public boolean removeLoser(ArrayList<Integer> p) {
 		boolean lost = true;
