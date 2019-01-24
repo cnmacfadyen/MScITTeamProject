@@ -90,7 +90,7 @@ public class Card {
 	+ c2 + "\n" + cat3 + " - " + c3 + "\n" + cat4 + " - " + c4 + "\n" + cat5 + " - " + c5;
 	}
 	
-	private void setAttNames() { //change method so we can pass it a file
+	protected void setAttNames() { //change method so we can pass it a file
 		FileReader fr = null;		
 		String firstLine = "";
 		try {
