@@ -1,0 +1,42 @@
+Top Trumps Test Log
+
+Contents of unshuffled deck:
+	Unshuffled pack goes here
+---------------------------------------------------
+Contents of shuffled deck:
+	Shuffled deck goes here
+---------------------------------------------------
+Player 1 deck (Human):
+	P1 original hand goes here
+---------------------------------------------------
+Player 2 deck (AI):
+	P2 original hand goes here
+---------------------------------------------------
+Player 3 deck (AI):
+	P5 original hand goes here
+---------------------------------------------------
+Player 4 deck (AI):
+	P5 original hand goes here
+---------------------------------------------------
+Player 5 deck (AI):
+	P5 original hand goes here
+---------------------------------------------------
+Round 1:
+ Communal Contents:
+	Communal pile details.
+---------------------------------------------------
+Cards in play:
+	Card in play details go here
+---------------------------------------------------
+Category selected:
+	Category goes here.
+---------------------------------------------------
+Values of selected category
+	Selected category values go here.
+---------------------------------------------------
+New deck contents:
+	Selected category values go here.
+---------------------------------------------------
+Winner of game:
+	Winner goes here.
+---------------------------------------------------
