@@ -12,7 +12,10 @@ public class Player {
 		}
 
 	}
-
+	public boolean isEmpty(ArrayList<Card> x) {
+		
+		return false;
+	}
 	public boolean removeLoser(ArrayList<Integer> p) {
 		boolean lost = true;
 		if (lost) {
@@ -45,8 +48,8 @@ public class Player {
 	 public void setPlayerNumber(int num) {
 		 playerNumber=num;  
 	 }
-<<<<<<< HEAD
-=======
-
->>>>>>> e15554c0b8a5951bfafd8ef3fab7cb7b19e379b6
+//<<<<<<< HEAD
+//=======
+//
+//>>>>>>> e15554c0b8a5951bfafd8ef3fab7cb7b19e379b6
 }
