@@ -76,24 +76,30 @@ class CLModeTest {
 	
 	@Test
 	public void testViewStatisticsOption() {
-		
+		PlayGame pg = new PlayGame();
+		pg.viewStatistics(true);
 	}
 	
 	@Test
 	public void testCategorySelection() {
-//		PlayGame pg = new PlayGame();
-//		int sC = pg.selectCategory();
-//
-//		System.out.println("the category you selected is : " + sC);
-//		assertEquals(sC, sC);
+		System.out.println("\nThis is to test the selection of a category for the human Player" );
+		PlayGame pg = new PlayGame();
+		pg.indx = 0;
+		pg.selectedCategoryValue = pg.selectCategory();
+		assertNotNull(pg.selectedCategoryValue);
+		System.out.println("Human player: " +  " \nselected the category: " + pg.selectedCategoryValue);
 
 	}
 	
+	//should there be a method for each AI player to test this? or can we keep changing the number of the indx which represent the AI player everytime we test?
 	@Test
 	public void testSelectingCategoryForAIPlayer() {
-		Random random = new Random(5);
-		//PlayGame.selectCategory();
-		assertNotNull(PlayGame.selectCategory());
+		System.out.println("\nThis is to test the selection of a category for any of the AI Players" );
+		PlayGame pg = new PlayGame();
+		pg.indx = 3; // AI Player number 1-4
+		pg.selectedCategoryValue = pg.selectCategory();
+		assertNotNull(pg.selectedCategoryValue);
+		System.out.println("AI player:  " + pg.indx +  " \nselected the category: " + pg.selectedCategoryValue);
 	}
 	
 	@Test
