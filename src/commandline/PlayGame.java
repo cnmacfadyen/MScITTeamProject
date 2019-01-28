@@ -1,6 +1,7 @@
 package commandline;
 	import java.util.ArrayList;
-	import java.util.Collections;
+import java.util.Arrays;
+import java.util.Collections;
 	import java.util.Random;
 	import java.util.Scanner;
 
@@ -21,8 +22,9 @@ package commandline;
 		private static ArrayList<Card> p5Hand = new ArrayList<Card>();
 		private static ArrayList<Card> currentCardsInRound = new ArrayList<Card>();
 		private static ArrayList<Player> players = new ArrayList<Player>(5);
-		private static ArrayList<Integer> newA = new ArrayList<Integer>();
+		private static ArrayList<Integer> categoryValues = new ArrayList<Integer>();
 		private static boolean cardsToCommunal;
+		private static String selectedCategoryName;
 		int numOfGamesPlayed =0; // number of games a player played.
 		int totalScore; 	// total score of each game for a player.
 		
@@ -35,7 +37,8 @@ package commandline;
 		static int indx =0; // this will be used in selectStartingPlayer method and selectCategory method.
 		static Random random = new Random();
 		static int selectRandom = random.nextInt(5); //for selecting a starting player.
-		static Player x = new Player(10);
+		static Player x = new Player("Player X", 10);
+		static Player p1, p2, p3, p4, p5;
 		
 		String selectedCategory;
 		int selectedCategoryValue;
@@ -63,22 +66,22 @@ package commandline;
 				//do database stuff
 			}
 			else if(inputForOption.equals("2")) {
-				Player p1 = new Player(1);
-				Player p2 = new Player(2);
-				Player p3 = new Player(3);
-				Player p4 = new Player(4);
-				Player p5 = new Player(5);
+				p1 = new Player("Player 1", 1);
+				p2 = new Player("Player 2", 2);
+				p3 = new Player("Player 3", 3);
+				p4 = new Player("Player 4", 4);
+				p5 = new Player("Player 5", 5);
 				players.add(p1);
 				players.add(p2);
 				players.add(p3);
 				players.add(p4);
 				players.add(p5);
 				c.setAttNames();
-				p1Hand = dealCards(5, 1, getShuffledDeck());
-				p2Hand = dealCards(5, 2, getShuffledDeck());
-				p3Hand = dealCards(5, 3, getShuffledDeck());
-				p4Hand = dealCards(5, 4, getShuffledDeck());
-				p5Hand = dealCards(5, 5, getShuffledDeck());
+				p1Hand = c.dealCards(5, 1, getShuffledDeck());
+				p2Hand = c.dealCards(5, 2, getShuffledDeck());
+				p3Hand = c.dealCards(5, 3, getShuffledDeck());
+				p4Hand = c.dealCards(5, 4, getShuffledDeck());
+				p5Hand = c.dealCards(5, 5, getShuffledDeck());
 				playFirstRound();
 				
 			}
@@ -98,13 +101,26 @@ package commandline;
 		
 		public static void playFirstRound() {
 			//start new game
-			System.out.println("Player " + (selectStartingPlayer() +1) + " will select the category for the next round.");
+			int r1SelectedCat = 0;
+			String catName = "";
+			System.out.println("Player " + (selectStartingPlayer() +1) + " will select the category for the first round.");
 			System.out.println("Here is your card: " + p1Hand.get(0).toString());
 			System.out.println("The categories are as follows:\n0. " + c.getCat1Name() + "\n1. " + c.getCat2Name() + "\n2. " +
 								c.getCat3Name() + "\n3. " + c.getCat4Name() + "\n4. " + c.getCat5Name());
-			selectCategory();
-			System.out.println("The selected category is " + selectCategory() + ".");
-			getNewA();
+			r1SelectedCat = selectCategory();
+			if(r1SelectedCat == 0) {
+				catName = c.getCat1Name();						
+			}else if (r1SelectedCat == 1) {
+				catName = c.getCat2Name();
+			}else if (r1SelectedCat == 2) {
+				catName = c.getCat3Name();
+			}else if (r1SelectedCat == 3) {
+				catName = c.getCat4Name();
+			}else if (r1SelectedCat == 4) {
+				catName = c.getCat5Name();
+			}
+			System.out.println("The selected category is " + r1SelectedCat + ": " + catName);
+			getCategoryValues();
 			checkDuplicate();
 			if (cardsToCommunal == false) {
 				System.out.println("This was the winning card:" + winningCard());
@@ -176,7 +192,7 @@ package commandline;
 				//will probably need an exception here to allow user to enter the correct input number.
 				if(index >=0 && index <=4) {
 					selectedCat = index;
-					winnerPlayer = new Player(0);
+					winnerPlayer = p1;
 				}
 				else {
 					System.out.println("category number should be from 0-4. \n Re-enter category number.");
@@ -185,22 +201,22 @@ package commandline;
 			//AI player 1
 			else if(indx == 1) {
 				selectedCat = selectRandomCategory;
-				winnerPlayer = new Player(1);
+				winnerPlayer = p2;
 			}
 			//AI player 2
 			else if(indx== 2) {
 				selectedCat = selectRandomCategory;
-				winnerPlayer = new Player(2);
+				winnerPlayer = p3;
 			}
 			//AI player 3
 			else if(indx == 3) {
 				selectedCat = selectRandomCategory;
-				winnerPlayer = new Player(3);
+				winnerPlayer = p4;
 			}
 			//AI player 4
 			else if(indx == 4) {
 				selectedCat = selectRandomCategory;
-				winnerPlayer = new Player(4);
+				winnerPlayer = p5;
 			}
 			
 			// might need to move the following two lines to a separate method.
@@ -223,54 +239,101 @@ package commandline;
 //			c.toString();
 //		}
 		
-		public static ArrayList<Integer> getNewA() { //creating newA instead of returning highest value
-			newA.clear();
+		public static ArrayList<Integer> getCategoryValues() { //creating newA instead of returning highest value
+			categoryValues.clear();
 			if(selectedCat == 0) {
-				newA.add(0, getCurrentCardsInRound().get(0).getC1());
-				newA.add(1,getCurrentCardsInRound().get(1).getC1());
-				newA.add(2, getCurrentCardsInRound().get(2).getC1());
-				newA.add(3, getCurrentCardsInRound().get(3).getC1());
-				newA.add(4, getCurrentCardsInRound().get(4).getC1());
+				for (int i = 0; i < players.size()-1; i++) {
+					categoryValues.add(getCurrentCardsInRound().get(i).getC1());
+					
+				}
 			}
 			
 			if(selectedCat == 1) {
-				newA.add(0, getCurrentCardsInRound().get(0).getC2());
-				newA.add(1, getCurrentCardsInRound().get(1).getC2());
-				newA.add(2, getCurrentCardsInRound().get(2).getC2());
-				newA.add(3, getCurrentCardsInRound().get(3).getC2());
-				newA.add(4, getCurrentCardsInRound().get(4).getC2());
-
+				for (int i = 0; i < players.size()-1; i++) {
+					categoryValues.add(getCurrentCardsInRound().get(i).getC2());
+				}
 			}
 
 			if(selectedCat == 2) {
-				newA.add(0, getCurrentCardsInRound().get(0).getC3());
-				newA.add(1, getCurrentCardsInRound().get(1).getC3());
-				newA.add(2, getCurrentCardsInRound().get(2).getC3());
-				newA.add(3, getCurrentCardsInRound().get(3).getC3());
-				newA.add(4, getCurrentCardsInRound().get(4).getC3());
+				for (int i = 0; i < players.size()-1; i++) {
+					categoryValues.add(getCurrentCardsInRound().get(i).getC3());
+				}
 				
 			}
 
 			if(selectedCat == 3) {
-				newA.add(0, getCurrentCardsInRound().get(0).getC4());
-				newA.add(1, getCurrentCardsInRound().get(1).getC4());
-				newA.add(2, getCurrentCardsInRound().get(2).getC4());
-				newA.add(3, getCurrentCardsInRound().get(3).getC4());
-				newA.add(4, getCurrentCardsInRound().get(4).getC4());	
-
+				for (int i = 0; i < players.size()-1; i++) {
+					categoryValues.add(getCurrentCardsInRound().get(i).getC4());
+				}
 			}
 	
 			if(selectedCat == 4) {
-				newA.add(0, getCurrentCardsInRound().get(0).getC5());
-				newA.add(1, getCurrentCardsInRound().get(1).getC5());
-				newA.add(2, getCurrentCardsInRound().get(2).getC5());
-				newA.add(3, getCurrentCardsInRound().get(3).getC5());
-				newA.add(4, getCurrentCardsInRound().get(4).getC5());
+				for (int i = 0; i < players.size()-1; i++) {
+					categoryValues.add(getCurrentCardsInRound().get(i).getC5());
+				}
 		
 			}
 		
-			return newA;
+			return categoryValues;
 		}
+		
+		public static void cardsRemaining() {
+			if(p1Hand.size() == 0) {
+				players.remove(0);
+			}
+			if(p2Hand.size() == 0) {
+				players.remove(1);
+			}
+			if(p3Hand.size() == 0) {
+				players.remove(2);
+			}
+			if(p4Hand.size() == 0) {
+				players.remove(3);
+			}
+			if(p5Hand.size() == 0) {
+				players.remove(4);
+			}
+		}
+//		public static ArrayList<Integer> getNewA() throws OutOfCardsException{ //creating newA instead of returning highest value
+//			newA.clear();
+//			try {
+//				newA.add(0, getCurrentCardsInRound().get(0).getChosenCategory(selectedCat)); //add selected category of first card to the array
+//				if(!getCurrentCardsInRound().contains(getCurrentCardsInRound().get(0))) { //if the current cards array does not contain a first element
+//					throw new OutOfCardsException();
+//				}
+//			}catch(OutOfCardsException e) {
+//				newA.add(0,	-1);
+//			}			try {
+//				newA.add(1, getCurrentCardsInRound().get(1).getChosenCategory(selectedCat)); //add selected category of first card to the array
+//				if(!getCurrentCardsInRound().contains(getCurrentCardsInRound().get(1))) {
+//					throw new OutOfCardsException();
+//				}
+//			}catch(OutOfCardsException e) {
+//				newA.add(1,	-1);
+//			}			try {
+//				newA.add(2, getCurrentCardsInRound().get(2).getChosenCategory(selectedCat)); //add selected category of first card to the array
+//				if(!getCurrentCardsInRound().contains(getCurrentCardsInRound().get(2))) {
+//					throw new OutOfCardsException();
+//				}
+//			}catch(OutOfCardsException e) {
+//				newA.add(2,	-1);
+//			}			try {
+//				newA.add(3, getCurrentCardsInRound().get(3).getChosenCategory(selectedCat)); //add selected category of first card to the array
+//				if(!getCurrentCardsInRound().contains(getCurrentCardsInRound().get(3))) {
+//					throw new OutOfCardsException();
+//				}
+//			}catch(OutOfCardsException e) {
+//				newA.add(3,	-1);
+//			}			try {
+//				newA.add(4, getCurrentCardsInRound().get(4).getChosenCategory(selectedCat)); //add selected category of first card to the array
+//				if(!getCurrentCardsInRound().contains(getCurrentCardsInRound().get(4))) {
+//					throw new OutOfCardsException();
+//				}
+//			}catch(OutOfCardsException e) {
+//				newA.add(4,	-1);
+//			}
+//			return newA;
+//		}
 		
 		public static int returnHighestIndex(ArrayList<Integer> a) {
 			int element = 0;
@@ -288,12 +351,13 @@ package commandline;
 	}
 		
 		public static Card winningCard() {
-			 return currentCardsInRound.get(returnHighestIndex(getNewA()));
+			 return currentCardsInRound.get(returnHighestIndex(getCategoryValues()));
 		}
 		
 		public static void checkDuplicate() {
-			Collections.sort(newA);
-			if(newA.get(4).equals(newA.get(3))) {
+			int arraySize = categoryValues.size();
+			Collections.sort(categoryValues);
+			if(categoryValues.get(arraySize-1).equals(categoryValues.get(arraySize-2))) {
 				//round is a draw
 				System.out.println("This round has resulted in a draw.");
 				cardsToCommunal = true;
@@ -302,10 +366,8 @@ package commandline;
 				} 
 			} else {
 				cardsToCommunal = false;
-				System.out.println("The winner of the round is Player " + (returnHighestIndex(getNewA()) + 1));
-				winnerPlayer = new Player(returnHighestIndex(getNewA()));
-				
-			 
+				System.out.println("The winner of the round is Player " + (returnHighestIndex(getCategoryValues()) + 1));
+				winnerPlayer = new Player(players.get(returnHighestIndex(getCategoryValues())).getPlayerName(), players.get(returnHighestIndex(getCategoryValues())).getPlayerNumber());			 
 			}
 
 		}
@@ -317,17 +379,18 @@ package commandline;
 			return shuffledDeck;
 			
 		}
-		//DEAL CARDS METHOD -- pass it the number of players, the player number (e.g. player1), and the shuffled deck
-		//IF THERE ARE 3 PLAYERS WE SHOULD ADD THE TOP CARD TO THE COMMUNAL PILE BEFORE WE CALL THE dealCards() METHOD// 
-		//I.E. WE SHOULD REMOVE IT FROM THE SHUFFLED DECK SO WE CAN DIVIDE BY 3//
-		//didn't add this functionality to the method because it removes a card each time it is called, rather than only once
-		public static ArrayList<Card> dealCards(int nPlayers, int playerNumber, ArrayList<Card> shuffledDeck) { 
-			ArrayList<Card> playerDeck = new ArrayList<Card>();
-			for(int i=0;i<shuffledDeck.size();i=i+nPlayers) { //iterate over the deck increasing by the number of players each time (deal cards one at a time)
-					playerDeck.add(shuffledDeck.get(i+playerNumber-1));
-				}
-			return playerDeck; 
-		}
+		
+//		//DEAL CARDS METHOD -- pass it the number of players, the player number (e.g. player1), and the shuffled deck
+//		//IF THERE ARE 3 PLAYERS WE SHOULD ADD THE TOP CARD TO THE COMMUNAL PILE BEFORE WE CALL THE dealCards() METHOD// 
+//		//I.E. WE SHOULD REMOVE IT FROM THE SHUFFLED DECK SO WE CAN DIVIDE BY 3//
+//		//didn't add this functionality to the method because it removes a card each time it is called, rather than only once
+//		public static ArrayList<Card> dealCards(int nPlayers, int playerNumber, ArrayList<Card> shuffledDeck) { 
+//			ArrayList<Card> playerDeck = new ArrayList<Card>();
+//			for(int i=0;i<shuffledDeck.size();i=i+nPlayers) { //iterate over the deck increasing by the number of players each time (deal cards one at a time)
+//					playerDeck.add(shuffledDeck.get(i+playerNumber-1));
+//				}
+//			return playerDeck; 
+//		}
 	
 		public static ArrayList<Card> getP1Deck() {
 			return p1Hand;
@@ -347,13 +410,22 @@ package commandline;
 		
 		public static ArrayList<Card> getCurrentCardsInRound() {
 			currentCardsInRound.clear();
-			currentCardsInRound.add(getP1Deck().get(0));
-			currentCardsInRound.add(getP2Deck().get(0));
-			currentCardsInRound.add(getP3Deck().get(0));
-			currentCardsInRound.add(getP4Deck().get(0));
-			currentCardsInRound.add(getP5Deck().get(0));
-			return currentCardsInRound;
-			
+			if(p1Hand.size()>0) {
+				currentCardsInRound.add(getP1Deck().get(0));
+			}
+			if(p2Hand.size()>0) {
+				currentCardsInRound.add(getP2Deck().get(0));
+			}
+			if(p3Hand.size()>0) {
+				currentCardsInRound.add(getP3Deck().get(0));
+			}
+			if(p4Hand.size()>0) {
+				currentCardsInRound.add(getP4Deck().get(0));
+			}
+			if(p5Hand.size()>0) {
+				currentCardsInRound.add(getP5Deck().get(0));
+			}
+			return currentCardsInRound;			
 		}
 		
 		public static ArrayList<Card> updatedP1Deck() {
@@ -377,19 +449,63 @@ package commandline;
 			return p5Hand;
 		}
 		public static void updateHands() {
-			updatedP1Deck();
-			updatedP2Deck();
-			updatedP3Deck();
-			updatedP4Deck();
-			updatedP5Deck();
+			if(p1Hand.size()>0) {
+				updatedP1Deck();
+			}
+			if(p2Hand.size()>0) {
+				updatedP2Deck();
+			}
+			if(p3Hand.size()>0) {
+				updatedP3Deck();
+			}
+			if(p4Hand.size()>0) {
+				updatedP4Deck();
+			}
+			if(p5Hand.size()>0) {
+				updatedP5Deck();
+			}
+		}
+		
+		public static void addWinnerCards() {
+			if(cardsToCommunal == false) {		
+				if(winnerPlayer.getPlayerName().equals(p1.getPlayerName())) {
+					for(int i=0;i<currentCardsInRound.size();i++) {
+						p1Hand.add(currentCardsInRound.get(i));
+					}
+				}
+				if(winnerPlayer.getPlayerName().equals(p2.getPlayerName())) {
+					for(int i=0;i<currentCardsInRound.size();i++) {
+						p2Hand.add(currentCardsInRound.get(i));
+					}
+				}
+				if(winnerPlayer.getPlayerName().equals(p3.getPlayerName())) {
+					for(int i=0;i<currentCardsInRound.size();i++) {
+						p3Hand.add(currentCardsInRound.get(i));
+					}
+				}
+				if(winnerPlayer.getPlayerName().equals(p4.getPlayerName())) {
+					for(int i=0;i<currentCardsInRound.size();i++) {
+						p4Hand.add(currentCardsInRound.get(i));
+					}
+				}
+				if(winnerPlayer.getPlayerName().equals(p5.getPlayerName())) {
+					for(int i=0;i<currentCardsInRound.size();i++) {
+						p5Hand.add(currentCardsInRound.get(i));
+					}
+				}
+			}
 		}
 		
 		public static void playRemainingRounds() {
 			int counter = 2;
+			String catName = "";
 			while (x.gameWinner(players) == false) {
-				System.out.println("Player " + (getWinningPlayer().getPlayerNumber()+1) + " will select the next category.");
-				updateHands();
-				System.out.println("Your card is as follows:" + p1Hand.get(0));
+				System.out.println("\nPlayer " + (getWinningPlayer().getPlayerNumber()) + " will select the next category.");
+				if (!p1Hand.isEmpty()) {
+					System.out.println("\nYour card is as follows:" + p1Hand.get(0)); //pick the top card from their hand
+				}else {
+					System.out.println("\nYou are out of cards. You lose!\n");
+				}
 				if (getWinningPlayer().getPlayerNumber()+1 == 1) {
 					System.out.println("Please select a number from the following categories:\n0." + c.getCat1Name() + "\n1." + c.getCat2Name() + "\n2." + 
 															c.getCat3Name() +"\n3." + c.getCat4Name() + "\n4." + c.getCat5Name());
@@ -398,6 +514,17 @@ package commandline;
 					//will probably need an exception here to allow user to enter the correct input number.
 					if(selection >=0 && selection <=4) {
 						selectedCat = selection;
+						if(selection == 0) {
+							selectedCategoryName = c.getCat1Name();						
+						}else if (selection == 1) {
+							selectedCategoryName = c.getCat2Name();
+						}else if (selection == 2) {
+							selectedCategoryName = c.getCat3Name();
+						}else if (selection == 3) {
+							selectedCategoryName = c.getCat4Name();
+						}else if (selection == 4) {
+							selectedCategoryName = c.getCat5Name();
+						}
 					}
 					else {
 						System.out.println("Category number should be from 0-4. \n Re-enter category number.");
@@ -405,20 +532,38 @@ package commandline;
 				} else {
 					int randomCategory = random.nextInt(5);
 					selectedCat = randomCategory;	
+					if(randomCategory == 0) {
+						selectedCategoryName = c.getCat1Name();						
+					}else if (randomCategory == 1) {
+						selectedCategoryName = c.getCat2Name();
+					}else if (randomCategory == 2) {
+						selectedCategoryName = c.getCat3Name();
+					}else if (randomCategory == 3) {
+						selectedCategoryName = c.getCat4Name();
+					}else if (randomCategory == 4) {
+						selectedCategoryName = c.getCat5Name();
+					}
 				}
 //			**********Need to look at this so that pressing q doesn't cause an error
-				System.out.println("The chosen category is " + selectedCat + ".");
-				getNewA();
+				System.out.println("\nThe chosen category is " + selectedCat + ": " + selectedCategoryName);
+				getCategoryValues();
 				checkDuplicate();
 				if (cardsToCommunal == false) {
-					System.out.println("This was the winning card:" + winningCard());
-					System.out.println("The winner of the round is Player " + (returnHighestIndex(getNewA()) + 1));
-					winnerPlayer = new Player(returnHighestIndex(getNewA()));
+					System.out.println("\nThis was the winning card:" + winningCard());
+					System.out.println("\nThe winner of the round is Player " + (returnHighestIndex(getCategoryValues()) + 1));
+					//winnerPlayer = new Player(players.get(returnHighestIndex(getCategoryValues())).getPlayerName(), players.get(returnHighestIndex(getCategoryValues())).getPlayerNumber());
 				}
 				else {
 					System.out.println("The following cards have been added to the communal pile: " + getCurrentCardsInRound());
 				}
-				//add Round object here
+				addWinnerCards();
+				RoundObject roundDetails = new RoundObject(counter, communalPile, currentCardsInRound, selectedCategoryName, categoryValues, p1Hand, p2Hand, p3Hand, p4Hand, p5Hand);
+				cardsRemaining();
+				cardsRemaining();
+				updateHands();
+				
+				System.out.println(p1Hand.size() + " " + p2Hand.size() + " " + p3Hand.size()+ " " + p4Hand.size()+ " " + p5Hand.size());
+				System.out.println();
 				counter++;
 				
 			}
@@ -432,14 +577,15 @@ package commandline;
 		public static void main(String[] args) {
 			openApplication();
 			if (start == true) {
-				playRemainingRounds();
+				if(players.size()>=2) {
+					playRemainingRounds();
+				}
+			}else {
+				System.out.println("The winner of the game is: " + winnerPlayer.getPlayerName());
+				System.exit(0);
 			}
-			//
 		}
 		
 		
 	
 	}
-
-
-

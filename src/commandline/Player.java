@@ -3,6 +3,14 @@ package commandline;
 import java.util.ArrayList;
 
 public class Player {
+	
+	private int playerNumber;
+	private String playerName;
+	
+	 public Player(String playerName, int playerNumber) {
+		 this.playerName=playerName;
+		 this.playerNumber=playerNumber;
+	 }
 
 	public boolean gameWinner(ArrayList<Player> p) {
 		if (p.size() >= 2) {
@@ -57,11 +65,7 @@ public class Player {
 		return false;
 	}
 
-	private int playerNumber;
-	
-	 public Player(int pNumber) {
-		 this.playerNumber = pNumber;
-	 }
+
 	 
 	 public int getPlayerNumber() {
 		 return playerNumber;
@@ -70,5 +74,13 @@ public class Player {
 	 public void setPlayerNumber(int num) {
 		 playerNumber=num;  
 	 }
+
+	public String getPlayerName() {
+		return playerName;
+	}
+
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
 
 }

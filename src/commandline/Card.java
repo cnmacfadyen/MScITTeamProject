@@ -22,6 +22,22 @@ public class Card {
 		this.c5 = a5;
 	}
 	
+	public int getChosenCategory(int catNumber) {
+		if(catNumber == 0) {
+			return c1;
+		}else if(catNumber == 1){
+			return c2;
+		}else if(catNumber == 2){
+			return c3;
+		}else if(catNumber == 3){
+			return c4;
+		}else if(catNumber == 4){
+			return c5;
+		}else {
+			return -1;
+		}
+	}
+	
 	public String getCat1Name() {
 		return cat1;
 	}
