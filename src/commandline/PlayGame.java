@@ -242,33 +242,33 @@ import java.util.Collections;
 		public static ArrayList<Integer> getCategoryValues() { //creating newA instead of returning highest value
 			categoryValues.clear();
 			if(selectedCat == 0) {
-				for (int i = 0; i < players.size()-1; i++) {
+				for (int i = 0; i < getCurrentCardsInRound().size(); i++) {
 					categoryValues.add(getCurrentCardsInRound().get(i).getC1());
 					
 				}
 			}
 			
 			if(selectedCat == 1) {
-				for (int i = 0; i < players.size()-1; i++) {
+				for (int i = 0; i < getCurrentCardsInRound().size(); i++) {
 					categoryValues.add(getCurrentCardsInRound().get(i).getC2());
 				}
 			}
 
 			if(selectedCat == 2) {
-				for (int i = 0; i < players.size()-1; i++) {
+				for (int i = 0; i < getCurrentCardsInRound().size(); i++) {
 					categoryValues.add(getCurrentCardsInRound().get(i).getC3());
 				}
 				
 			}
 
 			if(selectedCat == 3) {
-				for (int i = 0; i < players.size()-1; i++) {
+				for (int i = 0; i < getCurrentCardsInRound().size(); i++) {
 					categoryValues.add(getCurrentCardsInRound().get(i).getC4());
 				}
 			}
 	
 			if(selectedCat == 4) {
-				for (int i = 0; i < players.size()-1; i++) {
+				for (int i = 0; i < getCurrentCardsInRound().size(); i++) {
 					categoryValues.add(getCurrentCardsInRound().get(i).getC5());
 				}
 		
@@ -278,22 +278,55 @@ import java.util.Collections;
 		}
 		
 		public static void cardsRemaining() {
-			if(p1Hand.size() == 0) {
-				players.remove(0);
-			}
-			if(p2Hand.size() == 0) {
-				players.remove(1);
-			}
-			if(p3Hand.size() == 0) {
-				players.remove(2);
-			}
-			if(p4Hand.size() == 0) {
-				players.remove(3);
-			}
-			if(p5Hand.size() == 0) {
-				players.remove(4);
+			p1CardCheck();
+			p2CardCheck();
+			p3CardCheck();
+			p4CardCheck();
+			p5CardCheck();
+		}
+		
+
+		
+		public static void p1CardCheck() {
+			if (players.contains(p1)) {
+				if(p1Hand.size() == 0) {
+					players.remove(p1);
+				}
 			}
 		}
+		
+		public static void p2CardCheck() {
+			if (players.contains(p2)) {
+				if(p2Hand.size() == 0) {
+					players.remove(p2);
+				}
+			}
+		}
+		
+		public static void p3CardCheck() {
+			if (players.contains(p3)) {
+				if(p3Hand.size() == 0) {
+					players.remove(p3);
+				}
+			}
+		}
+		
+		public static void p4CardCheck() {
+			if (players.contains(p4)) {
+				if(p4Hand.size() == 0) {
+					players.remove(p4);
+				}
+			}
+		}
+		
+		public static void p5CardCheck() {
+			if(players.contains(p5)) {
+				if(p5Hand.size() == 0) {
+					players.remove(p5);
+				}
+			}
+		}
+		
 //		public static ArrayList<Integer> getNewA() throws OutOfCardsException{ //creating newA instead of returning highest value
 //			newA.clear();
 //			try {
@@ -355,9 +388,9 @@ import java.util.Collections;
 		}
 		
 		public static void checkDuplicate() {
-			int arraySize = categoryValues.size();
+			int arraySize = categoryValues.size() - 1 ;
 			Collections.sort(categoryValues);
-			if(categoryValues.get(arraySize-1).equals(categoryValues.get(arraySize-2))) {
+			if(categoryValues.get(arraySize).equals(categoryValues.get(arraySize-1))) {
 				//round is a draw
 				System.out.println("This round has resulted in a draw.");
 				cardsToCommunal = true;
@@ -366,7 +399,7 @@ import java.util.Collections;
 				} 
 			} else {
 				cardsToCommunal = false;
-				System.out.println("The winner of the round is Player " + (returnHighestIndex(getCategoryValues()) + 1));
+				System.out.println("The winner of the round is " + players.get(returnHighestIndex(getCategoryValues())).getPlayerName());
 				winnerPlayer = new Player(players.get(returnHighestIndex(getCategoryValues())).getPlayerName(), players.get(returnHighestIndex(getCategoryValues())).getPlayerNumber());			 
 			}
 
@@ -429,23 +462,33 @@ import java.util.Collections;
 		}
 		
 		public static ArrayList<Card> updatedP1Deck() {
+			if (p1Hand.size() > 0) {
 			p1Hand.remove(0);
+			}
 			return p1Hand;
 		}
 		public static ArrayList<Card> updatedP2Deck() {
+			if (p2Hand.size() > 0) {
 			p2Hand.remove(0);
+			}
 			return p2Hand;
 		}
 		public static ArrayList<Card> updatedP3Deck() {
+			if (p3Hand.size() > 0) {
 			p3Hand.remove(0);
+			}
 			return p3Hand;
 		}
 		public static ArrayList<Card> updatedP4Deck() {
+			if (p4Hand.size() > 0) {
 			p4Hand.remove(0);
+			}
 			return p4Hand;
 		}
 		public static ArrayList<Card> updatedP5Deck() {
+			if (p5Hand.size() > 0) {
 			p5Hand.remove(0);
+			}
 			return p5Hand;
 		}
 		public static void updateHands() {
@@ -506,7 +549,7 @@ import java.util.Collections;
 				}else {
 					System.out.println("\nYou are out of cards. You lose!\n");
 				}
-				if (getWinningPlayer().getPlayerNumber()+1 == 1) {
+				if (getWinningPlayer().getPlayerName().equals(p1.getPlayerName())) {
 					System.out.println("Please select a number from the following categories:\n0." + c.getCat1Name() + "\n1." + c.getCat2Name() + "\n2." + 
 															c.getCat3Name() +"\n3." + c.getCat4Name() + "\n4." + c.getCat5Name());
 					Scanner scan = new Scanner(System.in);
@@ -580,7 +623,7 @@ import java.util.Collections;
 				if(players.size()>=2) {
 					playRemainingRounds();
 				}
-			}else {
+			}else  {
 				System.out.println("The winner of the game is: " + winnerPlayer.getPlayerName());
 				System.exit(0);
 			}

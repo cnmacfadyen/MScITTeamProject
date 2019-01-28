@@ -32,7 +32,7 @@ public class FileWriterClass {
 				writeToLog.write(fd.getRoundNumber()+ ":\n Communal Contents:\n\t" + fd.getCommunalContents() +
 								"\n---------------------------------------------------\nCards in play:\n\t" + fd.cardsInPlay() +
 								"\n---------------------------------------------------\nCategory selected:\n\t" + fd.categorySelected() +
-								"\n---------------------------------------------------\nValues of selected category\n\t" + gp.getNewA()+
+								"\n---------------------------------------------------\nValues of selected category\n\t" + gp.getCategoryValues()+
 								"\n---------------------------------------------------\nNew deck contents:\n\t" + fd.newDeckContents() +
 								"\n---------------------------------------------------\n");
 //			}
