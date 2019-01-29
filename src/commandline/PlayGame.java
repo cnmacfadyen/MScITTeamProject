@@ -23,7 +23,10 @@ import java.util.Collections;
 		private static ArrayList<Card> currentCardsInRound = new ArrayList<Card>();
 		private static ArrayList<Player> players = new ArrayList<Player>(5);
 		private static ArrayList<Integer> categoryValues = new ArrayList<Integer>();
+		private static ArrayList<RoundObject> roundsArray = new ArrayList<RoundObject>();
 		private static boolean cardsToCommunal;
+		private static boolean gameOver = false;
+		private static boolean keepPlaying = true;
 		private static String selectedCategoryName;
 		int numOfGamesPlayed =0; // number of games a player played.
 		int totalScore; 	// total score of each game for a player.
@@ -124,11 +127,16 @@ import java.util.Collections;
 			checkDuplicate();
 			if (cardsToCommunal == false) {
 				System.out.println("This was the winning card:" + winningCard());
+				
 			}
 			else {
 				System.out.println("The following cards have been added to the communal pile: " + getCurrentCardsInRound());
 			}
 			//add round object here
+			RoundObject firstRound = new RoundObject(1, communalPile, currentCardsInRound, selectedCategoryName, categoryValues, p1Hand, p2Hand, p3Hand, p4Hand, p5Hand);
+			roundsArray.add(firstRound);
+			cardsRemaining();
+			updateHands();
 			start = true;
 			
 		}
@@ -136,6 +144,7 @@ import java.util.Collections;
 		// if user typed "q" or "Q" for input then the game is terminated. data is saved???
 		//we can also put this into the selectOption method as another condition for input.
 		public static void quit(Scanner in) {
+			keepPlaying = false;
 				System.out.println("Goodbye.");
 				in.close();
 				System.exit(1);
@@ -400,7 +409,8 @@ import java.util.Collections;
 			} else {
 				cardsToCommunal = false;
 				System.out.println("The winner of the round is " + players.get(returnHighestIndex(getCategoryValues())).getPlayerName());
-				winnerPlayer = new Player(players.get(returnHighestIndex(getCategoryValues())).getPlayerName(), players.get(returnHighestIndex(getCategoryValues())).getPlayerNumber());			 
+				winnerPlayer = new Player(players.get(returnHighestIndex(getCategoryValues())).getPlayerName(), players.get(returnHighestIndex(getCategoryValues())).getPlayerNumber());	
+				addWinnerCards();
 			}
 
 		}
@@ -542,7 +552,7 @@ import java.util.Collections;
 		public static void playRemainingRounds() {
 			int counter = 2;
 			String catName = "";
-			while (x.gameWinner(players) == false) {
+			while (players.size() > 1) {
 				System.out.println("\nPlayer " + (getWinningPlayer().getPlayerNumber()) + " will select the next category.");
 				if (!p1Hand.isEmpty()) {
 					System.out.println("\nYour card is as follows:" + p1Hand.get(0)); //pick the top card from their hand
@@ -593,21 +603,28 @@ import java.util.Collections;
 				checkDuplicate();
 				if (cardsToCommunal == false) {
 					System.out.println("\nThis was the winning card:" + winningCard());
-					System.out.println("\nThe winner of the round is Player " + (returnHighestIndex(getCategoryValues()) + 1));
+//					System.out.println("\nThe winner of the round is Player " + players.get(returnHighestIndex(getCategoryValues())).getPlayerName());
 					//winnerPlayer = new Player(players.get(returnHighestIndex(getCategoryValues())).getPlayerName(), players.get(returnHighestIndex(getCategoryValues())).getPlayerNumber());
 				}
 				else {
 					System.out.println("The following cards have been added to the communal pile: " + getCurrentCardsInRound());
 				}
-				addWinnerCards();
+//				addWinnerCards();
 				RoundObject roundDetails = new RoundObject(counter, communalPile, currentCardsInRound, selectedCategoryName, categoryValues, p1Hand, p2Hand, p3Hand, p4Hand, p5Hand);
-				cardsRemaining();
-				cardsRemaining();
+				roundsArray.add(roundDetails);
 				updateHands();
+				cardsRemaining();
+//				cardsRemaining();
+//				updateHands();
 				
 				System.out.println(p1Hand.size() + " " + p2Hand.size() + " " + p3Hand.size()+ " " + p4Hand.size()+ " " + p5Hand.size());
 				System.out.println();
+				System.out.println(roundsArray.size());
+				System.out.println(players.size());
 				counter++;
+				if (players.size()==1) {
+					gameOver = true;
+				}
 				
 			}
 			
@@ -616,19 +633,23 @@ import java.util.Collections;
 		public static Player getWinningPlayer() {
 			return winnerPlayer;
 		}
+		public static ArrayList<RoundObject> getRoundsArray(){
+			return roundsArray;
+		}
 		
 		public static void main(String[] args) {
+//			while (keepPlaying) {
 			openApplication();
 			if (start == true) {
-				if(players.size()>=2) {
+//				if(players.size()>=2) {
 					playRemainingRounds();
-				}
-			}else  {
+//				}
+//			}else  {
+			if(gameOver == true) {
 				System.out.println("The winner of the game is: " + winnerPlayer.getPlayerName());
-				System.exit(0);
 			}
 		}
 		
-		
-	
 	}
+	
+}

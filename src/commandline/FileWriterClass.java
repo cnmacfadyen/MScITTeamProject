@@ -29,13 +29,16 @@ public class FileWriterClass {
 					 		 "\n---------------------------------------------------\n");
 //			while (gameOver = false) { //I think this stuff might have to come from the database, but I'm not 100%
 //			 Might make sense to use a boolean for this bit and the winner as well
-				writeToLog.write(fd.getRoundNumber()+ ":\n Communal Contents:\n\t" + fd.getCommunalContents() +
-								"\n---------------------------------------------------\nCards in play:\n\t" + fd.cardsInPlay() +
-								"\n---------------------------------------------------\nCategory selected:\n\t" + fd.categorySelected() +
-								"\n---------------------------------------------------\nValues of selected category\n\t" + gp.getCategoryValues()+
-								"\n---------------------------------------------------\nNew deck contents:\n\t" + fd.newDeckContents() +
-								"\n---------------------------------------------------\n");
-//			}
+//				writeToLog.write(fd.getRoundNumber()+ ":\n Communal Contents:\n\t" + fd.getCommunalContents() +
+//								"\n---------------------------------------------------\nCards in play:\n\t" + fd.cardsInPlay() +
+//								"\n---------------------------------------------------\nCategory selected:\n\t" + fd.categorySelected() +
+//								"\n---------------------------------------------------\nValues of selected category\n\t" + gp.getCategoryValues()+
+//								"\n---------------------------------------------------\nNew deck contents:\n\t" + fd.newDeckContents() +
+//								"\n---------------------------------------------------\n");
+////			}
+			 for (int i = 0; i< gp.getRoundsArray().size(); i++) {
+				 writeToLog.write(gp.getRoundsArray().get(i).toString());
+			 }
 			
 //			if (gameOver = true) {
 				writeToLog.write("Winner of game:\n\t" + fd.returnWinner() +
