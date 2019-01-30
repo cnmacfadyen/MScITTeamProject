@@ -65,12 +65,10 @@ import java.util.Collections;
 			selectOption(s);
 		}
 
-		//viewStatisticsOrPlay();
-		//ask the user to type 1 for viewing statistics of previous games. or 2 for starting a new game.
 		public static void selectOption(Scanner in) {
 			while(start==false) {
 			try {
-			String inputForOption = in.next();
+			String inputForOption = in.nextLine();
 			if(inputForOption.equals("1")) {
 				viewStatistics(true);
 				db.displayResults();
@@ -105,12 +103,11 @@ import java.util.Collections;
 			else {
 				throw new InvalidInputException();
 				}
-			}
-			catch (InvalidInputException e) {
+			}catch (InvalidInputException e) {
 				System.out.println("Your input is incorrect. Please enter 1 to view statistics, 2 to play a game, or q to quit.");
 				start = false;
+				}
 			}
-		}
 		}
 		
 		public static void playFirstRound() {
@@ -143,7 +140,6 @@ import java.util.Collections;
 			else {
 				System.out.println("The following cards have been added to the communal pile: " + getCurrentCardsInRound());
 			}
-			//add round object here
 			RoundObject firstRound = new RoundObject(1, communalPile, currentCardsInRound, selectedCategoryName, categoryValues, p1Hand, p2Hand, p3Hand, p4Hand, p5Hand);
 			roundsArray.add(firstRound);
 			cardsRemaining();
@@ -166,8 +162,6 @@ import java.util.Collections;
 			//connect to database for statistics ??
 		}
 		
-		//should it return the object element from the players arraylist or
-		//better return the indext of the player element??
 		public static int selectStartingPlayer() {
 			Object startPlayer = null;
 				//get player 1 and set current player to player 1  (Human Player)
@@ -207,15 +201,18 @@ import java.util.Collections;
 			//human player
 			if(indx == 0) {
 				Scanner in = new Scanner(System.in);
+				String userInput = in.nextLine();
 				System.out.println("Please select a category.");
-				int index = in.nextInt();  // to select a category from 1 to 5.
-				//will probably need an exception here to allow user to enter the correct input number.
-				if(index >=0 && index <=4) {
-					selectedCat = index;
+				//will probably need a try-catch here to catch an input mismatch exception
+				//works for entering a wrong number but not a wrong letter
+				if(userInput.equals("0") || userInput.equals("1") ||userInput.equals("2") ||userInput.equals("3") ||userInput.equals("4")) {
+					selectedCat = Integer.parseInt(userInput);
 					winnerPlayer = p1;
+				}else if(userInput.equals("q") || userInput.equals("Q")) {
+					quit(in);
 				}
 				else {
-					System.out.println("category number should be from 0-4. \n Re-enter category number.");
+					System.out.println("Incorrect Category Number. Category has been chosen for you.");
 				}
 			}
 			//AI player 1
@@ -239,10 +236,6 @@ import java.util.Collections;
 				winnerPlayer = p5;
 			}
 			
-			// might need to move the following two lines to a separate method.
-//			selectedCategory = playerCard.getCategoryName();
-//			selectedCategoryValue = playerCard.getCategoryValue();
-			
 			return selectedCat;
 		}
 
@@ -252,12 +245,6 @@ import java.util.Collections;
 			communalPile.add(c);
 			
 		}
-		
-//		//public void viewCardData(Player p)
-//		public static void viewCardData(Card c)
-//		{
-//			c.toString();
-//		}
 		
 		public static ArrayList<Integer> getCategoryValues() { //creating newA instead of returning highest value
 			categoryValues.clear();
