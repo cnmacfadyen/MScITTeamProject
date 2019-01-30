@@ -38,10 +38,14 @@
     	<artifactId>mysql-connector-java</artifactId>
     	<version>5.1.38</version>
 	</dependency>
-    
+	
+  	<dependency>
+	<groupId>org.postgresql</groupId>
+	<artifactId>postgresql</artifactId>
+	<version>42.2.1</version>
+	</dependency>
   </dependencies>
-  
-  <build>
+<build>
   
   	<!-- Where do our Java sources come from? -->
     <sourceDirectory>src</sourceDirectory>
