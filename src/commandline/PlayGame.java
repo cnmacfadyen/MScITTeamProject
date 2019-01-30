@@ -69,16 +69,18 @@ import java.util.Collections;
 				//do database stuff
 			}
 			else if(inputForOption.equals("2")) {
+				getPlayers().clear();
+				getRoundsArray().clear();
 				p1 = new Player("Player 1", 1);
 				p2 = new Player("Player 2", 2);
 				p3 = new Player("Player 3", 3);
 				p4 = new Player("Player 4", 4);
 				p5 = new Player("Player 5", 5);
-				players.add(p1);
-				players.add(p2);
-				players.add(p3);
-				players.add(p4);
-				players.add(p5);
+				getPlayers().add(p1);
+				getPlayers().add(p2);
+				getPlayers().add(p3);
+				getPlayers().add(p4);
+				getPlayers().add(p5);
 				c.setAttNames();
 				p1Hand = c.dealCards(5, 1, getShuffledDeck());
 				p2Hand = c.dealCards(5, 2, getShuffledDeck());
@@ -161,28 +163,28 @@ import java.util.Collections;
 			Object startPlayer = null;
 				//get player 1 and set current player to player 1  (Human Player)
 				if(selectRandom == 0) {
-					startPlayer = players.get(0);
-					indx = players.indexOf(startPlayer);
+					startPlayer = getPlayers().get(0);
+					indx = getPlayers().indexOf(startPlayer);
 				}
 				//get player 2 and set current player to (AI player 1)
 				else if(selectRandom == 1) {
-					startPlayer = players.get(1);
-					indx = players.indexOf(startPlayer);
+					startPlayer = getPlayers().get(1);
+					indx = getPlayers().indexOf(startPlayer);
 				}
 				//get player 3 and set current player to (AI player 2)
 				else if(selectRandom == 2) {
-					startPlayer = players.get(2);
-					indx = players.indexOf(startPlayer);
+					startPlayer = getPlayers().get(2);
+					indx = getPlayers().indexOf(startPlayer);
 				}
 				//get player 4 and set current player to (AI player 3)
 				else if(selectRandom == 3) {
-					startPlayer = players.get(3);
-					indx = players.indexOf(startPlayer);
+					startPlayer = getPlayers().get(3);
+					indx = getPlayers().indexOf(startPlayer);
 				}
 				//get player 5 and set current player to (AI player 4)
 				else if(selectRandom == 4) {
-					startPlayer = players.get(4);
-					indx = players.indexOf(startPlayer);
+					startPlayer = getPlayers().get(4);
+					indx = getPlayers().indexOf(startPlayer);
 				}
 			
 			//return startPlayer;
@@ -297,41 +299,41 @@ import java.util.Collections;
 
 		
 		public static void p1CardCheck() {
-			if (players.contains(p1)) {
-				if(p1Hand.size() == 0) {
-					players.remove(p1);
+			if (getPlayers().contains(p1)) {
+				if(getP1Deck().size() == 0) {
+					getPlayers().remove(p1);
 				}
 			}
 		}
 		
 		public static void p2CardCheck() {
-			if (players.contains(p2)) {
-				if(p2Hand.size() == 0) {
-					players.remove(p2);
+			if (getPlayers().contains(p2)) {
+				if(getP2Deck().size() == 0) {
+					getPlayers().remove(p2);
 				}
 			}
 		}
 		
 		public static void p3CardCheck() {
-			if (players.contains(p3)) {
-				if(p3Hand.size() == 0) {
-					players.remove(p3);
+			if (getPlayers().contains(p3)) {
+				if(getP3Deck().size() == 0) {
+					getPlayers().remove(p3);
 				}
 			}
 		}
 		
 		public static void p4CardCheck() {
-			if (players.contains(p4)) {
-				if(p4Hand.size() == 0) {
-					players.remove(p4);
+			if (getPlayers().contains(p4)) {
+				if(getP4Deck().size() == 0) {
+					getPlayers().remove(p4);
 				}
 			}
 		}
 		
 		public static void p5CardCheck() {
-			if(players.contains(p5)) {
-				if(p5Hand.size() == 0) {
-					players.remove(p5);
+			if(getPlayers().contains(p5)) {
+				if(getP5Deck().size() == 0) {
+					getPlayers().remove(p5);
 				}
 			}
 		}
@@ -453,97 +455,97 @@ import java.util.Collections;
 		
 		public static ArrayList<Card> getCurrentCardsInRound() {
 			currentCardsInRound.clear();
-			if(p1Hand.size()>0) {
+			if(getP1Deck().size()>0) {
 				currentCardsInRound.add(getP1Deck().get(0));
 			}
-			if(p2Hand.size()>0) {
+			if(getP2Deck().size()>0) {
 				currentCardsInRound.add(getP2Deck().get(0));
 			}
-			if(p3Hand.size()>0) {
+			if(getP3Deck().size()>0) {
 				currentCardsInRound.add(getP3Deck().get(0));
 			}
-			if(p4Hand.size()>0) {
+			if(getP4Deck().size()>0) {
 				currentCardsInRound.add(getP4Deck().get(0));
 			}
-			if(p5Hand.size()>0) {
+			if(getP5Deck().size()>0) {
 				currentCardsInRound.add(getP5Deck().get(0));
 			}
 			return currentCardsInRound;			
 		}
 		
 		public static ArrayList<Card> updatedP1Deck() {
-			if (p1Hand.size() > 0) {
-			p1Hand.remove(0);
+			if (getP1Deck().size() > 0) {
+				getP1Deck().remove(0);
 			}
 			return p1Hand;
 		}
 		public static ArrayList<Card> updatedP2Deck() {
-			if (p2Hand.size() > 0) {
-			p2Hand.remove(0);
+			if (getP2Deck().size() > 0) {
+				getP2Deck().remove(0);
 			}
 			return p2Hand;
 		}
 		public static ArrayList<Card> updatedP3Deck() {
-			if (p3Hand.size() > 0) {
-			p3Hand.remove(0);
+			if (getP3Deck().size() > 0) {
+				getP3Deck().remove(0);
 			}
 			return p3Hand;
 		}
 		public static ArrayList<Card> updatedP4Deck() {
-			if (p4Hand.size() > 0) {
-			p4Hand.remove(0);
+			if (getP4Deck().size() > 0) {
+				getP4Deck().remove(0);
 			}
 			return p4Hand;
 		}
 		public static ArrayList<Card> updatedP5Deck() {
-			if (p5Hand.size() > 0) {
-			p5Hand.remove(0);
+			if (getP5Deck().size() > 0) {
+				getP5Deck().remove(0);
 			}
 			return p5Hand;
 		}
 		public static void updateHands() {
-			if(p1Hand.size()>0) {
+			if(getP1Deck().size()>0) {
 				updatedP1Deck();
 			}
-			if(p2Hand.size()>0) {
+			if(getP2Deck().size()>0) {
 				updatedP2Deck();
 			}
-			if(p3Hand.size()>0) {
+			if(getP3Deck().size()>0) {
 				updatedP3Deck();
 			}
-			if(p4Hand.size()>0) {
+			if(getP4Deck().size()>0) {
 				updatedP4Deck();
 			}
-			if(p5Hand.size()>0) {
+			if(getP5Deck().size()>0) {
 				updatedP5Deck();
 			}
 		}
 		
 		public static void addWinnerCards() {
 			if(cardsToCommunal == false) {		
-				if(winnerPlayer.getPlayerName().equals(p1.getPlayerName())) {
-					for(int i=0;i<currentCardsInRound.size();i++) {
-						p1Hand.add(currentCardsInRound.get(i));
+				if(getWinningPlayer().getPlayerName().equals(p1.getPlayerName())) {
+					for(int i=0;i<getCurrentCardsInRound().size();i++) {
+						getP1Deck().add(getCurrentCardsInRound().get(i));
 					}
 				}
-				if(winnerPlayer.getPlayerName().equals(p2.getPlayerName())) {
-					for(int i=0;i<currentCardsInRound.size();i++) {
-						p2Hand.add(currentCardsInRound.get(i));
+				if(getWinningPlayer().getPlayerName().equals(p2.getPlayerName())) {
+					for(int i=0;i<getCurrentCardsInRound().size();i++) {
+						getP2Deck().add(getCurrentCardsInRound().get(i));
 					}
 				}
-				if(winnerPlayer.getPlayerName().equals(p3.getPlayerName())) {
-					for(int i=0;i<currentCardsInRound.size();i++) {
-						p3Hand.add(currentCardsInRound.get(i));
+				if(getWinningPlayer().getPlayerName().equals(p3.getPlayerName())) {
+					for(int i=0;i<getCurrentCardsInRound().size();i++) {
+						getP3Deck().add(getCurrentCardsInRound().get(i));
 					}
 				}
-				if(winnerPlayer.getPlayerName().equals(p4.getPlayerName())) {
-					for(int i=0;i<currentCardsInRound.size();i++) {
-						p4Hand.add(currentCardsInRound.get(i));
+				if(getWinningPlayer().getPlayerName().equals(p4.getPlayerName())) {
+					for(int i=0;i<getCurrentCardsInRound().size();i++) {
+						getP4Deck().add(getCurrentCardsInRound().get(i));
 					}
 				}
-				if(winnerPlayer.getPlayerName().equals(p5.getPlayerName())) {
-					for(int i=0;i<currentCardsInRound.size();i++) {
-						p5Hand.add(currentCardsInRound.get(i));
+				if(getWinningPlayer().getPlayerName().equals(p5.getPlayerName())) {
+					for(int i=0;i<getCurrentCardsInRound().size();i++) {
+						getP5Deck().add(getCurrentCardsInRound().get(i));
 					}
 				}
 			}
@@ -609,25 +611,26 @@ import java.util.Collections;
 				else {
 					System.out.println("The following cards have been added to the communal pile: " + getCurrentCardsInRound());
 				}
-//				addWinnerCards();
-				RoundObject roundDetails = new RoundObject(counter, communalPile, currentCardsInRound, selectedCategoryName, categoryValues, p1Hand, p2Hand, p3Hand, p4Hand, p5Hand);
+				RoundObject roundDetails = new RoundObject(counter, getCommunalPile(), getCurrentCardsInRound(), selectedCategoryName, getCategoryValues(), getP1Deck(), getP2Deck(), getP3Deck(), getP4Deck(), getP5Deck());
 				roundsArray.add(roundDetails);
 				updateHands();
 				cardsRemaining();
-//				cardsRemaining();
-//				updateHands();
 				
 				System.out.println(p1Hand.size() + " " + p2Hand.size() + " " + p3Hand.size()+ " " + p4Hand.size()+ " " + p5Hand.size());
 				System.out.println();
-				System.out.println(roundsArray.size());
-				System.out.println(players.size());
+				System.out.println(getRoundsArray().size());
+				System.out.println(getPlayers().size());
 				counter++;
-				if (players.size()==1) {
+				if (getPlayers().size()==1) {
 					gameOver = true;
 				}
 				
 			}
 			
+		}
+		
+		public static ArrayList<Player> getPlayers() {
+			return players;
 		}
 		
 		public static Player getWinningPlayer() {
@@ -637,19 +640,23 @@ import java.util.Collections;
 			return roundsArray;
 		}
 		
-		public static void main(String[] args) {
-//			while (keepPlaying) {
-			openApplication();
-			if (start == true) {
-//				if(players.size()>=2) {
-					playRemainingRounds();
-//				}
-//			}else  {
-			if(gameOver == true) {
-				System.out.println("The winner of the game is: " + winnerPlayer.getPlayerName());
-			}
+		public static ArrayList<Card> getCommunalPile() {
+			return communalPile;
 		}
 		
+		public static void main(String[] args) {
+			openApplication();
+			while (keepPlaying) {
+			if (start == true) {
+					playRemainingRounds();
+				if(gameOver == true) {
+					System.out.println("The winner of the game is: " + winnerPlayer.getPlayerName());
+					start = false;
+					System.out.println("Press 1 to view statistics, 2 to play a game. Press q at any time to quit.");
+					Scanner s = new Scanner(System.in);
+					selectOption(s);
+				}
+			}
+		}
 	}
-	
 }
