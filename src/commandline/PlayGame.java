@@ -6,6 +6,7 @@ import java.util.Collections;
 	import java.util.Scanner;
 
 	public class PlayGame {
+		static Database db = new Database();
 		static Card c = new Card();
 		 //this is to test the methods in this class...
 		static ArrayList<Card> deck =  (ArrayList<Card>) c.getDeck().clone();
@@ -28,15 +29,22 @@ import java.util.Collections;
 		private static boolean gameOver = false;
 		private static boolean keepPlaying = true;
 		private static String selectedCategoryName;
+		
 		int numOfGamesPlayed =0; // number of games a player played.
 		int totalScore; 	// total score of each game for a player.
-		
+		static private int drawRound;
 		// in player class we'll need score count for each player.
 		static boolean start = false;
+		static int totalRounds;
 		boolean playNewGame; // when user select to play again/new game
 		boolean quitGame;	//when user quits the game.
 		//boolean veiwStatistics; //when user wants to view statistics of previous games.
-		
+		private int humanRounds;
+		private int ai1Rounds;
+		private int ai2Rounds;
+		private int ai3Rounds;
+		private int ai4Rounds;
+		static int totalDrawRounds;
 		static int indx =0; // this will be used in selectStartingPlayer method and selectCategory method.
 		static Random random = new Random();
 		static int selectRandom = random.nextInt(5); //for selecting a starting player.
@@ -65,6 +73,7 @@ import java.util.Collections;
 			String inputForOption = in.next();
 			if(inputForOption.equals("1")) {
 				viewStatistics(true);
+				db.displayResults();
 				start = false;
 				//do database stuff
 			}
@@ -403,6 +412,7 @@ import java.util.Collections;
 			Collections.sort(categoryValues);
 			if(categoryValues.get(arraySize).equals(categoryValues.get(arraySize-1))) {
 				//round is a draw
+				drawRound++;
 				System.out.println("This round has resulted in a draw.");
 				cardsToCommunal = true;
 				for (int i = 0; i < currentCardsInRound.size(); i++) {
@@ -524,26 +534,31 @@ import java.util.Collections;
 		public static void addWinnerCards() {
 			if(cardsToCommunal == false) {		
 				if(getWinningPlayer().getPlayerName().equals(p1.getPlayerName())) {
+					p1.getPlayerWonRound();
 					for(int i=0;i<getCurrentCardsInRound().size();i++) {
 						getP1Deck().add(getCurrentCardsInRound().get(i));
 					}
 				}
 				if(getWinningPlayer().getPlayerName().equals(p2.getPlayerName())) {
+					p2.getPlayerWonRound();
 					for(int i=0;i<getCurrentCardsInRound().size();i++) {
 						getP2Deck().add(getCurrentCardsInRound().get(i));
 					}
 				}
 				if(getWinningPlayer().getPlayerName().equals(p3.getPlayerName())) {
+					p3.getPlayerWonRound();
 					for(int i=0;i<getCurrentCardsInRound().size();i++) {
 						getP3Deck().add(getCurrentCardsInRound().get(i));
 					}
 				}
 				if(getWinningPlayer().getPlayerName().equals(p4.getPlayerName())) {
+					p4.getPlayerWonRound();
 					for(int i=0;i<getCurrentCardsInRound().size();i++) {
 						getP4Deck().add(getCurrentCardsInRound().get(i));
 					}
 				}
 				if(getWinningPlayer().getPlayerName().equals(p5.getPlayerName())) {
+					p5.getPlayerWonRound();
 					for(int i=0;i<getCurrentCardsInRound().size();i++) {
 						getP5Deck().add(getCurrentCardsInRound().get(i));
 					}
@@ -607,27 +622,35 @@ import java.util.Collections;
 					System.out.println("\nThis was the winning card:" + winningCard());
 //					System.out.println("\nThe winner of the round is Player " + players.get(returnHighestIndex(getCategoryValues())).getPlayerName());
 					//winnerPlayer = new Player(players.get(returnHighestIndex(getCategoryValues())).getPlayerName(), players.get(returnHighestIndex(getCategoryValues())).getPlayerNumber());
+				
 				}
 				else {
 					System.out.println("The following cards have been added to the communal pile: " + getCurrentCardsInRound());
 				}
+				
 				RoundObject roundDetails = new RoundObject(counter, getCommunalPile(), getCurrentCardsInRound(), selectedCategoryName, getCategoryValues(), getP1Deck(), getP2Deck(), getP3Deck(), getP4Deck(), getP5Deck());
 				roundsArray.add(roundDetails);
 				updateHands();
 				cardsRemaining();
-				
+			;
 				System.out.println(p1Hand.size() + " " + p2Hand.size() + " " + p3Hand.size()+ " " + p4Hand.size()+ " " + p5Hand.size());
 				System.out.println();
 				System.out.println(getRoundsArray().size());
 				System.out.println(getPlayers().size());
 				counter++;
 				if (getPlayers().size()==1) {
+					totalDrawRounds = drawRound;
+					totalRounds = counter;
+					
 					gameOver = true;
+				
+					
 				}
 				
 			}
 			
 		}
+		
 		
 		public static ArrayList<Player> getPlayers() {
 			return players;
@@ -651,6 +674,8 @@ import java.util.Collections;
 					playRemainingRounds();
 				if(gameOver == true) {
 					System.out.println("The winner of the game is: " + winnerPlayer.getPlayerName());
+					db.postResultsToDatabase(totalDrawRounds, winnerPlayer.getPlayerNumber(), totalRounds, p1.getWonRound(), p2.getWonRound(),
+							p3.getWonRound(), p4.getWonRound(), p5.getWonRound());
 					start = false;
 					System.out.println("Press 1 to view statistics, 2 to play a game. Press q at any time to quit.");
 					Scanner s = new Scanner(System.in);

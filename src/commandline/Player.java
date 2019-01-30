@@ -6,6 +6,7 @@ public class Player {
 	
 	private int playerNumber;
 	private String playerName;
+	private int wonRound;
 	
 	 public Player(String playerName, int playerNumber) {
 		 this.playerName=playerName;
@@ -20,6 +21,14 @@ public class Player {
 		}
 	}
 
+
+	public int getWonRound() {
+		return wonRound;
+	}
+
+	public void setWonRound(int wonRound) {
+		this.wonRound = wonRound;
+	}
 
 	public boolean isEmpty(ArrayList<Card> x,ArrayList<Player> p) {
 		if (x.isEmpty()){
@@ -65,7 +74,9 @@ public class Player {
 		return false;
 	}
 
-
+	public int getPlayerWonRound() {
+		return wonRound++;
+	}
 	 
 	 public int getPlayerNumber() {
 		 return playerNumber;
