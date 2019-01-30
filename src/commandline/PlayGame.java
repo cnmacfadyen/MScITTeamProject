@@ -347,47 +347,6 @@ import java.util.Collections;
 			}
 		}
 		
-//		public static ArrayList<Integer> getNewA() throws OutOfCardsException{ //creating newA instead of returning highest value
-//			newA.clear();
-//			try {
-//				newA.add(0, getCurrentCardsInRound().get(0).getChosenCategory(selectedCat)); //add selected category of first card to the array
-//				if(!getCurrentCardsInRound().contains(getCurrentCardsInRound().get(0))) { //if the current cards array does not contain a first element
-//					throw new OutOfCardsException();
-//				}
-//			}catch(OutOfCardsException e) {
-//				newA.add(0,	-1);
-//			}			try {
-//				newA.add(1, getCurrentCardsInRound().get(1).getChosenCategory(selectedCat)); //add selected category of first card to the array
-//				if(!getCurrentCardsInRound().contains(getCurrentCardsInRound().get(1))) {
-//					throw new OutOfCardsException();
-//				}
-//			}catch(OutOfCardsException e) {
-//				newA.add(1,	-1);
-//			}			try {
-//				newA.add(2, getCurrentCardsInRound().get(2).getChosenCategory(selectedCat)); //add selected category of first card to the array
-//				if(!getCurrentCardsInRound().contains(getCurrentCardsInRound().get(2))) {
-//					throw new OutOfCardsException();
-//				}
-//			}catch(OutOfCardsException e) {
-//				newA.add(2,	-1);
-//			}			try {
-//				newA.add(3, getCurrentCardsInRound().get(3).getChosenCategory(selectedCat)); //add selected category of first card to the array
-//				if(!getCurrentCardsInRound().contains(getCurrentCardsInRound().get(3))) {
-//					throw new OutOfCardsException();
-//				}
-//			}catch(OutOfCardsException e) {
-//				newA.add(3,	-1);
-//			}			try {
-//				newA.add(4, getCurrentCardsInRound().get(4).getChosenCategory(selectedCat)); //add selected category of first card to the array
-//				if(!getCurrentCardsInRound().contains(getCurrentCardsInRound().get(4))) {
-//					throw new OutOfCardsException();
-//				}
-//			}catch(OutOfCardsException e) {
-//				newA.add(4,	-1);
-//			}
-//			return newA;
-//		}
-		
 		public static int returnHighestIndex(ArrayList<Integer> a) {
 			int element = 0;
 			int max = a.get(element);
@@ -434,18 +393,6 @@ import java.util.Collections;
 			return shuffledDeck;
 			
 		}
-		
-//		//DEAL CARDS METHOD -- pass it the number of players, the player number (e.g. player1), and the shuffled deck
-//		//IF THERE ARE 3 PLAYERS WE SHOULD ADD THE TOP CARD TO THE COMMUNAL PILE BEFORE WE CALL THE dealCards() METHOD// 
-//		//I.E. WE SHOULD REMOVE IT FROM THE SHUFFLED DECK SO WE CAN DIVIDE BY 3//
-//		//didn't add this functionality to the method because it removes a card each time it is called, rather than only once
-//		public static ArrayList<Card> dealCards(int nPlayers, int playerNumber, ArrayList<Card> shuffledDeck) { 
-//			ArrayList<Card> playerDeck = new ArrayList<Card>();
-//			for(int i=0;i<shuffledDeck.size();i=i+nPlayers) { //iterate over the deck increasing by the number of players each time (deal cards one at a time)
-//					playerDeck.add(shuffledDeck.get(i+playerNumber-1));
-//				}
-//			return playerDeck; 
-//		}
 	
 		public static ArrayList<Card> getP1Deck() {
 			return p1Hand;
@@ -568,7 +515,6 @@ import java.util.Collections;
 		
 		public static void playRemainingRounds() {
 			int counter = 2;
-			String catName = "";
 			while (players.size() > 1) {
 				System.out.println("\nPlayer " + (getWinningPlayer().getPlayerNumber()) + " will select the next category.");
 				if (!p1Hand.isEmpty()) {
@@ -580,25 +526,34 @@ import java.util.Collections;
 					System.out.println("Please select a number from the following categories:\n0." + c.getCat1Name() + "\n1." + c.getCat2Name() + "\n2." + 
 															c.getCat3Name() +"\n3." + c.getCat4Name() + "\n4." + c.getCat5Name());
 					Scanner scan = new Scanner(System.in);
-					int selection = scan.nextInt();  // to select a category from 1 to 5.
-					//will probably need an exception here to allow user to enter the correct input number.
-					if(selection >=0 && selection <=4) {
-						selectedCat = selection;
-						if(selection == 0) {
-							selectedCategoryName = c.getCat1Name();						
-						}else if (selection == 1) {
-							selectedCategoryName = c.getCat2Name();
-						}else if (selection == 2) {
-							selectedCategoryName = c.getCat3Name();
-						}else if (selection == 3) {
-							selectedCategoryName = c.getCat4Name();
-						}else if (selection == 4) {
-							selectedCategoryName = c.getCat5Name();
+					String stringSelection = scan.nextLine();
+					try {
+						int selection = Integer.parseInt(stringSelection);  // to select a category from 1 to 5.
+						if(selection >=0 && selection <=4) {
+							selectedCat = selection;
+							if(selection == 0) {
+								selectedCategoryName = c.getCat1Name();						
+							}else if (selection == 1) {
+								selectedCategoryName = c.getCat2Name();
+							}else if (selection == 2) {
+								selectedCategoryName = c.getCat3Name();
+							}else if (selection == 3) {
+								selectedCategoryName = c.getCat4Name();
+							}else if (selection == 4) {
+								selectedCategoryName = c.getCat5Name();
+							}
+						}
+						else {
+							System.out.println("Incorrect Category Number. Category has been chosen for you.");
+						}
+					}catch(NumberFormatException e) {
+						if(stringSelection.equals("Q") || stringSelection.equals("q")) {
+							quit(scan);
+						}else {
+							System.out.println("Incorrect Category Number. Category has been chosen for you.");	
 						}
 					}
-					else {
-						System.out.println("Category number should be from 0-4. \n Re-enter category number.");
-					}
+
 				} else {
 					int randomCategory = random.nextInt(5);
 					selectedCat = randomCategory;	
