@@ -12,6 +12,7 @@ class CLModeTest {
 	private ArrayList<Card> communalPile = new ArrayList<Card>();
 	private ArrayList<Card> currentCardsInRound = new ArrayList<Card>();
 
+	PlayGame pg = new PlayGame();
 	
 	@Before
 	public void init() {
@@ -79,14 +80,14 @@ class CLModeTest {
 	
 	@Test
 	public void testViewStatisticsOption() {
-		PlayGame pg = new PlayGame();
+		
 		pg.viewStatistics(true);
 	}
 	
 	@Test
 	public void testCategorySelection() {
 		System.out.println("\nThis is to test the selection of a category for the human Player" );
-		PlayGame pg = new PlayGame();
+
 		pg.indx = 0;
 		pg.selectedCategoryValue = pg.selectCategory();
 		assertNotNull(pg.selectedCategoryValue);
@@ -98,7 +99,7 @@ class CLModeTest {
 	@Test
 	public void testSelectingCategoryForAIPlayer() {
 		System.out.println("\nThis is to test the selection of a category for any of the AI Players" );
-		PlayGame pg = new PlayGame();
+		
 		pg.indx = 3; // AI Player number 1-4
 		pg.selectedCategoryValue = pg.selectCategory();
 		assertNotNull(pg.selectedCategoryValue);
