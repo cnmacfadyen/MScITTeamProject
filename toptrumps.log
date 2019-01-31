@@ -286,19 +286,12 @@ Cargo - 2]
 Contents of shuffled deck:
 	[
 
-Vanguard: 
-Size - 3
-Speed - 4
-Range - 5
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
 Firepower - 5
-Cargo - 2, 
-
-Carrack: 
-Size - 6
-Speed - 2
-Range - 10
-Firepower - 4
-Cargo - 6, 
+Cargo - 0, 
 
 Avenger: 
 Size - 2
@@ -307,18 +300,53 @@ Range - 4
 Firepower - 3
 Cargo - 2, 
 
-350r: 
-Size - 1
-Speed - 9
-Range - 2
-Firepower - 3
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
 Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
 
 Sabre: 
 Size - 2
 Speed - 7
 Range - 2
 Firepower - 5
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
 Cargo - 0, 
 
 Idris: 
@@ -328,61 +356,12 @@ Range - 7
 Firepower - 10
 Cargo - 6, 
 
-Merchantman: 
-Size - 7
-Speed - 3
-Range - 5
-Firepower - 6
-Cargo - 8, 
-
 Avenger: 
 Size - 2
 Speed - 5
 Range - 4
 Firepower - 3
 Cargo - 2, 
-
-Orion: 
-Size - 10
-Speed - 1
-Range - 6
-Firepower - 2
-Cargo - 9, 
-
-Sabre: 
-Size - 2
-Speed - 7
-Range - 2
-Firepower - 5
-Cargo - 0, 
-
-Avenger: 
-Size - 2
-Speed - 5
-Range - 4
-Firepower - 3
-Cargo - 2, 
-
-Constellation: 
-Size - 4
-Speed - 5
-Range - 7
-Firepower - 3
-Cargo - 4, 
-
-Hurricane: 
-Size - 2
-Speed - 5
-Range - 3
-Firepower - 5
-Cargo - 0, 
-
-Hawk: 
-Size - 1
-Speed - 3
-Range - 2
-Firepower - 4
-Cargo - 0, 
 
 350r: 
 Size - 1
@@ -398,25 +377,39 @@ Range - 10
 Firepower - 4
 Cargo - 6, 
 
-Merchantman: 
-Size - 7
-Speed - 3
-Range - 5
-Firepower - 6
-Cargo - 8, 
-
-Vanguard: 
-Size - 3
-Speed - 4
-Range - 5
-Firepower - 5
-Cargo - 2, 
-
-Hurricane: 
+Hornet: 
 Size - 2
 Speed - 5
 Range - 3
-Firepower - 5
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
 Cargo - 0, 
 
 Carrack: 
@@ -426,12 +419,19 @@ Range - 10
 Firepower - 4
 Cargo - 6, 
 
-Merchantman: 
-Size - 7
-Speed - 3
-Range - 5
-Firepower - 6
-Cargo - 8, 
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
 
 Hornet: 
 Size - 2
@@ -454,11 +454,376 @@ Range - 7
 Firepower - 3
 Cargo - 4, 
 
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
 Hawk: 
 Size - 1
 Speed - 3
 Range - 2
 Firepower - 4
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4]
+---------------------------------------------------
+Player 1 deck (Human):
+	[
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6]
+---------------------------------------------------
+Player 2 deck (AI):
+	[
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 3 deck (AI):
+	[
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 4 deck (AI):
+	[
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 5 deck (AI):
+	[
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
 Cargo - 0, 
 
 Hurricane: 
@@ -468,11 +833,1661 @@ Range - 3
 Firepower - 5
 Cargo - 0, 
 
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4]
+---------------------------------------------------
+
+
+
+	~~~~~ Round 1 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: []
+---------------------------------------------------
+Current Cards in Play: [
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8]
+---------------------------------------------------
+
+Category selected:
+
+	Size
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[1, 1, 2, 1, 3]
+
+---------------------------------------------------
+Player 1 deck at end of round 1:
+	[
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6]
+---------------------------------------------------
+Player 2 deck at end of round 1:
+	[
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 3 deck at end of round 1:
+	[
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 4 deck at end of round 1:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 5 deck at end of round 1:
+	[
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
 m50: 
 Size - 1
 Speed - 10
 Range - 2
 Firepower - 2
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+
+
+	~~~~~ Round 2 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: []
+---------------------------------------------------
+Current Cards in Play: [
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8]
+---------------------------------------------------
+
+Category selected:
+
+	Range
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[7, 5, 5, 4, 5]
+
+---------------------------------------------------
+Player 1 deck at end of round 2:
+	[
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8]
+---------------------------------------------------
+Player 2 deck at end of round 2:
+	[
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 3 deck at end of round 2:
+	[
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 4 deck at end of round 2:
+	[
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 5 deck at end of round 2:
+	[
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+
+
+	~~~~~ Round 3 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Current Cards in Play: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+
+Category selected:
+
+	Range
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[10, 7, 10, 5, 3]
+
+---------------------------------------------------
+Player 1 deck at end of round 3:
+	[
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8]
+---------------------------------------------------
+Player 2 deck at end of round 3:
+	[
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 3 deck at end of round 3:
+	[
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 4 deck at end of round 3:
+	[
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 5 deck at end of round 3:
+	[
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+
+
+	~~~~~ Round 4 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Current Cards in Play: [
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+
+Category selected:
+
+	Cargo
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[8, 8, 0, 0, 0]
+
+---------------------------------------------------
+Player 1 deck at end of round 4:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8]
+---------------------------------------------------
+Player 2 deck at end of round 4:
+	[
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 3 deck at end of round 4:
+	[
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 4 deck at end of round 4:
+	[
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 5 deck at end of round 4:
+	[
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+
+
+	~~~~~ Round 5 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Current Cards in Play: [
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9]
+---------------------------------------------------
+
+Category selected:
+
+	Speed
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[5, 5, 7, 2, 1]
+
+---------------------------------------------------
+Player 1 deck at end of round 5:
+	[
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8]
+---------------------------------------------------
+Player 2 deck at end of round 5:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 3 deck at end of round 5:
+	[
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
 Cargo - 0, 
 
 Avenger: 
@@ -489,6 +2504,54 @@ Range - 3
 Firepower - 4
 Cargo - 1, 
 
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9]
+---------------------------------------------------
+Player 4 deck at end of round 5:
+	[
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 5 deck at end of round 5:
+	[
+
 Vanguard: 
 Size - 3
 Speed - 4
@@ -496,11 +2559,25 @@ Range - 5
 Firepower - 5
 Cargo - 2, 
 
-m50: 
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+350r: 
 Size - 1
-Speed - 10
+Speed - 9
 Range - 2
-Firepower - 2
+Firepower - 3
 Cargo - 0, 
 
 Hawk: 
@@ -510,18 +2587,86 @@ Range - 2
 Firepower - 4
 Cargo - 0, 
 
-Orion: 
-Size - 10
-Speed - 1
-Range - 6
-Firepower - 2
-Cargo - 9, 
-
-Sabre: 
+Hornet: 
 Size - 2
-Speed - 7
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+m50: 
+Size - 1
+Speed - 10
 Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
 Firepower - 5
+Cargo - 2]
+
+
+	~~~~~ Round 6 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
 Cargo - 0, 
 
 350r: 
@@ -531,12 +2676,168 @@ Range - 2
 Firepower - 3
 Cargo - 0, 
 
-Idris: 
-Size - 8
-Speed - 2
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Current Cards in Play: [
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+
+Category selected:
+
+	Size
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[3, 2, 10, 2, 3]
+
+---------------------------------------------------
+Player 1 deck at end of round 6:
+	[
+
+Constellation: 
+Size - 4
+Speed - 5
 Range - 7
-Firepower - 10
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
 Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8]
+---------------------------------------------------
+Player 2 deck at end of round 6:
+	[
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 3 deck at end of round 6:
+	[
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
 
 Idris: 
 Size - 8
@@ -544,6 +2845,103 @@ Speed - 2
 Range - 7
 Firepower - 10
 Cargo - 6, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 6:
+	[
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 5 deck at end of round 6:
+	[
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
 
 m50: 
 Size - 1
@@ -552,12 +2950,115 @@ Range - 2
 Firepower - 2
 Cargo - 0, 
 
-Orion: 
-Size - 10
-Speed - 1
-Range - 6
-Firepower - 2
-Cargo - 9, 
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+
+
+	~~~~~ Round 7 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
 
 Hornet: 
 Size - 2
@@ -566,18 +3067,6247 @@ Range - 3
 Firepower - 4
 Cargo - 1]
 ---------------------------------------------------
-Player 1 deck (Human):
+Current Cards in Play: [
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+
+Category selected:
+
+	Cargo
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[4, 6, 4, 6, 1]
+
+---------------------------------------------------
+Player 1 deck at end of round 7:
+	[
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8]
+---------------------------------------------------
+Player 2 deck at end of round 7:
+	[
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Player 3 deck at end of round 7:
+	[
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 7:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 5 deck at end of round 7:
+	[
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+
+
+	~~~~~ Round 8 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Current Cards in Play: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4]
+---------------------------------------------------
+
+Category selected:
+
+	Size
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[6, 2, 2, 2, 4]
+
+---------------------------------------------------
+Player 1 deck at end of round 8:
+	[
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4]
+---------------------------------------------------
+Player 2 deck at end of round 8:
 	[]
 ---------------------------------------------------
-Player 2 deck (AI):
+Player 3 deck at end of round 8:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 8:
 	[]
 ---------------------------------------------------
-Player 3 deck (AI):
+Player 5 deck at end of round 8:
+	[
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+
+
+	~~~~~ Round 9 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Current Cards in Play: [
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0]
+---------------------------------------------------
+
+Category selected:
+
+	Range
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[7, 4, 2]
+
+---------------------------------------------------
+Player 1 deck at end of round 9:
+	[
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0]
+---------------------------------------------------
+Player 2 deck at end of round 9:
 	[]
 ---------------------------------------------------
-Player 4 deck (AI):
+Player 3 deck at end of round 9:
+	[
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 9:
 	[]
 ---------------------------------------------------
-Player 5 deck (AI):
+Player 5 deck at end of round 9:
+	[
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+
+
+	~~~~~ Round 10 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Current Cards in Play: [
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0]
+---------------------------------------------------
+
+Category selected:
+
+	Firepower
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[5, 4, 4]
+
+---------------------------------------------------
+Player 1 deck at end of round 10:
+	[
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0]
+---------------------------------------------------
+Player 2 deck at end of round 10:
 	[]
+---------------------------------------------------
+Player 3 deck at end of round 10:
+	[
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 10:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 10:
+	[
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+
+
+	~~~~~ Round 11 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Current Cards in Play: [
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+
+Category selected:
+
+	Cargo
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[8, 0, 1]
+
+---------------------------------------------------
+Player 1 deck at end of round 11:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Player 2 deck at end of round 11:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 11:
+	[
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 11:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 11:
+	[
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+
+
+	~~~~~ Round 12 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Current Cards in Play: [
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0]
+---------------------------------------------------
+
+Category selected:
+
+	Speed
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[5, 2, 10]
+
+---------------------------------------------------
+Player 1 deck at end of round 12:
+	[
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Player 2 deck at end of round 12:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 12:
+	[
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 12:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 12:
+	[
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0]
+
+
+	~~~~~ Round 13 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Current Cards in Play: [
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+
+Category selected:
+
+	Range
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[5, 6, 5]
+
+---------------------------------------------------
+Player 1 deck at end of round 13:
+	[
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Player 2 deck at end of round 13:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 13:
+	[
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 13:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 13:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0]
+
+
+	~~~~~ Round 14 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Current Cards in Play: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+
+Category selected:
+
+	Range
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[10, 5, 4]
+
+---------------------------------------------------
+Player 1 deck at end of round 14:
+	[
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 2 deck at end of round 14:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 14:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 14:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 14:
+	[
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0]
+
+
+	~~~~~ Round 15 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Current Cards in Play: [
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+---------------------------------------------------
+
+Category selected:
+
+	Firepower
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[5, 3, 10]
+
+---------------------------------------------------
+Player 1 deck at end of round 15:
+	[
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 2 deck at end of round 15:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 15:
+	[
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 15:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 15:
+	[
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+
+
+	~~~~~ Round 16 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1]
+---------------------------------------------------
+Current Cards in Play: [
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0]
+---------------------------------------------------
+
+Category selected:
+
+	Firepower
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[5, 2, 2]
+
+---------------------------------------------------
+Player 1 deck at end of round 16:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0]
+---------------------------------------------------
+Player 2 deck at end of round 16:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 16:
+	[
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 16:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 16:
+	[
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+
+
+	~~~~~ Round 17 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Current Cards in Play: [
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+
+Category selected:
+
+	Speed
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[5, 5, 5]
+
+---------------------------------------------------
+Player 1 deck at end of round 17:
+	[
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0]
+---------------------------------------------------
+Player 2 deck at end of round 17:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 17:
+	[
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 17:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 17:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+
+
+	~~~~~ Round 18 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0]
+---------------------------------------------------
+Current Cards in Play: [
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+
+Category selected:
+
+	Range
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[7, 5, 4]
+
+---------------------------------------------------
+Player 1 deck at end of round 18:
+	[
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 2 deck at end of round 18:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 18:
+	[
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 18:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 18:
+	[
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+
+
+	~~~~~ Round 19 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+---------------------------------------------------
+Current Cards in Play: [
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+---------------------------------------------------
+
+Category selected:
+
+	Range
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[7, 5, 7]
+
+---------------------------------------------------
+Player 1 deck at end of round 19:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 2 deck at end of round 19:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 19:
+	[
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 19:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 19:
+	[]
+
+
+	~~~~~ Round 20 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+---------------------------------------------------
+Current Cards in Play: [
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9]
+---------------------------------------------------
+
+Category selected:
+
+	Range
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[4, 6]
+
+---------------------------------------------------
+Player 1 deck at end of round 20:
+	[
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 2 deck at end of round 20:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 20:
+	[
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9]
+---------------------------------------------------
+Player 4 deck at end of round 20:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 20:
+	[]
+
+
+	~~~~~ Round 21 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+---------------------------------------------------
+Current Cards in Play: [
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+
+Category selected:
+
+	Range
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[2, 5]
+
+---------------------------------------------------
+Player 1 deck at end of round 21:
+	[
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 2 deck at end of round 21:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 21:
+	[
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 21:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 21:
+	[]
+
+
+	~~~~~ Round 22 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+---------------------------------------------------
+Current Cards in Play: [
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+
+Category selected:
+
+	Range
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[5, 4]
+
+---------------------------------------------------
+Player 1 deck at end of round 22:
+	[
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2]
+---------------------------------------------------
+Player 2 deck at end of round 22:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 22:
+	[
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 22:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 22:
+	[]
+
+
+	~~~~~ Round 23 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+---------------------------------------------------
+Current Cards in Play: [
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9]
+---------------------------------------------------
+
+Category selected:
+
+	Speed
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[5, 1]
+
+---------------------------------------------------
+Player 1 deck at end of round 23:
+	[
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9]
+---------------------------------------------------
+Player 2 deck at end of round 23:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 23:
+	[
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 23:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 23:
+	[]
+
+
+	~~~~~ Round 24 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+---------------------------------------------------
+Current Cards in Play: [
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0]
+---------------------------------------------------
+
+Category selected:
+
+	Firepower
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[4, 3]
+
+---------------------------------------------------
+Player 1 deck at end of round 24:
+	[
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0]
+---------------------------------------------------
+Player 2 deck at end of round 24:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 24:
+	[
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 4 deck at end of round 24:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 24:
+	[]
+
+
+	~~~~~ Round 25 ~~~~~
+---------------------------------------------------
+Communal Pile Contents: [
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Idris: 
+Size - 8
+Speed - 2
+Range - 7
+Firepower - 10
+Cargo - 6]
+---------------------------------------------------
+Current Cards in Play: [
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+
+Category selected:
+
+	Cargo
+
+---------------------------------------------------
+
+Values of selected category:
+
+	[8, 2]
+
+---------------------------------------------------
+Player 1 deck at end of round 25:
+	[
+
+Sabre: 
+Size - 2
+Speed - 7
+Range - 2
+Firepower - 5
+Cargo - 0, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Carrack: 
+Size - 6
+Speed - 2
+Range - 10
+Firepower - 4
+Cargo - 6, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hurricane: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 5
+Cargo - 0, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+m50: 
+Size - 1
+Speed - 10
+Range - 2
+Firepower - 2
+Cargo - 0, 
+
+Constellation: 
+Size - 4
+Speed - 5
+Range - 7
+Firepower - 3
+Cargo - 4, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2, 
+
+Avenger: 
+Size - 2
+Speed - 5
+Range - 4
+Firepower - 3
+Cargo - 2, 
+
+Hornet: 
+Size - 2
+Speed - 5
+Range - 3
+Firepower - 4
+Cargo - 1, 
+
+Orion: 
+Size - 10
+Speed - 1
+Range - 6
+Firepower - 2
+Cargo - 9, 
+
+Hawk: 
+Size - 1
+Speed - 3
+Range - 2
+Firepower - 4
+Cargo - 0, 
+
+350r: 
+Size - 1
+Speed - 9
+Range - 2
+Firepower - 3
+Cargo - 0, 
+
+Merchantman: 
+Size - 7
+Speed - 3
+Range - 5
+Firepower - 6
+Cargo - 8, 
+
+Vanguard: 
+Size - 3
+Speed - 4
+Range - 5
+Firepower - 5
+Cargo - 2]
+---------------------------------------------------
+Player 2 deck at end of round 25:
+	[]
+---------------------------------------------------
+Player 3 deck at end of round 25:
+	[]
+---------------------------------------------------
+Player 4 deck at end of round 25:
+	[]
+---------------------------------------------------
+Player 5 deck at end of round 25:
+	[]
+---------------------------------------------------
+Winner of game:
+	Player 1
 ---------------------------------------------------

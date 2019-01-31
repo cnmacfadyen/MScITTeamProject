@@ -15,7 +15,7 @@ public class Database {
 	private static int computerWon;
 	private static int humanWon;
 	private String dbName = "postgres";
-	private String dbPassword = "DTA123";
+	private String dbPassword = "2138525f";
 
 	public Database() {
 		createTable();

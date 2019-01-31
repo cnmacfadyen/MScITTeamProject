@@ -9,6 +9,7 @@ public class RoundObject {
 	private String category;
 	private ArrayList<Integer> categoryValues;
 	private ArrayList<Card> p1EndOfRoundHand, p2EndOfRoundHand, p3EndOfRoundHand,p4EndOfRoundHand, p5EndOfRoundHand;
+	protected static ArrayList<RoundObject> roundsArray = new ArrayList<RoundObject>();
 	
 	//complete deck, shuffled deck, starting player hands and winner of the game do not need to be inside this class, they are defined elsewhere
 	
@@ -42,4 +43,9 @@ public class RoundObject {
 
 		return output;
 	}
+	
+	public static ArrayList<RoundObject> getRoundsArray(){
+		return roundsArray;
+	}
+	
 }

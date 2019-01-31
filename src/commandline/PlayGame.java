@@ -14,15 +14,20 @@ import java.util.Collections;
 		private ArrayList<Card> shuffledDeck = new ArrayList<Card>(maxSize);
 		private ArrayList<Card> playerDeck = new ArrayList<Card>(maxSize);
 		private ArrayList<Card> communalPile = new ArrayList<Card>(maxSize);
-		private ArrayList<Card> p1Hand = new ArrayList<Card>();
-		private ArrayList<Card> p2Hand = new ArrayList<Card>();
-		private ArrayList<Card> p3Hand = new ArrayList<Card>();
-		private ArrayList<Card> p4Hand = new ArrayList<Card>();
-		private ArrayList<Card> p5Hand = new ArrayList<Card>();
+		protected ArrayList<Card> p1Hand = new ArrayList<Card>();
+		protected ArrayList<Card> p2Hand = new ArrayList<Card>();
+		protected ArrayList<Card> p3Hand = new ArrayList<Card>();
+		protected ArrayList<Card> p4Hand = new ArrayList<Card>();
+		protected ArrayList<Card> p5Hand = new ArrayList<Card>();
+		protected static ArrayList<Card> h1 = new ArrayList<Card>();
+		protected static ArrayList<Card> h2 = new ArrayList<Card>();
+		protected static ArrayList<Card> h3 = new ArrayList<Card>();
+		protected static ArrayList<Card> h4 = new ArrayList<Card>();
+		protected static ArrayList<Card> h5 = new ArrayList<Card>();
+		protected static ArrayList<Card> cp = new ArrayList<Card>();
 		private ArrayList<Card> currentCardsInRound = new ArrayList<Card>();
 		private ArrayList<Player> players = new ArrayList<Player>(5);
 		private ArrayList<Integer> categoryValues = new ArrayList<Integer>();
-		private ArrayList<RoundObject> roundsArray = new ArrayList<RoundObject>();
 		private boolean cardsToCommunal;
 		protected boolean gameOver = false;
 		protected boolean start = false;
@@ -42,7 +47,7 @@ import java.util.Collections;
 		protected Player p1, p2, p3, p4, p5;		
 		protected String selectedCategory;
 		protected int selectedCategoryValue;
-		protected Player winnerPlayer;		
+		protected static Player winnerPlayer;		
 		private int selectedCat;
 		
 	//---------------------------------------------------------------------------------------------------------------------------------------------//
@@ -54,6 +59,7 @@ import java.util.Collections;
 			selectOption(s);
 		}
 
+		@SuppressWarnings("unchecked")
 		public void selectOption(Scanner in) {
 			while(start==false) {
 			try {
@@ -66,7 +72,7 @@ import java.util.Collections;
 			}
 			else if(inputForOption.equals("2")) {
 				getPlayers().clear();
-				getRoundsArray().clear();
+				RoundObject.roundsArray.clear();
 				p1 = new Player("Player 1", 1);
 				p2 = new Player("Player 2", 2);
 				p3 = new Player("Player 3", 3);
@@ -83,6 +89,11 @@ import java.util.Collections;
 				p3Hand = c.dealCards(5, 3, getShuffledDeck());
 				p4Hand = c.dealCards(5, 4, getShuffledDeck());
 				p5Hand = c.dealCards(5, 5, getShuffledDeck());
+				h1 = (ArrayList<Card>) p1Hand.clone();
+				h2 = (ArrayList<Card>) p2Hand.clone();
+				h3 = (ArrayList<Card>) p3Hand.clone();
+				h4 = (ArrayList<Card>) p4Hand.clone();
+				h5 = (ArrayList<Card>) p5Hand.clone();
 				playFirstRound();
 				
 			}
@@ -99,6 +110,7 @@ import java.util.Collections;
 			}
 		}
 		
+		@SuppressWarnings("unchecked")
 		public void playFirstRound() {
 			//start new game
 			int r1SelectedCat = 0;
@@ -130,10 +142,18 @@ import java.util.Collections;
 			else {
 				System.out.println("The following cards have been added to the communal pile: " + getCurrentCardsInRound());
 			}
-			RoundObject firstRound = new RoundObject(1, communalPile, currentCardsInRound, selectedCategoryName, categoryValues, p1Hand, p2Hand, p3Hand, p4Hand, p5Hand);
-			roundsArray.add(firstRound);
+			ArrayList<Integer> v = (ArrayList<Integer>)getCategoryValues().clone();
+			cp = (ArrayList<Card>)getCommunalPile().clone();
 			cardsRemaining();
 			updateHands();
+			ArrayList<Card>h1 = (ArrayList<Card>) p1Hand.clone();
+			ArrayList<Card>h2 = (ArrayList<Card>) p2Hand.clone();
+			ArrayList<Card>h3 = (ArrayList<Card>) p3Hand.clone();
+			ArrayList<Card>h4 = (ArrayList<Card>) p4Hand.clone();
+			ArrayList<Card>h5 = (ArrayList<Card>) p5Hand.clone();
+			ArrayList<Card>cC = (ArrayList<Card>) getCurrentCardsInRound().clone();
+			RoundObject firstRound = new RoundObject(1, cp, cC, catName, v, h1, h2, h3, h4, h5);
+			RoundObject.roundsArray.add(firstRound);
 			start = true;
 			
 		}
@@ -475,6 +495,7 @@ import java.util.Collections;
 			}
 		}
 		
+		@SuppressWarnings("unchecked")
 		public void playRemainingRounds() {
 			int counter = 2;
 			while (players.size() > 1) {
@@ -539,14 +560,22 @@ import java.util.Collections;
 				}
 				else {
 					System.out.println("The following cards have been added to the communal pile: " + getCurrentCardsInRound());
-				}				
-				RoundObject roundDetails = new RoundObject(counter, getCommunalPile(), getCurrentCardsInRound(), selectedCategoryName, getCategoryValues(), getP1Deck(), getP2Deck(), getP3Deck(), getP4Deck(), getP5Deck());
-				roundsArray.add(roundDetails);
+				}
+				ArrayList<Card>cC = (ArrayList<Card>) getCurrentCardsInRound().clone();
+				ArrayList<Integer> v = (ArrayList<Integer>)getCategoryValues().clone();
 				updateHands();
 				cardsRemaining();
+				ArrayList<Card>h1 = (ArrayList<Card>) getP1Deck().clone();
+				ArrayList<Card>h2 = (ArrayList<Card>) getP2Deck().clone();
+				ArrayList<Card>h3 = (ArrayList<Card>) getP3Deck().clone();
+				ArrayList<Card>h4 = (ArrayList<Card>) getP4Deck().clone();
+				ArrayList<Card>h5 = (ArrayList<Card>) getP5Deck().clone();
+				ArrayList<Card>cp = (ArrayList<Card>)getCommunalPile().clone();
+				RoundObject roundDetails = new RoundObject(counter, cp, cC, getCategoryName(), v, h1, h2, h3, h4, h5);
+				RoundObject.roundsArray.add(roundDetails);
 				System.out.println(p1Hand.size() + " " + p2Hand.size() + " " + p3Hand.size()+ " " + p4Hand.size()+ " " + p5Hand.size());
 				System.out.println();
-				System.out.println(getRoundsArray().size());
+				System.out.println(RoundObject.roundsArray.size());
 				System.out.println(getPlayers().size());
 				counter++;
 				if (getPlayers().size()==1) {
@@ -555,20 +584,22 @@ import java.util.Collections;
 					gameOver = true;			
 				}
 			}
-		}		
+		}
 		
 		public ArrayList<Player> getPlayers() {
 			return players;
 		}
 		
-		public Player getWinningPlayer() {
+		public static Player getWinningPlayer() {
 			return winnerPlayer;
 		}
-		public ArrayList<RoundObject> getRoundsArray(){
-			return roundsArray;
-		}
+	
 		
 		public ArrayList<Card> getCommunalPile() {
 			return communalPile;
 		}
+		public String getCategoryName() {
+			return selectedCategoryName;
+		}
+		
 }

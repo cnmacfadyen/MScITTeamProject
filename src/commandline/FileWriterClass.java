@@ -9,6 +9,7 @@ public class FileWriterClass {
 	FileWriter writeToLog;
 	Card c = new Card();
 	PlayGame gp = new PlayGame();
+	
 	public void returnTrumpsLog() {
 		try {
 			 writeToLog = new FileWriter(log, false);
@@ -16,33 +17,26 @@ public class FileWriterClass {
 					 		  "\n---------------------------------------------------\n" +
 					 		  "Contents of shuffled deck:\n\t" + gp.getShuffledDeck() +
 					 		 "\n---------------------------------------------------\n" +
-					 		  "Player 1 deck (Human):\n\t" + gp.getP1Deck() +
+					 		  "Player 1 deck (Human):\n\t" + PlayGame.h1 +
 					 		 "\n---------------------------------------------------\n" +
-					 		  "Player 2 deck (AI):\n\t" + gp.getP2Deck() +
+					 		  "Player 2 deck (AI):\n\t" + PlayGame.h2 +
 					 		 "\n---------------------------------------------------\n" +
-					 		  "Player 3 deck (AI):\n\t" + gp.getP3Deck() +
+					 		  "Player 3 deck (AI):\n\t" + PlayGame.h3 +
 					 		 "\n---------------------------------------------------\n" +
-					 		  "Player 4 deck (AI):\n\t" + gp.getP4Deck() +
+					 		  "Player 4 deck (AI):\n\t" + PlayGame.h4 +
 					 		 "\n---------------------------------------------------\n" +
-					 		  "Player 5 deck (AI):\n\t" + gp.getP5Deck() +
+					 		  "Player 5 deck (AI):\n\t" + PlayGame.h5 +
 					 		 "\n---------------------------------------------------\n");
-//			while (gameOver = false) { //I think this stuff might have to come from the database, but I'm not 100%
-//			 Might make sense to use a boolean for this bit and the winner as well
-//				writeToLog.write(fd.getRoundNumber()+ ":\n Communal Contents:\n\t" + fd.getCommunalContents() +
-//								"\n---------------------------------------------------\nCards in play:\n\t" + fd.cardsInPlay() +
-//								"\n---------------------------------------------------\nCategory selected:\n\t" + fd.categorySelected() +
-//								"\n---------------------------------------------------\nValues of selected category\n\t" + gp.getCategoryValues()+
-//								"\n---------------------------------------------------\nNew deck contents:\n\t" + fd.newDeckContents() +
-//								"\n---------------------------------------------------\n");
-////			}
-			 for (int i = 0; i< gp.getRoundsArray().size(); i++) {
-				 writeToLog.write(gp.getRoundsArray().get(i).toString());
+			 
+			 
+			 for (int i = 0; i< RoundObject.getRoundsArray().size(); i++) {
+				 writeToLog.write(RoundObject.getRoundsArray().get(i).toString());
 			 }
 			
-//			if (gameOver = true) {
-			//	writeToLog.write("Winner of game:\n\t" + gp.winnerPlayer.getPlayerName() +
-			//					"\n---------------------------------------------------\n");
-//			}
+				writeToLog.write("\n---------------------------------------------------\n" +
+								"Winner of game:\n\t" + PlayGame.getWinningPlayer().getPlayerName() +
+								"\n---------------------------------------------------\n");
+
 		}catch (IOException e) { 
 			e.printStackTrace();
 		}finally {
