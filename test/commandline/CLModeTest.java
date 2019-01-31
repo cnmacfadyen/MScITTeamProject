@@ -18,11 +18,6 @@ class CLModeTest {
 	public void init() {
 		
 	}
-
-	@Test
-	public void testStartingPlayerSelection() {
-		
-	}
 	
 	@Test
 	public void testGetHighestValue() {
@@ -38,11 +33,6 @@ class CLModeTest {
 	@Test
 	public void testAddToCommunalPile() {
 
-		
-	}
-	
-	@Test
-	public void testRemoveFromCommunalPile() {
 		
 	}
 	
@@ -69,15 +59,6 @@ class CLModeTest {
 	}
 	
 	
-	
-	@Test
-	public void testPlayNewGameOption() {
-		//Scanner in = new Scanner(System.in);
-		//assertEquals(2, PlayGame.selectOption(in));
-
-	}
-	
-	
 	@Test
 	public void testViewStatisticsOption() {
 		
@@ -85,7 +66,7 @@ class CLModeTest {
 	}
 	
 	@Test
-	public void testCategorySelection() {
+	public void testCategorySelectionForHumanPlayer() {
 		System.out.println("\nThis is to test the selection of a category for the human Player" );
 
 		pg.indx = 0;
@@ -95,21 +76,5 @@ class CLModeTest {
 
 	}
 	
-	//should there be a method for each AI player to test this? or can we keep changing the number of the indx which represent the AI player everytime we test?
-	@Test
-	public void testSelectingCategoryForAIPlayer() {
-		System.out.println("\nThis is to test the selection of a category for any of the AI Players" );
-		
-		pg.indx = 3; // AI Player number 1-4
-		pg.selectedCategoryValue = pg.selectCategory();
-		assertNotNull(pg.selectedCategoryValue);
-		System.out.println("AI player:  " + pg.indx +  " \nselected the category: " + pg.selectedCategoryValue);
-	}
-	
-	@Test
-	public void testShufflingCards() {
-		
-	}
-
 	
 }

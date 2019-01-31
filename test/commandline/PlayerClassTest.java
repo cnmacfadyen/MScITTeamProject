@@ -2,10 +2,7 @@ package commandline;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Before;
 import org.junit.jupiter.api.Test;
-
-import junit.framework.Assert;
 
 class PlayerClassTest {
 
@@ -15,10 +12,6 @@ class PlayerClassTest {
 	//when
 	Player player = new Player(playerName, playerNumber);
 	
-	@Before
-	void init() {
-		
-	}
 	
 	@Test
 	void testToGetPlayerName() {
