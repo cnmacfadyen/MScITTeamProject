@@ -24,7 +24,7 @@ class CardClassTest {
 	
 	@Test
 	void testDeckHasCards() {
-		assertNotNull("there is no cards in deck", deck);
+		assertNotNull("there are no cards in deck", deck);
 	}
 	
 	
