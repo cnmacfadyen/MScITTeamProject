@@ -8,7 +8,6 @@ import java.util.Collections;
 	public class PlayGame {	
 		protected Database db = new Database();
 		private Card c = new Card();
-		//protected FileWriterClass f = new FileWriterClass();
 		private final int maxSize = 40; //size of the ArrayList
 		protected ArrayList<Card> deck =  (ArrayList<Card>) c.getDeck().clone();
 		private ArrayList<Card> unshuffledDeck = new ArrayList<Card>(maxSize);
@@ -108,6 +107,7 @@ import java.util.Collections;
 			System.out.println("Here is your card: " + p1Hand.get(0).toString());
 			System.out.println("The categories are as follows:\n0. " + c.getCat1Name() + "\n1. " + c.getCat2Name() + "\n2. " +
 								c.getCat3Name() + "\n3. " + c.getCat4Name() + "\n4. " + c.getCat5Name());
+			//throws a null pointer exception when the input is incorrect and there is a draw in the first round
 			r1SelectedCat = selectCategory();
 			if(r1SelectedCat == 0) {
 				catName = c.getCat1Name();						

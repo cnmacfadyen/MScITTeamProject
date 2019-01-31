@@ -7,7 +7,6 @@ public class FileWriterClass {
 	
 	private String log = "toptrumps.log";
 	FileWriter writeToLog;
-	FakeData fd = new FakeData();
 	Card c = new Card();
 	PlayGame gp = new PlayGame();
 	public void returnTrumpsLog() {
@@ -41,8 +40,8 @@ public class FileWriterClass {
 			 }
 			
 //			if (gameOver = true) {
-				writeToLog.write("Winner of game:\n\t" + fd.returnWinner() +
-								"\n---------------------------------------------------\n");
+			//	writeToLog.write("Winner of game:\n\t" + gp.winnerPlayer.getPlayerName() +
+			//					"\n---------------------------------------------------\n");
 //			}
 		}catch (IOException e) { 
 			e.printStackTrace();
