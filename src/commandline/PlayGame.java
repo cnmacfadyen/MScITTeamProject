@@ -5,75 +5,65 @@ import java.util.Collections;
 	import java.util.Random;
 	import java.util.Scanner;
 
-	public class PlayGame {
-		static Database db = new Database();
-		static Card c = new Card();
-		 //this is to test the methods in this class...
-		static ArrayList<Card> deck =  (ArrayList<Card>) c.getDeck().clone();
-		static FileWriterClass f = new FileWriterClass();
-		static int maxSize = 40; //size of the ArrayList
+	public class PlayGame {	
+		protected Database db = new Database();
+		private Card c = new Card();
+		//protected FileWriterClass f = new FileWriterClass();
+		private final int maxSize = 40; //size of the ArrayList
+		protected ArrayList<Card> deck =  (ArrayList<Card>) c.getDeck().clone();
 		private ArrayList<Card> unshuffledDeck = new ArrayList<Card>(maxSize);
-		private static ArrayList<Card> shuffledDeck = new ArrayList<Card>(maxSize);
+		private ArrayList<Card> shuffledDeck = new ArrayList<Card>(maxSize);
 		private ArrayList<Card> playerDeck = new ArrayList<Card>(maxSize);
-		private static ArrayList<Card> communalPile = new ArrayList<Card>(maxSize);
-		private static ArrayList<Card> p1Hand = new ArrayList<Card>();
-		private static ArrayList<Card> p2Hand = new ArrayList<Card>();
-		private static ArrayList<Card> p3Hand = new ArrayList<Card>();
-		private static ArrayList<Card> p4Hand = new ArrayList<Card>();
-		private static ArrayList<Card> p5Hand = new ArrayList<Card>();
-		private static ArrayList<Card> currentCardsInRound = new ArrayList<Card>();
-		private static ArrayList<Player> players = new ArrayList<Player>(5);
-		private static ArrayList<Integer> categoryValues = new ArrayList<Integer>();
-		private static ArrayList<RoundObject> roundsArray = new ArrayList<RoundObject>();
-		private static boolean cardsToCommunal;
-		private static boolean gameOver = false;
-		private static boolean keepPlaying = true;
-		private static String selectedCategoryName;
+		private ArrayList<Card> communalPile = new ArrayList<Card>(maxSize);
+		private ArrayList<Card> p1Hand = new ArrayList<Card>();
+		private ArrayList<Card> p2Hand = new ArrayList<Card>();
+		private ArrayList<Card> p3Hand = new ArrayList<Card>();
+		private ArrayList<Card> p4Hand = new ArrayList<Card>();
+		private ArrayList<Card> p5Hand = new ArrayList<Card>();
+		private ArrayList<Card> currentCardsInRound = new ArrayList<Card>();
+		private ArrayList<Player> players = new ArrayList<Player>(5);
+		private ArrayList<Integer> categoryValues = new ArrayList<Integer>();
+		private ArrayList<RoundObject> roundsArray = new ArrayList<RoundObject>();
+		private boolean cardsToCommunal;
+		protected boolean gameOver = false;
+		protected boolean start = false;
+		protected boolean keepPlaying = true;
+		private String selectedCategoryName;		
+		private int numOfGamesPlayed =0; // number of games a player played.
+		private int totalScore; 	// total score of each game for a player.
+		private int drawRound;
+		protected static int totalRounds;
+		private boolean playNewGame, quitGame; // when user select to play again/new game
+		private int humanRounds, ai1Rounds, ai2Rounds, ai3Rounds, ai4Rounds;
+		protected int totalDrawRounds;
+		protected int indx = 0; // this will be used in selectStartingPlayer method and selectCategory method.
+		private Random random = new Random();
+		private int selectRandom = random.nextInt(5); //for selecting a starting player.
+		private Player x = new Player("Player X", 10);
+		protected Player p1, p2, p3, p4, p5;		
+		protected String selectedCategory;
+		protected int selectedCategoryValue;
+		protected Player winnerPlayer;		
+		private int selectedCat;
 		
-		int numOfGamesPlayed =0; // number of games a player played.
-		int totalScore; 	// total score of each game for a player.
-		static private int drawRound;
-		// in player class we'll need score count for each player.
-		static boolean start = false;
-		static int totalRounds;
-		boolean playNewGame; // when user select to play again/new game
-		boolean quitGame;	//when user quits the game.
-		//boolean veiwStatistics; //when user wants to view statistics of previous games.
-		private int humanRounds;
-		private int ai1Rounds;
-		private int ai2Rounds;
-		private int ai3Rounds;
-		private int ai4Rounds;
-		static int totalDrawRounds;
-		static int indx =0; // this will be used in selectStartingPlayer method and selectCategory method.
-		static Random random = new Random();
-		static int selectRandom = random.nextInt(5); //for selecting a starting player.
-		static Player x = new Player("Player X", 10);
-		static Player p1, p2, p3, p4, p5;
+	//---------------------------------------------------------------------------------------------------------------------------------------------//
 		
-		String selectedCategory;
-		int selectedCategoryValue;
-		static Player winnerPlayer;
-		
-		static int selectedCat;
-		
-		//-------------------------------------------------------------
-		public static void openApplication() {
+		public void openApplication() {
 			System.out.println("Welcome to Top Trumps, Player 1. Would you like to play a game or view statistics from previous games?");
 			System.out.println("Press 1 to view statistics, 2 to play a game. Press q at any time to quit.");
 			Scanner s = new Scanner(System.in);
 			selectOption(s);
 		}
 
-		public static void selectOption(Scanner in) {
+		public void selectOption(Scanner in) {
 			while(start==false) {
 			try {
 			String inputForOption = in.nextLine();
 			if(inputForOption.equals("1")) {
 				viewStatistics(true);
 				db.displayResults();
+				System.out.println("Press 1 to view statistics, 2 to play a game. Press q at any time to quit.");
 				start = false;
-				//do database stuff
 			}
 			else if(inputForOption.equals("2")) {
 				getPlayers().clear();
@@ -110,7 +100,7 @@ import java.util.Collections;
 			}
 		}
 		
-		public static void playFirstRound() {
+		public void playFirstRound() {
 			//start new game
 			int r1SelectedCat = 0;
 			String catName = "";
@@ -147,10 +137,8 @@ import java.util.Collections;
 			start = true;
 			
 		}
-		
-		// if user typed "q" or "Q" for input then the game is terminated. data is saved???
-		//we can also put this into the selectOption method as another condition for input.
-		public static void quit(Scanner in) {
+
+		public void quit(Scanner in) {
 			keepPlaying = false;
 				System.out.println("Goodbye.");
 				in.close();
@@ -159,10 +147,10 @@ import java.util.Collections;
 		
 		
 		public static void viewStatistics(boolean selectView) {
-			//connect to database for statistics ??
+			//connect to database for statistics 
 		}
 		
-		public static int selectStartingPlayer() {
+		public int selectStartingPlayer() {
 			Object startPlayer = null;
 				//get player 1 and set current player to player 1  (Human Player)
 				if(selectRandom == 0) {
@@ -195,7 +183,7 @@ import java.util.Collections;
 			
 		}
 
-		public static int selectCategory() {
+		public int selectCategory() {
 			int selectRandomCategory = random.nextInt(5);
 			selectedCat =1;
 			//human player
@@ -203,8 +191,6 @@ import java.util.Collections;
 				Scanner in = new Scanner(System.in);
 				String userInput = in.nextLine();
 				System.out.println("Please select a category.");
-				//will probably need a try-catch here to catch an input mismatch exception
-				//works for entering a wrong number but not a wrong letter
 				if(userInput.equals("0") || userInput.equals("1") ||userInput.equals("2") ||userInput.equals("3") ||userInput.equals("4")) {
 					selectedCat = Integer.parseInt(userInput);
 					winnerPlayer = p1;
@@ -240,51 +226,43 @@ import java.util.Collections;
 		}
 
 		
-		public static void addToCommunalPile(Card c) {	
+		public void addToCommunalPile(Card c) {	
 			//adding the specified card to the communalPile ArrayList.
 			communalPile.add(c);
 			
 		}
 		
-		public static ArrayList<Integer> getCategoryValues() { //creating newA instead of returning highest value
+		public ArrayList<Integer> getCategoryValues() { //creating an array of integers for the selected category instead of returning highest value
 			categoryValues.clear();
 			if(selectedCat == 0) {
 				for (int i = 0; i < getCurrentCardsInRound().size(); i++) {
-					categoryValues.add(getCurrentCardsInRound().get(i).getC1());
-					
+					categoryValues.add(getCurrentCardsInRound().get(i).getC1());					
 				}
-			}
-			
+			}			
 			if(selectedCat == 1) {
 				for (int i = 0; i < getCurrentCardsInRound().size(); i++) {
 					categoryValues.add(getCurrentCardsInRound().get(i).getC2());
 				}
 			}
-
 			if(selectedCat == 2) {
 				for (int i = 0; i < getCurrentCardsInRound().size(); i++) {
 					categoryValues.add(getCurrentCardsInRound().get(i).getC3());
-				}
-				
+				}	
 			}
-
 			if(selectedCat == 3) {
 				for (int i = 0; i < getCurrentCardsInRound().size(); i++) {
 					categoryValues.add(getCurrentCardsInRound().get(i).getC4());
 				}
 			}
-	
 			if(selectedCat == 4) {
 				for (int i = 0; i < getCurrentCardsInRound().size(); i++) {
 					categoryValues.add(getCurrentCardsInRound().get(i).getC5());
-				}
-		
-			}
-		
+				}		
+			}		
 			return categoryValues;
 		}
 		
-		public static void cardsRemaining() {
+		public void cardsRemaining() {
 			p1CardCheck();
 			p2CardCheck();
 			p3CardCheck();
@@ -294,7 +272,7 @@ import java.util.Collections;
 		
 
 		
-		public static void p1CardCheck() {
+		public void p1CardCheck() {
 			if (getPlayers().contains(p1)) {
 				if(getP1Deck().size() == 0) {
 					getPlayers().remove(p1);
@@ -302,7 +280,7 @@ import java.util.Collections;
 			}
 		}
 		
-		public static void p2CardCheck() {
+		public void p2CardCheck() {
 			if (getPlayers().contains(p2)) {
 				if(getP2Deck().size() == 0) {
 					getPlayers().remove(p2);
@@ -310,7 +288,7 @@ import java.util.Collections;
 			}
 		}
 		
-		public static void p3CardCheck() {
+		public void p3CardCheck() {
 			if (getPlayers().contains(p3)) {
 				if(getP3Deck().size() == 0) {
 					getPlayers().remove(p3);
@@ -318,7 +296,7 @@ import java.util.Collections;
 			}
 		}
 		
-		public static void p4CardCheck() {
+		public void p4CardCheck() {
 			if (getPlayers().contains(p4)) {
 				if(getP4Deck().size() == 0) {
 					getPlayers().remove(p4);
@@ -326,7 +304,7 @@ import java.util.Collections;
 			}
 		}
 		
-		public static void p5CardCheck() {
+		public void p5CardCheck() {
 			if(getPlayers().contains(p5)) {
 				if(getP5Deck().size() == 0) {
 					getPlayers().remove(p5);
@@ -342,18 +320,17 @@ import java.util.Collections;
 					if(max < a.get(i)) {
 						max = a.get(i);
 						element = i;
-				}
-					
+				}					
 			}
 		}
 			return element;
 	}
 		
-		public static Card winningCard() {
+		public Card winningCard() {
 			 return currentCardsInRound.get(returnHighestIndex(getCategoryValues()));
 		}
 		
-		public static void checkDuplicate() {
+		public void checkDuplicate() {
 			int arraySize = categoryValues.size() - 1 ;
 			Collections.sort(categoryValues);
 			if(categoryValues.get(arraySize).equals(categoryValues.get(arraySize-1))) {
@@ -370,34 +347,32 @@ import java.util.Collections;
 				winnerPlayer = new Player(players.get(returnHighestIndex(getCategoryValues())).getPlayerName(), players.get(returnHighestIndex(getCategoryValues())).getPlayerNumber());	
 				addWinnerCards();
 			}
-
 		}
 		
-		public static ArrayList<Card> getShuffledDeck() {
+		public ArrayList<Card> getShuffledDeck() {
 			Collections.shuffle(deck);
 			shuffledDeck = new ArrayList<Card>();
 			shuffledDeck = deck;
-			return shuffledDeck;
-			
+			return shuffledDeck;		
 		}
 	
-		public static ArrayList<Card> getP1Deck() {
+		public ArrayList<Card> getP1Deck() {
 			return p1Hand;
 		}
-		public static ArrayList<Card> getP2Deck() {
+		public ArrayList<Card> getP2Deck() {
 			return p2Hand;
 		}
-		public static ArrayList<Card> getP3Deck() {
+		public ArrayList<Card> getP3Deck() {
 			return p3Hand;
 		}
-		public static ArrayList<Card> getP4Deck() {
+		public ArrayList<Card> getP4Deck() {
 			return p4Hand;
 		}
-		public static ArrayList<Card> getP5Deck() {
+		public ArrayList<Card> getP5Deck() {
 			return p5Hand;
 		}
 		
-		public static ArrayList<Card> getCurrentCardsInRound() {
+		public ArrayList<Card> getCurrentCardsInRound() {
 			currentCardsInRound.clear();
 			if(getP1Deck().size()>0) {
 				currentCardsInRound.add(getP1Deck().get(0));
@@ -417,37 +392,37 @@ import java.util.Collections;
 			return currentCardsInRound;			
 		}
 		
-		public static ArrayList<Card> updatedP1Deck() {
+		public ArrayList<Card> updatedP1Deck() {
 			if (getP1Deck().size() > 0) {
 				getP1Deck().remove(0);
 			}
 			return p1Hand;
 		}
-		public static ArrayList<Card> updatedP2Deck() {
+		public ArrayList<Card> updatedP2Deck() {
 			if (getP2Deck().size() > 0) {
 				getP2Deck().remove(0);
 			}
 			return p2Hand;
 		}
-		public static ArrayList<Card> updatedP3Deck() {
+		public ArrayList<Card> updatedP3Deck() {
 			if (getP3Deck().size() > 0) {
 				getP3Deck().remove(0);
 			}
 			return p3Hand;
 		}
-		public static ArrayList<Card> updatedP4Deck() {
+		public ArrayList<Card> updatedP4Deck() {
 			if (getP4Deck().size() > 0) {
 				getP4Deck().remove(0);
 			}
 			return p4Hand;
 		}
-		public static ArrayList<Card> updatedP5Deck() {
+		public ArrayList<Card> updatedP5Deck() {
 			if (getP5Deck().size() > 0) {
 				getP5Deck().remove(0);
 			}
 			return p5Hand;
 		}
-		public static void updateHands() {
+		public void updateHands() {
 			if(getP1Deck().size()>0) {
 				updatedP1Deck();
 			}
@@ -465,7 +440,7 @@ import java.util.Collections;
 			}
 		}
 		
-		public static void addWinnerCards() {
+		public void addWinnerCards() {
 			if(cardsToCommunal == false) {		
 				if(getWinningPlayer().getPlayerName().equals(p1.getPlayerName())) {
 					p1.getPlayerWonRound();
@@ -500,7 +475,7 @@ import java.util.Collections;
 			}
 		}
 		
-		public static void playRemainingRounds() {
+		public void playRemainingRounds() {
 			int counter = 2;
 			while (players.size() > 1) {
 				System.out.println("\nPlayer " + (getWinningPlayer().getPlayerNumber()) + " will select the next category.");
@@ -556,25 +531,19 @@ import java.util.Collections;
 						selectedCategoryName = c.getCat5Name();
 					}
 				}
-//			**********Need to look at this so that pressing q doesn't cause an error
 				System.out.println("\nThe chosen category is " + selectedCat + ": " + selectedCategoryName);
 				getCategoryValues();
 				checkDuplicate();
 				if (cardsToCommunal == false) {
 					System.out.println("\nThis was the winning card:" + winningCard());
-//					System.out.println("\nThe winner of the round is Player " + players.get(returnHighestIndex(getCategoryValues())).getPlayerName());
-					//winnerPlayer = new Player(players.get(returnHighestIndex(getCategoryValues())).getPlayerName(), players.get(returnHighestIndex(getCategoryValues())).getPlayerNumber());
-				
 				}
 				else {
 					System.out.println("The following cards have been added to the communal pile: " + getCurrentCardsInRound());
-				}
-				
+				}				
 				RoundObject roundDetails = new RoundObject(counter, getCommunalPile(), getCurrentCardsInRound(), selectedCategoryName, getCategoryValues(), getP1Deck(), getP2Deck(), getP3Deck(), getP4Deck(), getP5Deck());
 				roundsArray.add(roundDetails);
 				updateHands();
 				cardsRemaining();
-			;
 				System.out.println(p1Hand.size() + " " + p2Hand.size() + " " + p3Hand.size()+ " " + p4Hand.size()+ " " + p5Hand.size());
 				System.out.println();
 				System.out.println(getRoundsArray().size());
@@ -582,48 +551,24 @@ import java.util.Collections;
 				counter++;
 				if (getPlayers().size()==1) {
 					totalDrawRounds = drawRound;
-					totalRounds = counter;
-					
-					gameOver = true;
-				
-					
+					totalRounds = counter;	
+					gameOver = true;			
 				}
-				
 			}
-			
-		}
+		}		
 		
-		
-		public static ArrayList<Player> getPlayers() {
+		public ArrayList<Player> getPlayers() {
 			return players;
 		}
 		
-		public static Player getWinningPlayer() {
+		public Player getWinningPlayer() {
 			return winnerPlayer;
 		}
-		public static ArrayList<RoundObject> getRoundsArray(){
+		public ArrayList<RoundObject> getRoundsArray(){
 			return roundsArray;
 		}
 		
-		public static ArrayList<Card> getCommunalPile() {
+		public ArrayList<Card> getCommunalPile() {
 			return communalPile;
 		}
-		
-		public static void main(String[] args) {
-			openApplication();
-			while (keepPlaying) {
-			if (start == true) {
-					playRemainingRounds();
-				if(gameOver == true) {
-					System.out.println("The winner of the game is: " + winnerPlayer.getPlayerName());
-					db.postResultsToDatabase(totalDrawRounds, winnerPlayer.getPlayerNumber(), totalRounds, p1.getWonRound(), p2.getWonRound(),
-							p3.getWonRound(), p4.getWonRound(), p5.getWonRound());
-					start = false;
-					System.out.println("Press 1 to view statistics, 2 to play a game. Press q at any time to quit.");
-					Scanner s = new Scanner(System.in);
-					selectOption(s);
-				}
-			}
-		}
-	}
 }
