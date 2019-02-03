@@ -62,13 +62,13 @@ import java.util.Collections;
 		@SuppressWarnings("unchecked")
 		public void selectOption(Scanner in) {
 			while(start==false) {
-			try {
-			String inputForOption = in.nextLine();
-			if(inputForOption.equals("1")) {
-				viewStatistics(true);
-				db.displayResults();
-				System.out.println("Press 1 to view statistics, 2 to play a game. Press q at any time to quit.");
-				start = false;
+				try {
+				String inputForOption = in.nextLine();
+				if(inputForOption.equals("1")) {
+					viewStatistics(true);
+					db.displayResults();
+					System.out.println("Press 1 to view statistics, 2 to play a game. Press q at any time to quit.");
+					start = false;
 			}
 			else if(inputForOption.equals("2")) {
 				getPlayers().clear();
