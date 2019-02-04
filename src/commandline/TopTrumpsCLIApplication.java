@@ -15,8 +15,9 @@ public class TopTrumpsCLIApplication {
 	public static void main(String[] args) {
 
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
-		//if (args[0].equalsIgnoreCase("true")) writeGameLogsToFile=true; // Command line selection
-		
+		if (args[0].equalsIgnoreCase("true")) {
+			writeGameLogsToFile=true; // Command line selection	
+		}
 		// State
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 		
@@ -38,21 +39,17 @@ public class TopTrumpsCLIApplication {
 					System.out.println("The winner of the game is: " + game.winnerPlayer.getPlayerName());
 					game.db.postResultsToDatabase(game.totalDrawRounds, game.winnerPlayer.getPlayerNumber(), game.totalRounds, game.p1.getWonRound(), game.p2.getWonRound(),
 							game.p3.getWonRound(), game.p4.getWonRound(), game.p5.getWonRound());
-					FileWriterClass f = new FileWriterClass();
-					f.returnTrumpsLog();
+					if(writeGameLogsToFile == true) {
+						FileWriterClass f = new FileWriterClass();
+						f.returnTrumpsLog();
+					}
 					game.start = false;
 					System.out.println("Press 1 to view statistics, 2 to play a game. Press q at any time to quit.");
 					Scanner s = new Scanner(System.in);
 					game.selectOption(s);
 
 				}
-
 			}
-
 		}
 	}			
 }
-
-
-
-
