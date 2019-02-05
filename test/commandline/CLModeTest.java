@@ -54,7 +54,7 @@ class CLModeTest {
 		
 		int counter = currentCardsInRound.size();
 		int cb = categoryValues.size()-1;
-		boolean isDuplicate;
+		boolean isDuplicate =false;
 		for(int i=counter; i> 0; i--) {
 			if(categoryValues.get(cb).equals(categoryValues.get(cb-1))) {
 				pg.checkDuplicate();
@@ -62,8 +62,8 @@ class CLModeTest {
 				//assertTrue(isDuplicate);
 			}
 			else {
-				isDuplicate = false;
-				assertTrue("there are no duplicates",isDuplicate);
+				//isDuplicate = false;
+				assertFalse("there are no duplicates",isDuplicate);
 			}
 		}
 		

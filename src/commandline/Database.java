@@ -21,6 +21,17 @@ public class Database {
 		createTable();
 	}
 
+	public int getAverageDraws() {
+		return (int) totalAverageDraws;
+	}
+	
+	public int setAverageDraws(int avg) {
+		return (int) (this.totalAverageDraws =  avg);
+	}
+	
+	public int getTotalGames() {
+		return totalGames;
+	}
 	public void displayResults() {
 		System.out.println("Game statistics: ");
 		System.out.println("Number of Games: " + totalGames());

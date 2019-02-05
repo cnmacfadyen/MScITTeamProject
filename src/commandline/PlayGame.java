@@ -59,6 +59,28 @@ import java.util.Collections;
 			selectOption(s);
 		}
 
+		public int getTotalRound() {
+			return totalRounds;
+		}
+		
+		public int getHumanRounds() {
+			return humanRounds;
+		}
+		
+		public int getAi1Rounds() {
+			return ai1Rounds;
+		}
+		
+		public int getAi2Rounds() {
+			return ai2Rounds;
+		}
+		
+		public int getAi3Rounds() {
+			return ai3Rounds;
+		}
+		public int getAi4Rounds() {
+			return ai4Rounds;
+		}
 		@SuppressWarnings("unchecked")
 		public void selectOption(Scanner in) {
 			while(start==false) {
@@ -593,7 +615,7 @@ import java.util.Collections;
 		public static Player getWinningPlayer() {
 			return winnerPlayer;
 		}
-	
+
 		
 		public ArrayList<Card> getCommunalPile() {
 			return communalPile;
