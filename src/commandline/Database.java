@@ -11,7 +11,7 @@ public class Database {
 	Statement stmt = null;
 	private static int totalGames;
 	private static int highestRounds;
-	private static double totalAverageDraws;
+	private  double totalAverageDraws;
 	private static int computerWon;
 	private static int humanWon;
 	private String dbName = "postgres";
@@ -26,7 +26,11 @@ public class Database {
 	}
 	
 	public int setAverageDraws(int avg) {
-		return (int) (this.totalAverageDraws =  avg);
+		return (int) (totalAverageDraws =  avg);
+	}
+	
+	public int setTotalGames(int tgame) {
+		return totalGames = tgame;
 	}
 	
 	public int getTotalGames() {

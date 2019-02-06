@@ -59,6 +59,31 @@ import java.util.Collections;
 			selectOption(s);
 		}
 
+		//setters ------------------------------------------------
+		public int setTotalRound(int totalR) {
+			return this.totalRounds = totalR;
+		}
+		
+		public int setHumanRounds(int humanR) {
+			return this.humanRounds = humanR;
+		}
+		
+		public int setAi1Rounds(int ai1) {
+			return this.ai1Rounds = ai1;
+		}
+		
+		public int setAi2Rounds(int ai2) {
+			return this.ai2Rounds = ai2;
+		}
+		
+		public int setAi3Rounds(int ai3) {
+			return this.ai3Rounds = ai3;
+		}
+		public int setAi4Rounds(int ai4) {
+			return this.ai4Rounds = ai4;
+		}
+		
+		//getters --------------------------------------------
 		public int getTotalRound() {
 			return totalRounds;
 		}
@@ -81,6 +106,7 @@ import java.util.Collections;
 		public int getAi4Rounds() {
 			return ai4Rounds;
 		}
+		
 		@SuppressWarnings("unchecked")
 		public void selectOption(Scanner in) {
 			while(start==false) {
@@ -616,6 +642,13 @@ import java.util.Collections;
 			return winnerPlayer;
 		}
 
+		public int setWinningPlayerNumber(int playerNumber) {
+			return winnerPlayer.setPlayerNumber(playerNumber);
+		}
+		
+		public int getWinningPlayerNumber() {
+			return winnerPlayer.getPlayerNumber();
+		}
 		
 		public ArrayList<Card> getCommunalPile() {
 			return communalPile;

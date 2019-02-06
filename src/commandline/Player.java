@@ -8,6 +8,10 @@ public class Player {
 	private String playerName;
 	private int wonRound;
 	
+	 public Player() {
+		 
+	 }
+	 
 	 public Player(String playerName, int playerNumber) {
 		 this.playerName=playerName;
 		 this.playerNumber=playerNumber;
@@ -82,8 +86,8 @@ public class Player {
 		 return playerNumber;
 	 }
 	 
-	 public void setPlayerNumber(int num) {
-		 playerNumber=num;  
+	 public int setPlayerNumber(int num) {
+		 return playerNumber=num;  
 	 }
 
 	public String getPlayerName() {
