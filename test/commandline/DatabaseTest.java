@@ -106,7 +106,8 @@ import java.sql.SQLException;
 				//assertEquals(1, pg.getWinningPlayerNumber());
 				
 				System.out.println(dbBefore.avgDraws()/dbBefore.totalGames());
-
+				dbBefore.deleteRow(3);
+				dbBefore.displayResults();
 			}
 			finally {
 				//toDeleteTable();
@@ -114,5 +115,11 @@ import java.sql.SQLException;
 				c.close();	
 			}
 		}
+
+		@BeforeClass
+		void deletee() {
+			
+		}
+	
 	
 }

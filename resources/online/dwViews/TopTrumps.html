@@ -121,7 +121,8 @@
 
 	</style>
 	<script>
-		
+				
+var cat = [0, 1, 2, 3, 4];
 		var category;
 		var value;
 		var click;
@@ -129,7 +130,7 @@
 		function selectAI(){
 			var aiPlayer=document.getElementById("mySelect");
 			value = aiPlayer.options[aiPlayer.selectedIndex].value;
-			alert(value);
+			alert("Number of players selected: "+value);
 			// return value;
 		}
 
@@ -176,7 +177,7 @@
 
 		function selectCat() {
 			var category = cat[Math.floor(Math.random()*cat.length)];
-			alert(category);
+			alert("Random category value is: " +category);
 		}
 </script>
 
