@@ -24,42 +24,43 @@ import java.sql.SQLException;
 		
 		Scanner inp = new Scanner(System.in);
 		
-//		@BeforeClass
-//		void toDeleteTable() throws SQLException {
-//			java.sql.Connection c = dbBefore.getConnection();
-//			c.setAutoCommit(false);
-//			try {
-//				PreparedStatement create = c.prepareStatement( "DELETE FROM gameresults");
-//				//int deletedRows = statement.executeUpdate(query);
-//				create.executeUpdate();
-//				
-//					//System.out.println("Rows deleted successfully");
-//			}
-//			
-//			finally {
-//				c.rollback();
-//				c.close();
-//			}
-//		}
-//	
+		@AfterClass
+		void toDeleteTable() throws SQLException {
+			java.sql.Connection c = dbBefore.getConnection();
+			c.setAutoCommit(false);
+			try {
+				
+				PreparedStatement create1 = c.prepareStatement( "DELETE FROM gameresults WHERE gameNumber=1");
+				PreparedStatement create2 = c.prepareStatement( "DELETE FROM gameresults WHERE gameNumber=2");
+				
+				create1.executeQuery();
+				create2.executeQuery();
+			}
+			
+			finally {
+				c.rollback();
+				c.close();
+			}
+		}
+	
 
 	
 		@Before
 		void insertOneGameWithThirdteenRounds() {
 			
-			dbBefore.postResultsToDatabase(dbBefore.setAverageDraws(2), 1, pg.setTotalRound(13), pg.setHumanRounds(2), pg.setAi1Rounds(4), pg.setAi2Rounds(2), pg.setAi3Rounds(3), pg.setAi4Rounds(2));
+			dbBefore.postResultsToDatabase(2, 1, pg.setTotalRound(15), pg.setHumanRounds(2), pg.setAi1Rounds(4), pg.setAi2Rounds(2), pg.setAi3Rounds(3), pg.setAi4Rounds(2));
 		}
 	
 		@Test
 		void testInsertOneGameMoreRounds() throws SQLException {
-		//	toDeleteTable();
+			//toDeleteTable();
 			java.sql.Connection c = dbBefore.getConnection();
 			c.setAutoCommit(false);
 			try {
-				
+				//totalNumofRounds/totalnumberofDraw = totalavgDraw
 				insertOneGameWithThirdteenRounds();
 				dbBefore.displayResults();
-				assertEquals(2, dbBefore.getAverageDraws());
+				assertEquals(2, dbBefore.avgDraws()/dbBefore.totalGames(),0);
 				//assertEquals(, dbBefore.getTotalGames());
 				assertEquals(2, pg.getHumanRounds());
 				assertEquals(4, pg.getAi1Rounds());
@@ -71,7 +72,8 @@ import java.sql.SQLException;
 	
 			}
 			finally {
-				c.rollback();
+				//c.rollback();
+				//toDeleteTable();
 				c.close();	
 			}
 		}
@@ -80,19 +82,21 @@ import java.sql.SQLException;
 		@Before
 		void insertTWoGamesWithMoreRounds() {
 			
-			dbBefore.postResultsToDatabase(dbBefore.setAverageDraws(5), 4, pg.setTotalRound(28), pg.setHumanRounds(7), pg.setAi1Rounds(6), pg.setAi2Rounds(3), pg.setAi3Rounds(5), pg.setAi4Rounds(7));
+			dbBefore.postResultsToDatabase(5, 4, pg.setTotalRound(33), pg.setHumanRounds(7), pg.setAi1Rounds(6), pg.setAi2Rounds(3), pg.setAi3Rounds(5), pg.setAi4Rounds(7));
 		}
 	
 		@Test
 		void testInsertTwoGamesMoreRounds() throws SQLException {
-		//	toDeleteTable();
+			
 			java.sql.Connection c = dbBefore.getConnection();
 			c.setAutoCommit(false);
 			try {
 				
+				//getAvgofallgames/totalnumofgames
+				
 				insertTWoGamesWithMoreRounds();
 				dbBefore.displayResults();
-				assertEquals(5, dbBefore.getAverageDraws());
+				assertEquals(1.5, dbBefore.avgDraws()/dbBefore.totalGames(),0);
 				//assertEquals(, dbBefore.getTotalGames());
 				assertEquals(7, pg.getHumanRounds());
 				assertEquals(6, pg.getAi1Rounds());
@@ -100,10 +104,13 @@ import java.sql.SQLException;
 				assertEquals(5, pg.getAi3Rounds());
 				assertEquals(7, pg.getAi4Rounds());
 				//assertEquals(1, pg.getWinningPlayerNumber());
+				
+				System.out.println(dbBefore.avgDraws()/dbBefore.totalGames());
 
 			}
 			finally {
-				c.rollback();
+				//toDeleteTable();
+				//c.rollback();
 				c.close();	
 			}
 		}
