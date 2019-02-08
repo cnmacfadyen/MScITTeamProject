@@ -23,12 +23,15 @@ public class Database {
 	}
 
 	public int getAverageDraws() {
+		//int totalAverageDraws = PlayGame.totalRounds/; 
 		return (int) totalAverageDraws;
 	}
 	
 	public int setAverageDraws(int avg) {
 		return (int) (totalAverageDraws =  avg);
 	}
+	
+
 	
 	public int setTotalGames(int tgame) {
 		return totalGames = tgame;
