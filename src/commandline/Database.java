@@ -23,7 +23,6 @@ public class Database {
 	}
 
 	public int getAverageDraws() {
-		//int totalAverageDraws = PlayGame.totalRounds/; 
 		return (int) totalAverageDraws;
 	}
 	
@@ -165,6 +164,8 @@ public class Database {
 		}
 		return null;
 	}
+	
+	
 	public void deleteRow(int num) {
 		try {
 			Connection c = getConnection();
