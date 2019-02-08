@@ -30,8 +30,6 @@ public class Database {
 		return (int) (totalAverageDraws =  avg);
 	}
 	
-
-	
 	public int setTotalGames(int tgame) {
 		return totalGames = tgame;
 	}
