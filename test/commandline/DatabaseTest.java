@@ -44,7 +44,7 @@ import java.sql.SQLException;
 		}
 	
 
-	
+
 		@Before
 		void insertOneGameWithThirdteenRounds() {
 			
