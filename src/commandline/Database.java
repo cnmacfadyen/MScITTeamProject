@@ -15,8 +15,9 @@ public class Database {
 	private static int computerWon;
 	private static int humanWon;
 	private String dbName = "postgres";
-	private String dbPassword = "Shaka'123";
+	private String dbPassword = "2138525f";
 
+	
 	public Database() {
 		createTable();
 	}
@@ -163,7 +164,17 @@ public class Database {
 		}
 		return null;
 	}
+	public void deleteRow(int num) {
+		try {
+			Connection c = getConnection();
+			PreparedStatement create = c.prepareStatement(
+					"DELETE FROM gameresults WHERE gameNumber="+ num);
+			create.executeUpdate();
 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	public void connectionClosed() {
 		try {
 			c.close();
