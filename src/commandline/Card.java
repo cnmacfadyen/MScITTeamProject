@@ -58,6 +58,15 @@ public class Card {
 		return cat5;
 	}
 	
+	
+	public void setCat1Name(String name) {
+		cat1 = name;
+	}
+	
+	public void setC1(int num) {
+		c1 = num;
+	}
+	
 	public int getC1() {
 		return c1;
 	}
@@ -106,7 +115,7 @@ public class Card {
 	+ c2 + "\n" + cat3 + " - " + c3 + "\n" + cat4 + " - " + c4 + "\n" + cat5 + " - " + c5;
 	}
 	
-	protected void setAttNames() { //change method so we can pass it a file
+	public void setAttNames() { 
 		FileReader fr = null;		
 		String firstLine = "";
 		try {
@@ -134,7 +143,7 @@ public class Card {
         } 
 	}
 	
-	protected ArrayList<Card> getDeck() { //should we change method so we can pass it a file?
+	public ArrayList<Card> getDeck() { //should we change method so we can pass it a file?
 		FileReader fr = null;
 		ArrayList<Card> deck = new ArrayList<Card>();
 		String firstLine = "";

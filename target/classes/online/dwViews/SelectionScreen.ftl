@@ -23,8 +23,10 @@
     <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
     	
     	<div class="container">
-
+    	
+    		<#include "Home.html">
 			<!-- Add your HTML Here -->
+
 		
 		</div>
 		

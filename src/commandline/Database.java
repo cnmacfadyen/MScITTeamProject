@@ -11,12 +11,17 @@ public class Database {
 	Statement stmt = null;
 	private static int totalGames;
 	private static int highestRounds;
-	private static double totalAverageDraws;
+	private  double totalAverageDraws;
 	private static int computerWon;
 	private static int humanWon;
 	private String dbName = "postgres";
+<<<<<<< HEAD
 	private String dbPassword = "DTA123";
+=======
+	private String dbPassword = "2138525f";
+>>>>>>> ebd030477980e1d2279f74e1c36f8f3c1cb47e67
 
+	
 	public Database() {
 		createTable();
 	}
@@ -26,7 +31,11 @@ public class Database {
 	}
 	
 	public int setAverageDraws(int avg) {
-		return (int) (this.totalAverageDraws =  avg);
+		return (int) (totalAverageDraws =  avg);
+	}
+	
+	public int setTotalGames(int tgame) {
+		return totalGames = tgame;
 	}
 	
 	public int getTotalGames() {
@@ -159,7 +168,19 @@ public class Database {
 		}
 		return null;
 	}
+	
+	
+	public void deleteRow(int num) {
+		try {
+			Connection c = getConnection();
+			PreparedStatement create = c.prepareStatement(
+					"DELETE FROM gameresults WHERE gameNumber="+ num);
+			create.executeUpdate();
 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	public void connectionClosed() {
 		try {
 			c.close();

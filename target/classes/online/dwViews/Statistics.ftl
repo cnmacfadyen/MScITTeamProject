@@ -23,7 +23,8 @@
     <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
     	
     	<div class="container">
-
+    	
+			<#include "ViewStatistics.html">
 			<!-- Add your HTML Here -->
 		
 		</div>

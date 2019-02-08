@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 	<link rel="stylesheet" href="TopTrumps.css">
+<meta charset="UTF-8"> -->
+<title>Top Trumps Online</title>
+<script type="text/javascript" src="TopTrump.js"></script>
+</head>
+<body>
+	<style>
+		body {
+			background-color: green;
+		}
+		#navigationContainer {
+			font-size: 28px;
+			font-family: helvetica;
+			text-align: center;
+		}
+		.firstDiv {
+			display: inline-block;
+			width: 750px;
+			height: 150px;
+		}
+		.secondDiv {
+			display: inline-block;
+			height:300px;
+			width: 750px;
+		}
+
+		.thirdDiv {
+			display: inline-block;
+			width: 750px;
+			height: 150px;
+		}
+
+		.categoryContainer {
+			margin-left:10px;
+			margin-right:0px;
+			width: 240px;
+			height:100px;
+		}
+		#c1 {
+			padding-top:25px;
+			padding-left: 10px;
+			display:inline-block;
+			width: 750px;
+		}
+		.middleButtons {
+			width:200px;
+			height:300px;
+			display:inline-block;
+		}
+		#c2 {
+			padding-left: 10px;
+			display:inline-block;
+			width: 200px;
+		}
+		#c3 {
+			padding-top:65px;
+			display:inline-block;
+			width: 200px;
+		}
+		#c4 {
+			padding-top:65px;
+			display:inline-block;
+			width: 200px;
+		}
+		#c5 {
+			padding-top:50px;
+			padding-left: 10px;
+			display:inline-block;
+			width: 750px;
+
+		}
+		#roundDetails {
+			padding-bottom: 25px;
+			padding-left:200px;
+			text-align: center;
+			font-size: 20px;
+			color: orange;
+			font-family: helvetica;
+			display: inline-block;
+		}
+		#roundNumberContainer {
+			padding-top:25px;
+			padding-left:350px;
+			text-align: center;
+			font-size: 20px;
+			color: orange;
+			font-family: helvetica;
+			display: inline-block;
+		}
+		.cardContainer {
+			display: inline-block;
+			/*width:540px;*/
+			/*height:300px;*/
+			position: absolute;
+			left: 225px;
+		}
+		.button {
+			background-color: orange;
+			height: 50px;
+			width: 200px;
+			padding:10px;
+			color:white;
+			text-align:center;
+			font-size: 14px;
+			border-radius: 12px;
+		}
+		#dropDown {
+			background-color: orange;
+			height: 50px;
+			width: 200px;
+			padding:10px;
+			color:white;
+			text-align:center;
+			font-family: helvetica;
+			font-size: 16px;
+			border-radius: 12px;
+		}
+
+	</style>
+	<script>
+		
+		var category;
+		var value;
+		var click;
+
+		function selectAI(){
+			var aiPlayer=document.getElementById("mySelect");
+			value = aiPlayer.options[aiPlayer.selectedIndex].value;
+			alert(value);
+			// return value;
+		}
+
+		function selectDisable() {
+		  document.getElementById("mySelect").disabled = true;
+		}
+
+		function cargoButton() {
+		        click = 4;
+		        alert("You selected Cargo.");
+		}
+
+		function firepowerButton() {
+		        click = 3;
+		        alert("You selected Firepower.");
+		}
+
+		function rangeButton() {
+		        click = 2;      
+		        alert("You selected Range.");
+		}
+
+		function speedButton() {
+		        click = 1;
+		        alert("You selected Speed.");
+		}
+
+		function sizeButton() {
+		        click = 0;
+		        alert("You selected Size.");
+		}
+
+		function getValue() {
+		    alert(value);
+		    return parseInt(value);
+		}
+
+		function selectStartingPlayer() {
+		    totalPlayers = getValue() + 1;
+		    startingPlayer = Math.floor(Math.random() * totalPlayers);
+		    alert(startingPlayer);
+		    alert("The starting player is Player " + (startingPlayer + 1));
+		}
+
+		function selectCat() {
+			var category = cat[Math.floor(Math.random()*cat.length)];
+			alert(category);
+		}
+</script>
+
+<div id="Header">
+	<div id="logoContainer">
+		<img src = "Images/toptrumpslogo.png" width = "200" height = "150"/>
+	</div>
+	<div id="navigationContainer">
+		<a href= "/toptrumps">Home Page</a>
+		<a href="/toptrumps/stats">View Statistics</a>
+		<a href="javascript:window.open('','_self').close();">Quit</a>
+	</div>
+		<div id ="dropDown">
+					<label>Number of Players</label>
+	
+					<select id ="mySelect" name="AI Players" >
+						<option value="1"> 1</option>
+						<option value="2"> 2 </option>
+						<option value="3"> 3 </option>
+						<option value="4"> 4 </option>
+					</select>
+						<button id = "selectPlayers" onclick="selectDisable(), selectAI(),selectStartingPlayer(), selectCat()">Ok</button>
+				</div>
+<div class="gameArea">
+	<div class="firstDiv">
+		<div id="c1">
+			<button class="button" onclick="sizeButton()">Size</button>
+				<div id="roundNumberContainer">
+					Round Number: 
+				</div>
+		</div>
+	</div>
+	<div class="secondDiv">
+		<div class="middleButtons" id="c2">
+			<button class="button" onclick="speedButton()">Speed</button>
+		<div id="c3">
+			<button class="button"onclick="rangeButton()">Range</button>
+		<div id="c4">
+			<button class="button" onclick="firepowerButton()">Firepower</button>
+		</div>
+	</div>
+</div>
+		<div class="cardContainer" id="p1Card">
+			<img src = "Images/Cards/m50.png" width = "150" height = "350"/>
+		<div class="cardContainer" id="p2Card">
+			<img src = "Images/Cards/Sabre.png" width = "150" height = "350"/>
+		<div class="cardContainer" id="p3Card">
+			<img src = "Images/Cards/Hawk.png" width = "150" height = "350"/>
+		<div class="cardContainer" id="p4Card">
+			<img src = "Images/Cards/Vanguard.png" width = "150" height = "350"/>
+		<div class="cardContainer" id="p5Card">
+			<img src = "Images/Cards/350r.png" width = "150" height = "350"/>
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+	</div>
+<div class="thirdDiv">
+	<div id="c5">
+		<button class="button" onclick="cargoButton()">Cargo</button>
+	<div id="roundDetails">
+		Round details: 
+	</div>
+</div>
+</div>
+</div>

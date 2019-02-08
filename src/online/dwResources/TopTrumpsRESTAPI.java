@@ -13,8 +13,11 @@ import javax.ws.rs.core.MediaType;
 
 import online.configuration.TopTrumpsJSONConfiguration;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+
+import commandline.Card;
 
 @Path("/toptrumps") // Resources specified here should be hosted at http://localhost:7777/toptrumps
 @Produces(MediaType.APPLICATION_JSON) // This resource returns JSON content
@@ -67,7 +70,7 @@ public class TopTrumpsRESTAPI {
 		
 		// We can turn arbatory Java objects directly into JSON strings using
 		// Jackson seralization, assuming that the Java objects are not too complex.
-		String listAsJSONString = oWriter.writeValueAsString(listOfWords);
+		String listAsJSONString = oWriter.writeValueAsString(listOfWords); 
 		
 		return listAsJSONString;
 	}
@@ -83,5 +86,33 @@ public class TopTrumpsRESTAPI {
 	public String helloWord(@QueryParam("Word") String Word) throws IOException {
 		return "Hello "+Word;
 	}
+	
+	@GET
+	@Path("/game")
+	/**
+	 * 
+	 */
+	public String getCard() throws JsonProcessingException {
+		Card c = new Card();
+//		ArrayList<Card> deck = new ArrayList<Card>();
+//		c.setAttNames();
+//		deck = c.getDeck();
+		c.setCat1Name("Speed");
+		System.out.println(c.getCat1Name());
+		String name = oWriter.writeValueAsString(c.getCat1Name());
+//		String test = "please work JSON!!";
+//		c.setC1(5);
+//		int testInt = c.getC1();
+//		Card card = deck.get(1);
+//		String cardString = oWriter.writeValueAsString(card);
+		return name;
+	}
+	
+	public String test() throws JsonProcessingException {
+		Card card = new Card("test", 2, 2, 2, 2, 2);
+		String stringCard = oWriter.writeValueAsString(card.toString());
+		return stringCard;
+	}
+	
 	
 }

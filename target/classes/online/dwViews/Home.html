@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<!-- <link rel="stylesheet" href="TopTrumps.css"> -->
+<!-- <meta charset="UTF-8"> -->
+<title>Top Trumps Online</title>
+</head>
+<body>
+	<style>
+		body{
+			background-color: green;
+		}
+		.buttonContainer {
+			height: 200px;
+			width: 300px;
+			display: inline-block;
+			padding-top:45px;
+		}
+		#b1 {
+			padding-left:20%;
+			/*padding-right: 10%;*/
+			padding-top: 15%;
+		}
+
+		.homePageButtons {
+			background-color: orange;
+			height: 100px;
+			width: 200px;
+			color: white;
+			text-align: center;
+			display: inline-block;
+			font-size: 24px;
+			border-radius: 12px;
+		}
+		.buttonContainer {
+			height: 200px;
+			width: 300px;
+			display: inline-block;
+			padding-top:45px;
+		}
+		
+	
+	</style>
+	<div id="Header">
+		<div id="logoContainer">
+			<img src = "Images/toptrumpslogo.png" width = "200" height = "150"/>
+		</div>
+<!-- 		<div id="navigationContainer">
+			<a href= "#">Home Page</a>
+			<a href="TopTrumps.html">Play Game</a>
+			<a href="ViewStatistics.html">View Statistics</a>
+		</div> -->
+	<div class="homeButtonContainer">
+		<div class="buttonContainer" id="b1">
+		<button class="homePageButtons" onclick="location.href='/toptrumps/game'">Play Game</button>
+		</div>
+		<div class="buttonContainer" id="b2">
+		<button class="homePageButtons" onclick="location.href='/toptrumps/stats'">View Statistics</button>
+		</div>
+		<div class="buttonContainer" id="b3">
+		<button class="homePageButtons" onclick="self.close()">Quit</button>
+
+		</div>
+	</div>
+</body>
+</html>
