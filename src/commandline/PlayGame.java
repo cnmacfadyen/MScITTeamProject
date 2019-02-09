@@ -621,10 +621,10 @@ import java.util.Collections;
 				ArrayList<Card>cp = (ArrayList<Card>)getCommunalPile().clone();
 				RoundObject roundDetails = new RoundObject(counter, cp, cC, getCategoryName(), v, h1, h2, h3, h4, h5);
 				RoundObject.roundsArray.add(roundDetails);
-				System.out.println(p1Hand.size() + " " + p2Hand.size() + " " + p3Hand.size()+ " " + p4Hand.size()+ " " + p5Hand.size());
+				System.out.println("\nNumber of cards left in play:\nPlayer 1: " + p1Hand.size() + "\nPlayer 2: " + p2Hand.size() + "\nPlayer 3: " + p3Hand.size()+ "\nPlayer 4: " + p4Hand.size()+ " \nPlayer 5: " + p5Hand.size());
 				System.out.println();
-				System.out.println(RoundObject.roundsArray.size());
-				System.out.println(getPlayers().size());
+//				System.out.println(RoundObject.roundsArray.size());
+//				System.out.println(getPlayers().size());
 				counter++;
 				if (getPlayers().size()==1) {
 					totalDrawRounds = drawRound;
