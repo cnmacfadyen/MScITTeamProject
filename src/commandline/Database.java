@@ -15,11 +15,11 @@ public class Database {
 	private static int computerWon;
 	private static int humanWon;
 	private String dbName = "postgres";
-<<<<<<< HEAD
-	private String dbPassword = "DTA123";
-=======
-	private String dbPassword = "2138525f";
->>>>>>> ebd030477980e1d2279f74e1c36f8f3c1cb47e67
+//<<<<<<< HEAD
+	private String dbPassword = "Shaka'123";
+//=======
+	//private String dbPassword = "2138525f";
+//>>>>>>> ebd030477980e1d2279f74e1c36f8f3c1cb47e67
 
 	
 	public Database() {

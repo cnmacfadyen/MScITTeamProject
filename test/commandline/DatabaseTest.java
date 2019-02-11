@@ -24,7 +24,7 @@ import java.sql.SQLException;
 		
 		Scanner inp = new Scanner(System.in);
 		
-		@AfterClass
+		@BeforeClass
 		void toDeleteTable() throws SQLException {
 			java.sql.Connection c = dbBefore.getConnection();
 			c.setAutoCommit(false);
@@ -35,6 +35,7 @@ import java.sql.SQLException;
 				
 				create1.executeQuery();
 				create2.executeQuery();
+				create1.getUpdateCount();
 			}
 			
 			finally {
@@ -53,7 +54,6 @@ import java.sql.SQLException;
 	
 		@Test
 		void testInsertOneGameMoreRounds() throws SQLException {
-			//toDeleteTable();
 			java.sql.Connection c = dbBefore.getConnection();
 			c.setAutoCommit(false);
 			try {
@@ -62,18 +62,13 @@ import java.sql.SQLException;
 				dbBefore.displayResults();
 				assertEquals(2, dbBefore.avgDraws()/dbBefore.totalGames(),0);
 				assertEquals(1, dbBefore.totalGames());
-				assertEquals(2, pg.getHumanRounds());
-				assertEquals(4, pg.getAi1Rounds());
-				assertEquals(2, pg.getAi2Rounds());
-				assertEquals(3, pg.getAi3Rounds());
-				assertEquals(2, pg.getAi4Rounds());
-				//assertEquals(1, pg.getWinningPlayerNumber());
-	
+				assertEquals(15, pg.totalRounds);
+				assertEquals(1, dbBefore.humanWon());
+				assertEquals(0, dbBefore.computerWon());				
 	
 			}
 			finally {
 				//c.rollback();
-				//toDeleteTable();
 				c.close();	
 			}
 		}
@@ -98,28 +93,17 @@ import java.sql.SQLException;
 				dbBefore.displayResults();
 				assertEquals(1.5, dbBefore.avgDraws()/dbBefore.totalGames(),0);
 				assertEquals(2, dbBefore.totalGames());
-				assertEquals(7, pg.getHumanRounds());
-				assertEquals(6, pg.getAi1Rounds());
-				assertEquals(3, pg.getAi2Rounds());
-				assertEquals(5, pg.getAi3Rounds());
-				assertEquals(7, pg.getAi4Rounds());
-				//assertEquals(1, pg.getWinningPlayerNumber());
-				
-				System.out.println(dbBefore.avgDraws()/dbBefore.totalGames());
-				dbBefore.deleteRow(3);
-				dbBefore.displayResults();
+				assertEquals(33, pg.totalRounds);
+				assertEquals(1, dbBefore.humanWon());
+				assertEquals(1, dbBefore.computerWon());
+//				System.out.println(dbBefore.avgDraws()/dbBefore.totalGames());
+
 			}
 			finally {
-				//toDeleteTable();
 				//c.rollback();
 				c.close();	
 			}
 		}
 
-		@BeforeClass
-		void deletee() {
-			
-		}
-	
-	
+
 }
