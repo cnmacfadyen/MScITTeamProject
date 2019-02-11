@@ -24,25 +24,25 @@ import java.sql.SQLException;
 		
 		Scanner inp = new Scanner(System.in);
 		
-		@BeforeClass
-		void toDeleteTable() throws SQLException {
-			java.sql.Connection c = dbBefore.getConnection();
-			c.setAutoCommit(false);
-			try {
-				
-				PreparedStatement create1 = c.prepareStatement( "DELETE FROM gameresults WHERE gameNumber=1");
-				PreparedStatement create2 = c.prepareStatement( "DELETE FROM gameresults WHERE gameNumber=2");
-				
-				create1.executeQuery();
-				create2.executeQuery();
-				create1.getUpdateCount();
-			}
-			
-			finally {
-				c.rollback();
-				c.close();
-			}
-		}
+//		@AfterClass
+//		void toDeleteTable() throws SQLException {
+//			java.sql.Connection c = dbBefore.getConnection();
+//			c.setAutoCommit(false);
+//			try {
+////				
+//				PreparedStatement create1 = c.prepareStatement( "DELETE FROM gameresults WHERE gameNumber=1");
+//				PreparedStatement create2 = c.prepareStatement( "DELETE FROM gameresults WHERE gameNumber=2");
+//				
+//				create1.executeQuery();
+//				create2.executeQuery();
+//				//create1.getUpdateCount();
+//			}
+//			
+//			finally {
+//				c.rollback();
+//				c.close();
+//			}
+//		}
 	
 
 
@@ -54,23 +54,14 @@ import java.sql.SQLException;
 	
 		@Test
 		void testInsertOneGameMoreRounds() throws SQLException {
-			java.sql.Connection c = dbBefore.getConnection();
-			c.setAutoCommit(false);
-			try {
 				//totalNumofRounds/totalnumberofDraw = totalavgDraw
 				insertOneGameWithThirdteenRounds();
 				dbBefore.displayResults();
-				assertEquals(2, dbBefore.avgDraws()/dbBefore.totalGames(),0);
+				assertEquals(2.0, dbBefore.avgDraws()/dbBefore.totalGames(),0);
 				assertEquals(1, dbBefore.totalGames());
-				assertEquals(15, pg.totalRounds);
+				assertEquals(15, dbBefore.highestRoundsInAGame());
 				assertEquals(1, dbBefore.humanWon());
 				assertEquals(0, dbBefore.computerWon());				
-	
-			}
-			finally {
-				//c.rollback();
-				c.close();	
-			}
 		}
 		
 		
@@ -83,27 +74,43 @@ import java.sql.SQLException;
 		@Test
 		void testInsertTwoGamesMoreRounds() throws SQLException {
 			
-			java.sql.Connection c = dbBefore.getConnection();
-			c.setAutoCommit(false);
-			try {
-				
-				//getAvgofallgames/totalnumofgames
+			//getAvgofallgames/totalnumofgames
 				
 				insertTWoGamesWithMoreRounds();
 				dbBefore.displayResults();
-				assertEquals(1.5, dbBefore.avgDraws()/dbBefore.totalGames(),0);
-				assertEquals(2, dbBefore.totalGames());
-				assertEquals(33, pg.totalRounds);
+				//check the statisctics displayed are correct.
+				assertEquals(1.0, dbBefore.avgDraws()/dbBefore.totalGames(),0);
+				assertEquals(3, dbBefore.totalGames());
+				assertEquals(33, dbBefore.highestRoundsInAGame());
 				assertEquals(1, dbBefore.humanWon());
-				assertEquals(1, dbBefore.computerWon());
+				assertEquals(2, dbBefore.computerWon());
+
 //				System.out.println(dbBefore.avgDraws()/dbBefore.totalGames());
 
-			}
-			finally {
-				//c.rollback();
-				c.close();	
-			}
 		}
+		
+		@Before
+		void insertTWoGamesWithLessRounds() {
+			
+			dbBefore.postResultsToDatabase(2, 4, pg.setTotalRound(10), pg.setHumanRounds(3), pg.setAi1Rounds(2), pg.setAi2Rounds(1), pg.setAi3Rounds(1), pg.setAi4Rounds(2));
+		}
+	
+		@Test
+		void testInsertTwoGamesLessRounds() throws SQLException {
+			
+			//getAvgofallgames/totalnumofgames
+				
+				insertTWoGamesWithLessRounds();
+				dbBefore.displayResults();
+				//check the statisctics displayed are correct.
+				assertEquals(1.0, dbBefore.avgDraws()/dbBefore.totalGames(),0);
+				assertEquals(2, dbBefore.totalGames());
+				assertEquals(15, dbBefore.highestRoundsInAGame());
+				assertEquals(1, dbBefore.humanWon());
+				assertEquals(1, dbBefore.computerWon());
 
+//				System.out.println(dbBefore.avgDraws()/dbBefore.totalGames());
+
+		}
 
 }
