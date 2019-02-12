@@ -44,6 +44,14 @@
 	<artifactId>postgresql</artifactId>
 	<version>42.2.1</version>
 	</dependency>
+			
+	<!-- https://mvnrepository.com/io.dropwizard/dropwizard-assets -->
+	<dependency>
+		<groupId>io.dropwizard</groupId>
+		<artifactId>dropwizard-assets</artifactId>
+		<version>${dropwizard.version}</version>
+	</dependency>
+	
   </dependencies>
 <build>
   

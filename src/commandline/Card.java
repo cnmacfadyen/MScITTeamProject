@@ -6,14 +6,27 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class Card {
 	private String name, cat1, cat2, cat3, cat4, cat5; //name of each card plus the attribute names 
 	private int c1, c2, c3, c4, c5;
 	
+	/**
+	 * empty Card constructor
+	 */
 	public Card() {		
 	}
 	
-	public Card(String name, int a1, int a2, int a3, int a4, int a5) { //pass each card a name and 5 attributes
+	/**
+	 * Card constructor
+	 * @param name - name of the Card (e.g. Vanguard)
+	 * @param a1 - integer value of 1st attribute
+	 * @param a2 - integer value of 2nd attribute
+	 * @param a3 - integer value of 3rd attribute
+	 * @param a4 - integer value of 4th attribute
+	 * @param a5 - integer value of 5th attribute
+	 */
+	public Card(String name, int a1, int a2, int a3, int a4, int a5) { 
 		this.name = name;
 		this.c1 = a1;
 		this.c2 = a2;
