@@ -43,6 +43,7 @@
 				helloJSONList();
 				helloWord("Student");
 				getCard();
+				readd();
 				
 			}
 			
@@ -79,6 +80,16 @@
 		
 		<!-- Here are examples of how to call REST API Methods -->
 		<script type="text/javascript">
+			function readd(){
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/readd")
+				if (!xhr) {
+  					alert("CORS not supported");
+				}
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+					alert(responseText);
+						xhr.send();	
+			}
 		
 			// This calls the helloJSONList REST method from TopTrumpsRESTAPI
 			function helloJSONList() {

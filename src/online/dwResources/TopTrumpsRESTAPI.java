@@ -74,6 +74,14 @@ public class TopTrumpsRESTAPI {
 		
 		return listAsJSONString;
 	}
+	@GET
+	@Path("/readd")
+	public String readd() throws IOException{
+		Card card = new Card();
+		String stringCard = oWriter.writeValueAsString(card.getDeck().toString());
+		return stringCard;
+	}
+	
 	
 	@GET
 	@Path("/helloWord")
