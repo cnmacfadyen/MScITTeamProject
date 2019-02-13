@@ -59,53 +59,112 @@ import java.util.Collections;
 			selectOption(s);
 		}
 
-		//setters ------------------------------------------------
+		/**
+		 * Total round setters for use with the database tests
+		 * @param totalR
+		 */
+		
 		public int setTotalRound(int totalR) {
 			return this.totalRounds = totalR;
 		}
+		/**
+		 * Human round setter for use with database tests
+		 * @param humanR
+		 */
 		
 		public int setHumanRounds(int humanR) {
 			return this.humanRounds = humanR;
 		}
 		
+		/**
+		 * First AI round setter(for database)
+		 * @param ai1
+		 */
+		
 		public int setAi1Rounds(int ai1) {
 			return this.ai1Rounds = ai1;
 		}
 		
+		/**
+		 * Second AI round setter(for database)
+		 * @param ai2
+		 */	
 		public int setAi2Rounds(int ai2) {
 			return this.ai2Rounds = ai2;
 		}
 		
+		/**
+		 * Third AI round setter(for database)
+		 * @param ai3
+		 * 
+		 */
 		public int setAi3Rounds(int ai3) {
 			return this.ai3Rounds = ai3;
 		}
+		
+		/**
+		 * Fourth AI round setter (for database)
+		 * @param ai4
+		 * 
+		 */
 		public int setAi4Rounds(int ai4) {
 			return this.ai4Rounds = ai4;
 		}
 		
-		//getters --------------------------------------------
+		
+		/**
+		 * totalRounds getter for database tests
+		 * @return totalRounds 
+		 */	
 		public int getTotalRound() {
 			return totalRounds;
 		}
+		
+		/**
+		 * humanRounds getter for database tests
+		 * @return humanRounds
+		 */
 		
 		public int getHumanRounds() {
 			return humanRounds;
 		}
 		
+		/**
+		 * ai1Rounds getter  for database tests
+		 * @return ai1Rounds
+		 */
+		
 		public int getAi1Rounds() {
 			return ai1Rounds;
 		}
 		
+		/**
+		 * ai2Rounds getter for database tests
+		 * @return ai2Rounds
+		 */
 		public int getAi2Rounds() {
 			return ai2Rounds;
 		}
 		
+		/**
+		 * ai3Rounds getter for database tests
+		 * @return ai3Rounds
+		 */
 		public int getAi3Rounds() {
 			return ai3Rounds;
 		}
+		
+		/**
+		 * ai4Rounds getter for database tests
+		 * @return ai4Rounds
+		 */
 		public int getAi4Rounds() {
 			return ai4Rounds;
 		}
+		/**
+		 * 
+		 * @param in
+		 */
 		
 		@SuppressWarnings("unchecked")
 		public void selectOption(Scanner in) {
@@ -113,7 +172,6 @@ import java.util.Collections;
 				try {
 				String inputForOption = in.nextLine();
 				if(inputForOption.equals("1")) {
-					viewStatistics(true);
 					db.displayResults();
 					System.out.println("Press 1 to view statistics, 2 to play a game. Press q at any time to quit.");
 					start = false;
@@ -157,6 +215,11 @@ import java.util.Collections;
 				}
 			}
 		}
+		
+		
+		/**
+		 * 
+		 */
 		
 		@SuppressWarnings("unchecked")
 		public void playFirstRound() {
@@ -205,6 +268,11 @@ import java.util.Collections;
 			start = true;
 			
 		}
+		
+		/**
+		 * Method to quit the game
+		 * @param in
+		 */
 
 		public void quit(Scanner in) {
 			keepPlaying = false;
@@ -212,12 +280,11 @@ import java.util.Collections;
 				in.close();
 				System.exit(1);
 			}
-		
-		
-		public static void viewStatistics(boolean selectView) {
-			//connect to database for statistics 
-		}
-		
+		/**
+		 * Method to select starting player at random
+		 * @return startPlayer
+		 */
+
 		public int selectStartingPlayer() {
 			Object startPlayer = null;
 				//get player 1 and set current player to player 1  (Human Player)
@@ -250,6 +317,12 @@ import java.util.Collections;
 			return indx;
 			
 		}
+		
+		/**
+		 * Method to select a random category for the AIs 
+		 * and for the human player to choose  their category
+		 * @return selectedCat
+		 */
 
 		public int selectCategory() {
 			int selectRandomCategory = random.nextInt(5);
@@ -293,12 +366,19 @@ import java.util.Collections;
 			return selectedCat;
 		}
 
-		
+		/**
+		 * Adding the specified card to the communalPile ArrayList.
+		 * @param c
+		 */
 		public void addToCommunalPile(Card c) {	
-			//adding the specified card to the communalPile ArrayList.
 			communalPile.add(c);
 			
 		}
+		
+		/**
+		 * Method to get the values of the cards in play for the selected category
+		 * @return categoryValues
+		 */
 		
 		public ArrayList<Integer> getCategoryValues() { //creating an array of integers for the selected category instead of returning highest value
 			categoryValues.clear();
@@ -330,6 +410,9 @@ import java.util.Collections;
 			return categoryValues;
 		}
 		
+		/**
+		 * Method which calls all the check methods at once
+		 */
 		public void cardsRemaining() {
 			p1CardCheck();
 			p2CardCheck();
@@ -338,7 +421,10 @@ import java.util.Collections;
 			p5CardCheck();
 		}
 		
-
+		/**
+		 * Check method for player one's hand - player will be removed from
+		 * players array if they have no cards remaining
+		 */
 		
 		public void p1CardCheck() {
 			if (getPlayers().contains(p1)) {
@@ -348,6 +434,11 @@ import java.util.Collections;
 			}
 		}
 		
+		/**
+		 * Check method for player two's hand - player will be removed from
+		 * players array if they have no cards remaining
+		 */
+		
 		public void p2CardCheck() {
 			if (getPlayers().contains(p2)) {
 				if(getP2Deck().size() == 0) {
@@ -355,6 +446,11 @@ import java.util.Collections;
 				}
 			}
 		}
+		
+		/**
+		 * Check method for player three's hand - player will be removed from
+		 * players array if they have no cards remaining
+		 */
 		
 		public void p3CardCheck() {
 			if (getPlayers().contains(p3)) {
@@ -364,6 +460,11 @@ import java.util.Collections;
 			}
 		}
 		
+		/**
+		 * Check method for player four's hand - player will be removed from
+		 * players array if they have no cards remaining
+		 */
+		
 		public void p4CardCheck() {
 			if (getPlayers().contains(p4)) {
 				if(getP4Deck().size() == 0) {
@@ -372,6 +473,11 @@ import java.util.Collections;
 			}
 		}
 		
+		/**
+		 * Check method for player five's hand - player will be removed from
+		 * players array if they have no cards remaining
+		 */
+		
 		public void p5CardCheck() {
 			if(getPlayers().contains(p5)) {
 				if(getP5Deck().size() == 0) {
@@ -379,6 +485,12 @@ import java.util.Collections;
 				}
 			}
 		}
+		
+		/**
+		 * Method to work out the highest index in an ArrayList, which will be used to determine the winner
+		 * @param a
+		 * @return element
+		 */
 		
 		public static int returnHighestIndex(ArrayList<Integer> a) {
 			int element = 0;
@@ -394,9 +506,19 @@ import java.util.Collections;
 			return element;
 	}
 		
+		/**
+		 * Method to establish which card won
+		 * @return currentCardsInRound.get(returnHighestIndex(getCategoryValues()));
+		 */
 		public Card winningCard() {
 			 return currentCardsInRound.get(returnHighestIndex(getCategoryValues()));
 		}
+		
+		/**
+		 * Method to check if there is a draw
+		 * Sorts the categoryValues ArrayList using Collections.sort and checks if the last two numbers 
+		 * in the ArrayList are the same. If they are,  it's a draw.
+		 */
 		
 		public void checkDuplicate() {
 			int arraySize = categoryValues.size() - 1 ;
@@ -417,6 +539,11 @@ import java.util.Collections;
 			}
 		}
 		
+		/**
+		 * Method to shuffle the deck
+		 * @return shuffledDeck
+		 */
+		
 		public ArrayList<Card> getShuffledDeck() {
 			Collections.shuffle(deck);
 			shuffledDeck = new ArrayList<Card>();
@@ -424,21 +551,55 @@ import java.util.Collections;
 			return shuffledDeck;		
 		}
 	
+		/**
+		 * Method to return Player One's hand
+		 * @return p1Hand
+		 */
 		public ArrayList<Card> getP1Deck() {
 			return p1Hand;
 		}
+		
+		/**
+		 * Method to return Player two's hand
+		 * @return p2Hand
+		 */
+		
 		public ArrayList<Card> getP2Deck() {
 			return p2Hand;
 		}
+		
+		/**
+		 * Method to return Player Three's hand
+		 * @return p3Hand
+		 */
+		
 		public ArrayList<Card> getP3Deck() {
 			return p3Hand;
 		}
+		
+		/**
+		 * Method to return Player Four's hand
+		 * @return p4Hand
+		 */
+		
 		public ArrayList<Card> getP4Deck() {
 			return p4Hand;
 		}
+		
+		/**
+		 * Method to return Player Five's hand
+		 * @return p5Hand
+		 */
+		
 		public ArrayList<Card> getP5Deck() {
 			return p5Hand;
 		}
+		
+		/**
+		 * Checks if the each player still has cards. 
+		 * If they do, the top card is added to the currentCardsInRound ArrayLists
+		 * @return  currentCardsInRound
+		 */
 		
 		public ArrayList<Card> getCurrentCardsInRound() {
 			currentCardsInRound.clear();
@@ -460,36 +621,61 @@ import java.util.Collections;
 			return currentCardsInRound;			
 		}
 		
+		/**
+		 * Method to update player one's deck after rounds
+		 * @return p1Hand
+		 */
 		public ArrayList<Card> updatedP1Deck() {
 			if (getP1Deck().size() > 0) {
 				getP1Deck().remove(0);
 			}
 			return p1Hand;
 		}
+		
+		/**
+		 * Method to update player two's deck after rounds
+		 * @return p2Hand
+		 */
 		public ArrayList<Card> updatedP2Deck() {
 			if (getP2Deck().size() > 0) {
 				getP2Deck().remove(0);
 			}
 			return p2Hand;
 		}
+		/**
+		 * Method to update player three's deck after rounds
+		 * @return p3Hand
+		 */
 		public ArrayList<Card> updatedP3Deck() {
 			if (getP3Deck().size() > 0) {
 				getP3Deck().remove(0);
 			}
 			return p3Hand;
 		}
+		/**
+		 * Method to update player four's deck after rounds
+		 * @return p4Hand
+		 */
 		public ArrayList<Card> updatedP4Deck() {
 			if (getP4Deck().size() > 0) {
 				getP4Deck().remove(0);
 			}
 			return p4Hand;
 		}
+		/**
+		 * Method to update player five's deck after rounds
+		 * @return p5Hand
+		 */
 		public ArrayList<Card> updatedP5Deck() {
 			if (getP5Deck().size() > 0) {
 				getP5Deck().remove(0);
 			}
 			return p5Hand;
 		}
+		/**
+		 * Method that calls all the updated hands methods at once,
+		 * checking that the size of the hand arrays are greater than 0.
+		 */
 		public void updateHands() {
 			if(getP1Deck().size()>0) {
 				updatedP1Deck();
@@ -508,6 +694,10 @@ import java.util.Collections;
 			}
 		}
 		
+		/**
+		 * Method which, if a player has won the round, adds the cards from the communal pile
+		 * into the winner's hand
+		 */
 		public void addWinnerCards() {
 			if(cardsToCommunal == false) {		
 				if(getWinningPlayer().getPlayerName().equals(p1.getPlayerName())) {
@@ -542,6 +732,12 @@ import java.util.Collections;
 				}
 			}
 		}
+		
+		/**
+		 * Method that plays the remaining rounds of the game.
+		 * Allows us to create a loop as the print statements are different
+		 * in the first round. Contains gameOver boolean to jump out  of loop 
+		 */
 		
 		@SuppressWarnings("unchecked")
 		public void playRemainingRounds() {
@@ -623,8 +819,6 @@ import java.util.Collections;
 				RoundObject.roundsArray.add(roundDetails);
 				System.out.println("\nNumber of cards left in play:\nPlayer 1: " + p1Hand.size() + "\nPlayer 2: " + p2Hand.size() + "\nPlayer 3: " + p3Hand.size()+ "\nPlayer 4: " + p4Hand.size()+ " \nPlayer 5: " + p5Hand.size());
 				System.out.println();
-//				System.out.println(RoundObject.roundsArray.size());
-//				System.out.println(getPlayers().size());
 				counter++;
 				if (getPlayers().size()==1) {
 					totalDrawRounds = drawRound;
@@ -634,25 +828,54 @@ import java.util.Collections;
 			}
 		}
 		
+		/**
+		 * Getter for players array
+		 * @return players
+		 */
 		public ArrayList<Player> getPlayers() {
 			return players;
 		}
+		/**
+		 * Getter for the winning playing
+		 * @return winnerPlayer
+		 */
 		
 		public static Player getWinningPlayer() {
 			return winnerPlayer;
 		}
+		
+		/**
+		 * Method to set t he winning player's number
+		 * @param playerNumber
+		 * @return winnerPlayer.setPlayerNumber(playerNumber)
+		 */
 
 		public int setWinningPlayerNumber(int playerNumber) {
 			return winnerPlayer.setPlayerNumber(playerNumber);
 		}
 		
+		
+		/**
+		 * Getter for the winning player's number
+		 * @return winnerPlayer.getPlayerNumber()
+		 */
+		
 		public int getWinningPlayerNumber() {
 			return winnerPlayer.getPlayerNumber();
 		}
 		
+		/**
+		 * Getter for the communal pile
+		 * @return communalPile
+		 */
 		public ArrayList<Card> getCommunalPile() {
 			return communalPile;
 		}
+		
+		/**
+		 * Getter for the name of the selected category
+		 * @return selectedCategoryName
+		 */
 		public String getCategoryName() {
 			return selectedCategoryName;
 		}
