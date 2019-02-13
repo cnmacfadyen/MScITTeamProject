@@ -49,6 +49,7 @@
 			width:200px;
 			height:300px;
 			display:inline-block;
+			padding-right: 50px;
 		}
 		#c2 {
 			padding-left: 10px;
@@ -92,10 +93,18 @@
 		}
 		.cardContainer {
 			display: inline-block;
-			/*width:540px;*/
-			/*height:300px;*/
+			width:540px;
+			height:300px;
 			position: absolute;
-			left: 225px;
+		}
+		#p1Card {
+			position: absolute;
+			left: 275px;
+		}
+		
+		#p2Card {
+		position: absolute;
+		left:150px;
 		}
 		.button {
 			background-color: orange;
@@ -126,6 +135,7 @@ var cat = [0, 1, 2, 3, 4];
 		var category;
 		var value;
 		var click;
+		
 
 		function selectAI(){
 			var aiPlayer=document.getElementById("mySelect");
@@ -221,15 +231,15 @@ var cat = [0, 1, 2, 3, 4];
 	</div>
 </div>
 		<div class="cardContainer" id="p1Card">
-			<img src = "Images/Cards/m50.png" width = "150" height = "350"/>
+			<img src = "Images/Cards/m50.png" width = "150" height = "300"/>
 		<div class="cardContainer" id="p2Card">
-			<img src = "Images/Cards/Sabre.png" width = "150" height = "350"/>
+			<img src = "Images/Cards/Sabre.png" width = "150" height = "300"/>
 		<div class="cardContainer" id="p3Card">
-			<img src = "Images/Cards/Hawk.png" width = "150" height = "350"/>
+			<img src = "Images/Cards/Hawk.png" width = "150" height = "300"/>
 		<div class="cardContainer" id="p4Card">
-			<img src = "Images/Cards/Vanguard.png" width = "150" height = "350"/>
+			<img src = "Images/Cards/Vanguard.png" width = "150" height = "300"/>
 		<div class="cardContainer" id="p5Card">
-			<img src = "Images/Cards/350r.png" width = "150" height = "350"/>
+			<img src = "Images/Cards/350r.png" width = "150" height = "300"/>
 		</div>
 		</div>
 		</div>
