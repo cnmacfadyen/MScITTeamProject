@@ -14,13 +14,12 @@ public class Database {
 	private  double totalAverageDraws;
 	private static int computerWon;
 	private static int humanWon;
-	private String dbName = "postgres";
-//<<<<<<< HEAD
-//	private String dbPassword = "0602452b";
-	private String dbPassword = "DTA123";
-//=======
-	//private String dbPassword = "2138525f";
-//>>>>>>> ebd030477980e1d2279f74e1c36f8f3c1cb47e67
+	private String dbName = "m_18_2028890m";
+
+//	private String dbPassword = "DTA123";
+//	private String dbPassword = "2138525f";
+	private String dbPassword = "2028890m";
+
 
 	
 	public Database() {
@@ -165,7 +164,7 @@ public class Database {
 	public Connection getConnection() {
 		try {
 			Class.forName("org.postgresql.Driver");
-			c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", dbName, dbPassword);
+			c = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", dbName, dbPassword);
 			return c;
 		} catch (Exception e) {
 			e.printStackTrace();
