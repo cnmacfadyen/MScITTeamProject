@@ -4,12 +4,30 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileWriterClass {
-	
+	/**
+	 * String which will create file to write to
+	 */
 	private String log = "toptrumps.log";
+	
+	/**
+	 * FileWriter object to write to the newly created log
+	 */
 	FileWriter writeToLog;
+	
+	/**
+	 * Card object to call that class's methods
+	 */
 	Card c = new Card();
+	
+	/**
+	 * PlayGame object to call that object's methods
+	 */
 	PlayGame gp = new PlayGame();
 	
+	
+	/**
+	 * Method to write to the toptrumps.log. FileWriter is set to false so that it will overwrite.
+	 */
 	public void returnTrumpsLog() {
 		try {
 			 writeToLog = new FileWriter(log, false);

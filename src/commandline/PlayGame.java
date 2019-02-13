@@ -377,7 +377,7 @@ import java.util.Collections;
 		
 		/**
 		 * Method to get the values of the cards in play for the selected category
-		 * @return categoryValues
+		 * @return {@link PlayGame#categoryValues}
 		 */
 		
 		public ArrayList<Integer> getCategoryValues() { //creating an array of integers for the selected category instead of returning highest value
@@ -541,7 +541,7 @@ import java.util.Collections;
 		
 		/**
 		 * Method to shuffle the deck
-		 * @return shuffledDeck
+		 * @return {@link PlayGame#shuffledDeck}
 		 */
 		
 		public ArrayList<Card> getShuffledDeck() {
@@ -553,7 +553,7 @@ import java.util.Collections;
 	
 		/**
 		 * Method to return Player One's hand
-		 * @return p1Hand
+		 * @return {@link PlayGame#p1Hand}
 		 */
 		public ArrayList<Card> getP1Deck() {
 			return p1Hand;
@@ -561,7 +561,7 @@ import java.util.Collections;
 		
 		/**
 		 * Method to return Player two's hand
-		 * @return p2Hand
+		 * @return {@link PlayGame#p2Hand}
 		 */
 		
 		public ArrayList<Card> getP2Deck() {
@@ -570,7 +570,7 @@ import java.util.Collections;
 		
 		/**
 		 * Method to return Player Three's hand
-		 * @return p3Hand
+		 * @return {@link PlayGame#p3Hand}
 		 */
 		
 		public ArrayList<Card> getP3Deck() {
@@ -579,7 +579,7 @@ import java.util.Collections;
 		
 		/**
 		 * Method to return Player Four's hand
-		 * @return p4Hand
+		 * @return {@link PlayGame#p4Hand}
 		 */
 		
 		public ArrayList<Card> getP4Deck() {
@@ -588,7 +588,7 @@ import java.util.Collections;
 		
 		/**
 		 * Method to return Player Five's hand
-		 * @return p5Hand
+		 * @return {@link PlayGame#p5Hand}
 		 */
 		
 		public ArrayList<Card> getP5Deck() {
@@ -598,7 +598,7 @@ import java.util.Collections;
 		/**
 		 * Checks if the each player still has cards. 
 		 * If they do, the top card is added to the currentCardsInRound ArrayLists
-		 * @return  currentCardsInRound
+		 * @return {@link PlayGame#currentCardsInRound}
 		 */
 		
 		public ArrayList<Card> getCurrentCardsInRound() {
@@ -623,7 +623,7 @@ import java.util.Collections;
 		
 		/**
 		 * Method to update player one's deck after rounds
-		 * @return p1Hand
+		 * @return {@link PlayGame#p1Hand}
 		 */
 		public ArrayList<Card> updatedP1Deck() {
 			if (getP1Deck().size() > 0) {
@@ -634,7 +634,7 @@ import java.util.Collections;
 		
 		/**
 		 * Method to update player two's deck after rounds
-		 * @return p2Hand
+		 * @return {@link PlayGame#p2Hand}
 		 */
 		public ArrayList<Card> updatedP2Deck() {
 			if (getP2Deck().size() > 0) {
@@ -644,7 +644,7 @@ import java.util.Collections;
 		}
 		/**
 		 * Method to update player three's deck after rounds
-		 * @return p3Hand
+		 * @return {@link PlayGame#p3Hand}
 		 */
 		public ArrayList<Card> updatedP3Deck() {
 			if (getP3Deck().size() > 0) {
@@ -654,7 +654,7 @@ import java.util.Collections;
 		}
 		/**
 		 * Method to update player four's deck after rounds
-		 * @return p4Hand
+		 * @return {@link PlayGame#p4Hand}
 		 */
 		public ArrayList<Card> updatedP4Deck() {
 			if (getP4Deck().size() > 0) {
@@ -664,7 +664,7 @@ import java.util.Collections;
 		}
 		/**
 		 * Method to update player five's deck after rounds
-		 * @return p5Hand
+		 * @return {@link PlayGame#p5Hand}
 		 */
 		public ArrayList<Card> updatedP5Deck() {
 			if (getP5Deck().size() > 0) {
@@ -830,14 +830,14 @@ import java.util.Collections;
 		
 		/**
 		 * Getter for players array
-		 * @return players
+		 * @return {@link PlayGame#players}
 		 */
 		public ArrayList<Player> getPlayers() {
 			return players;
 		}
 		/**
 		 * Getter for the winning playing
-		 * @return winnerPlayer
+		 * @return {@link PlayGame#winnerPlayer}
 		 */
 		
 		public static Player getWinningPlayer() {
@@ -866,7 +866,7 @@ import java.util.Collections;
 		
 		/**
 		 * Getter for the communal pile
-		 * @return communalPile
+		 * @return {@link PlayGame#communalPile}
 		 */
 		public ArrayList<Card> getCommunalPile() {
 			return communalPile;
@@ -874,7 +874,7 @@ import java.util.Collections;
 		
 		/**
 		 * Getter for the name of the selected category
-		 * @return selectedCategoryName
+		 * @return {@link PlayGame#selectedCategoryName}
 		 */
 		public String getCategoryName() {
 			return selectedCategoryName;
