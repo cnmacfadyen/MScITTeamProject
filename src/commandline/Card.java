@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Card {
-	private String name, cat1, cat2, cat3, cat4, cat5; //name of each card plus the attribute names 
+	private String name, cat1, cat2, cat3, cat4, cat5; 
 	private int c1, c2, c3, c4, c5;
 	
 	/**
@@ -35,6 +35,11 @@ public class Card {
 		this.c5 = a5;
 	}
 	
+	/**
+	 * 
+	 * @param catNumber
+	 * @return the given category number if it exists, else return -1
+	 */
 	public int getChosenCategory(int catNumber) {
 		if(catNumber == 0) {
 			return c1;
@@ -51,57 +56,109 @@ public class Card {
 		}
 	}
 	
+	/**
+	 * 
+	 * category 1 name getter
+	 * @return {@link Card#cat1}
+	 */
 	public String getCat1Name() {
 		return cat1;
 	}
 	
+	/**
+	 * category 2 name getter
+	 * @return {@link Card#cat2}
+	 */
 	public String getCat2Name() {
 		return cat2;
 	}
 	
+	/**
+	 * category 3 name getter
+	 * @return {@link Card#cat3}
+	 */
 	public String getCat3Name() {
 		return cat3;
 	}
 	
+	/**
+	 * category 4 name getter
+	 * @return {@link Card#cat4}
+	 */
 	public String getCat4Name() {
 		return cat4;
 	}
 	
+	/**
+	 * category 5 name getter
+	 * @return {@link Card#cat5}
+	 */
 	public String getCat5Name() {
 		return cat5;
 	}
 	
-	
+	/**
+	 * category 1 name setter
+	 * @param String - name of the category
+	 */
 	public void setCat1Name(String name) {
 		cat1 = name;
 	}
 	
+	/**
+	 * category 1 value setter
+	 * @param int - value of the category
+	 */
 	public void setC1(int num) {
 		c1 = num;
 	}
 	
+	/**
+	 * category 1 value getter
+	 * @return {@link Card #c1}
+	 */
 	public int getC1() {
 		return c1;
 	}
 	
+	/**
+	 * category 2 value getter
+	 * @return {@link Card #c2}
+	 */
 	public int getC2() {
 		return c2;
 	}
 	
+	/**
+	 * category 3 value getter
+	 * @return {@link Card #c3}
+	 */
 	public int getC3() {
 		return c3;
 	}
 	
+	/**
+	 * category 4 value getter
+	 * @return {@link Card #c4}
+	 */
 	public int getC4() {
 		return c4;
 	}
 	
+	/**
+	 * category 5 value getter
+	 * @return {@link Card #c5}
+	 */
 	public int getC5() {
 		return c5;
 	}
 	
 	
-	//temporary method, to get the selected category with the corresponding value ... for testing 
+	/**
+	 * temporary method, to get the selected category with the corresponding value ... for testing 
+	 * @param indx
+	 * @return String s - category name and value
+	 */
 	public String getCatInfo(int indx) {
 		String s = "";
 		if(indx == 0) {
@@ -122,12 +179,20 @@ public class Card {
 		return s;
 	}
 	
-	
+	/**
+	 * toString method to return the card details for printing
+	 * @return String containing card name, category names and category values
+	 */
 	public String toString() {
 		return "\n\n" + name + ": \n" + cat1 + " - " + c1 + "\n" + cat2 + " - " 
 	+ c2 + "\n" + cat3 + " - " + c3 + "\n" + cat4 + " - " + c4 + "\n" + cat5 + " - " + c5;
 	}
 	
+	/**
+	 * method to set the names for each category in the card deck
+	 * reads in the first line of the deck text file to get category names
+	 * e.g. "Size", "Speed"
+	 */
 	public void setAttNames() { 
 		FileReader fr = null;		
 		String firstLine = "";
@@ -156,7 +221,13 @@ public class Card {
         } 
 	}
 	
-	public ArrayList<Card> getDeck() { //should we change method so we can pass it a file?
+	/**
+	 * method to return an ArrayList (deck) of cards, setting 
+	 * the card name and values for each of the attributes
+	 * by reading from the given file ("StarCitizenDeck.txt")
+	 * @return ArrayList<Card>
+	 */
+	public ArrayList<Card> getDeck() { 
 		FileReader fr = null;
 		ArrayList<Card> deck = new ArrayList<Card>();
 		String firstLine = "";
@@ -192,10 +263,16 @@ public class Card {
         }return deck; 
 	}
 	
-	//pass it the number of players, the player number (e.g. player1), and the shuffled deck
-	//IF THERE ARE 3 PLAYERS WE SHOULD ADD THE TOP CARD TO THE COMMUNAL PILE BEFORE WE CALL THE dealCards() METHOD// 
-	//I.E. WE SHOULD REMOVE IT FROM THE SHUFFLED DECK SO WE CAN DIVIDE BY 3//
-	//didn't add this functionality to the method because it removes a card each time it is called
+
+	/**
+	 * Method to split the ArrayList of Cards between the players
+	 * by dividing them between the number of players in a game. The method must be called for
+	 * each player in the game in order to give them a different set of cards.
+	 * @param nPlayers - the number of players in the game
+	 * @param playerNumber - the number of the player that is being dealt to
+	 * @param shuffledDeck - the full deck, after it has been randomly shuffled
+	 * @return the deck assigned to the given player
+	 */
 	public ArrayList<Card> dealCards(int nPlayers, int playerNumber, ArrayList<Card> shuffledDeck) { 
 		ArrayList<Card> playerDeck = new ArrayList<Card>();
 		for(int i=0;i<shuffledDeck.size();i=i+nPlayers) {
@@ -203,6 +280,4 @@ public class Card {
 			}
 		return playerDeck;
 	}
-	
-
 }

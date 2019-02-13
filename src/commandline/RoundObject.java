@@ -11,8 +11,20 @@ public class RoundObject {
 	private ArrayList<Card> p1EndOfRoundHand, p2EndOfRoundHand, p3EndOfRoundHand,p4EndOfRoundHand, p5EndOfRoundHand;
 	protected static ArrayList<RoundObject> roundsArray = new ArrayList<RoundObject>();
 	
-	//complete deck, shuffled deck, starting player hands and winner of the game do not need to be inside this class, they are defined elsewhere
-	
+	/**
+	 * Constructor for RoundObjects - these are used to store the following details from each round in a game
+	 * in order to print them to the toptrumps.log test log file. 
+	 * @param roundNumber
+	 * @param communalPile
+	 * @param cardsInRound
+	 * @param category
+	 * @param categoryValues
+	 * @param p1EndOfRoundHand
+	 * @param p2EndOfRoundHand
+	 * @param p3EndOfRoundHand
+	 * @param p4EndOfRoundHand
+	 * @param p5EndOfRoundHand
+	 */
 	public RoundObject(int roundNumber, ArrayList<Card> communalPile, ArrayList<Card> cardsInRound,
 						String category, ArrayList<Integer> categoryValues, ArrayList<Card> p1EndOfRoundHand,
 						ArrayList<Card> p2EndOfRoundHand, ArrayList<Card> p3EndOfRoundHand, ArrayList<Card> p4EndOfRoundHand, 
@@ -22,13 +34,17 @@ public class RoundObject {
 		this.cardsInRound=cardsInRound;
 		this.category=category;
 		this.categoryValues=categoryValues;
-		this.p1EndOfRoundHand=p1EndOfRoundHand; //these will be the players' hands after each round												
-		this.p2EndOfRoundHand=p2EndOfRoundHand; //(at the start of the game it will be their starting hand)
+		this.p1EndOfRoundHand=p1EndOfRoundHand; 											
+		this.p2EndOfRoundHand=p2EndOfRoundHand; 
 		this.p3EndOfRoundHand=p3EndOfRoundHand;
 		this.p4EndOfRoundHand=p4EndOfRoundHand;
 		this.p5EndOfRoundHand=p5EndOfRoundHand; 
 	}
 	
+	/**
+	 * toString method to print out round details to the test log. A new RoundObject is created after each round to store the details
+	 * for the round, allowing them to be printed to the toptrumps.log file.
+	 */
 	public String toString() {
 		String output = "\n\n\n\t~~~~~ Round " + roundNumber + " ~~~~~" 
 				+"\n---------------------------------------------------\nCommunal Pile Contents: " + communalPile
@@ -44,6 +60,10 @@ public class RoundObject {
 		return output;
 	}
 	
+	/**
+	 * method to return the ArrayList of RoundObjects that store the values for each round
+	 * @return
+	 */
 	public static ArrayList<RoundObject> getRoundsArray(){
 		return roundsArray;
 	}
