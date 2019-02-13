@@ -158,7 +158,10 @@ public class Database {
 		}
 	}
 
-	// get connection//
+	/**
+	 * 
+	 * @return If we are able to connect then return the connection. However if unable to connect then return null
+	 */
 	public Connection getConnection() {
 		try {
 			Class.forName("org.postgresql.Driver");
@@ -170,7 +173,10 @@ public class Database {
 		return null;
 	}
 	
-	
+	/**Delete the row from the TopTrumps game results database
+	 * 
+	 * @param num the row to be deleted
+	 */
 	public void deleteRow(int num) {
 		try {
 			Connection c = getConnection();
@@ -182,6 +188,10 @@ public class Database {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * Closes the connection connecting to the database and if there is a SQLException then catch it and print out "Unable to close connection"
+	 */
 	public void connectionClosed() {
 		try {
 			c.close();
