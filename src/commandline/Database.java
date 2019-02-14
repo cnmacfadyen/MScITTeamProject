@@ -17,7 +17,7 @@ public class Database {
 //	private String dbName = "m_18_0602452b";
 	private String dbName = "postgres";
 
-	private String dbPassword = "DTA123";
+	private String dbPassword = "Shaka'123";
 //	private String dbPassword = "2138525f";
 //	private String dbPassword = "0602452b";
 

@@ -13,41 +13,50 @@ import org.junit.BeforeClass;
 import org.junit.jupiter.api.Test;
 
 class CLModeTest {
+	/*
+	 * declaration of objects and arraylists that will be needed for the testing.
+	 */
 	protected ArrayList<Card> communalPile = new ArrayList<Card>();
 	protected ArrayList<Card> currentCardsInRound = new ArrayList<Card>();
 	protected ArrayList<Integer> categoryValues = new ArrayList<Integer>();
 
 	PlayGame pg = new PlayGame();
-	
 	Card c = new Card();
 	ArrayList<Card> deck = c.getDeck(); 
-	int nPlayers = 5;
 	
+	//number of players
+	int nPlayers = 5;
+	//declaring of the 5 players' decks.
 	ArrayList<Card> player1Deck = c.dealCards(nPlayers, 1, deck);
 	ArrayList<Card> player2Deck = c.dealCards(nPlayers, 2, deck);
 	ArrayList<Card> player3Deck = c.dealCards(nPlayers, 3, deck);
 	ArrayList<Card> player4Deck = c.dealCards(nPlayers, 4, deck);
 	ArrayList<Card> player5Deck = c.dealCards(nPlayers, 5, deck);
 	
+	/*
+	 * The current cards in round are: player1: 5th card, AI1: 4th card , AI2: 3th card, AI3: 2nd card and AI4:  1st card.
+	 * selected category : 4
+
+	 */
 	@BeforeClass
 	void beforeTest() {
 			
 			currentCardsInRound.add(player1Deck.get(5));
-			currentCardsInRound.add(player2Deck.get(5));
-			currentCardsInRound.add(player3Deck.get(5));
-			currentCardsInRound.add(player4Deck.get(5));
-			currentCardsInRound.add(player5Deck.get(5));
+			currentCardsInRound.add(player2Deck.get(4));
+			currentCardsInRound.add(player3Deck.get(3));
+			currentCardsInRound.add(player4Deck.get(2));
+			currentCardsInRound.add(player5Deck.get(1));
 		
 			for(int i=0; i<=4; i++) {
-				//System.out.println(currentCardsInRound.get(i));
-				categoryValues.add(currentCardsInRound.get(i).getC2());
+				categoryValues.add(currentCardsInRound.get(i).getC4());
 				Collections.sort(categoryValues);
-				//pg.checkDuplicate();
 			}	
 
 	}
 	
-	//still trying to get this right
+	/*
+	 * test to check if there is a draw.
+	 */
 	@Test
 	public void testGetDuplicated() {
 		beforeTest();
@@ -59,20 +68,18 @@ class CLModeTest {
 			if(categoryValues.get(cb).equals(categoryValues.get(cb-1))) {
 				pg.checkDuplicate();
 				isDuplicate = true;
-				//assertTrue(isDuplicate);
+				assertTrue("there are not duplicates", isDuplicate);
 			}
-			else {
-				//isDuplicate = false;
-				assertFalse("there are no duplicates",isDuplicate);
-			}
+
 		}
 		
-		System.out.println(counter);
-		System.out.println(categoryValues);
+		//System.out.println("The values of the selected category:" + categoryValues);
 				
 	}
 	
-	//checking that cards are added to the communal pile when it is empty.
+	/*
+	 * test to check that cards are added to the communal pile when it is empty.
+	 */
 	@Test
 	public void testAddToCommunalPile() {
 		beforeTest();
@@ -86,7 +93,9 @@ class CLModeTest {
 		
 	}
 	
-	//checking that more cards the second time can be added to the communal pile when it is not empty.
+	/*
+	 * test to check that more cards the second time can be added to the communal pile when it is not empty.
+	 */
 	@Test
 	public void testAddToCommunalPile2() {
 		beforeTest();
@@ -101,16 +110,18 @@ class CLModeTest {
 		assertEquals(10, communalPile.size());
 	}
 	
-	
+	/*
+	 * test the quit game option
+	 */
 	@Test
 	public void testQuitGameOption() {
+		System.out.println("\nenter input 'q' or 'Q' to quit game");
 		Scanner inp = new Scanner(System.in);
 		String input = inp.nextLine();
 		boolean isQuit = false;
 		
 			if((input.equals("q"))) {
 				isQuit = true;
-				pg.selectOption(inp); // need to fix... it asks for input twice and it doesn't fail if input was ( q 1 ) or ( q 2).
 				assertTrue(isQuit);
 				
 			}
@@ -120,17 +131,18 @@ class CLModeTest {
 
 	}
 	
-	
+	/*
+	 * test that the returned value for category selection by human player is not null.
+	 */
 	@Test
 	public void testCategorySelectionForHumanPlayer() {
-		System.out.println("\nThis is to test the selection of a category for the human Player" );
+		System.out.println("\nselect a category: " );
 
-		//int indx = 0;
+		//int indx = 3;
 		int cate = pg.selectCategory();
 		assertNotNull(cate);
 		System.out.println("Human player: " +  " \nselected the category: " + cate);
 
 	}
-	
 	
 }

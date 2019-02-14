@@ -32,7 +32,6 @@ class CardClassTest {
 	void testToGetCategoryNameAndValue() {	
 			for(int i =0; i < deck.size(); i++) {
 				assertNotNull(deck.get(i));
-				//System.out.println(deck.get(i));
 			}	
 	}
 		

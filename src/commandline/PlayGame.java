@@ -6,6 +6,10 @@ import java.util.Collections;
 	import java.util.Scanner;
 
 	public class PlayGame {	
+		
+		/*
+		 * Declaration of all the global variables needed to be used.
+		 */
 		protected Database db = new Database();
 		private Card c = new Card();
 		private final int maxSize = 40; //size of the ArrayList
@@ -51,7 +55,9 @@ import java.util.Collections;
 		private int selectedCat;
 		
 	//---------------------------------------------------------------------------------------------------------------------------------------------//
-		
+		/*
+		 * Method to display the welcoming message and the options provided for the uesr to input and select.
+		 */
 		public void openApplication() {
 			System.out.println("Welcome to Top Trumps, Player 1. Would you like to play a game or view statistics from previous games?");
 			System.out.println("Press 1 to view statistics, 2 to play a game. Press q at any time to quit.");
@@ -161,11 +167,12 @@ import java.util.Collections;
 		public int getAi4Rounds() {
 			return ai4Rounds;
 		}
-		/**
-		 * 
-		 * @param in
-		 */
 		
+		/**
+		 * Method that prompts the user for an input for Starting a new game, viewing statistics or quiting the game. 
+		 * @param in : Scanner Object
+		 * @throws InvalidInputException for wrong input
+		 */
 		@SuppressWarnings("unchecked")
 		public void selectOption(Scanner in) {
 			while(start==false) {
@@ -218,6 +225,7 @@ import java.util.Collections;
 		
 		
 		/**
+		 * Method that plays the first round of the game.
 		 * 
 		 */
 		
@@ -319,8 +327,8 @@ import java.util.Collections;
 		}
 		
 		/**
-		 * Method to select a random category for the AIs 
-		 * and for the human player to choose  their category
+		 * Method to generate a random number for category selection for the AI Players. 
+		 * Prompts the human player for an input to choose their category
 		 * @return selectedCat
 		 */
 
@@ -368,7 +376,7 @@ import java.util.Collections;
 
 		/**
 		 * Adding the specified card to the communalPile ArrayList.
-		 * @param c
+		 * @param c : The card object that will be added to the communalPile.
 		 */
 		public void addToCommunalPile(Card c) {	
 			communalPile.add(c);
@@ -411,7 +419,7 @@ import java.util.Collections;
 		}
 		
 		/**
-		 * Method which calls all the check methods at once
+		 * Method which calls all the card check methods at once.
 		 */
 		public void cardsRemaining() {
 			p1CardCheck();
@@ -488,7 +496,7 @@ import java.util.Collections;
 		
 		/**
 		 * Method to work out the highest index in an ArrayList, which will be used to determine the winner
-		 * @param a
+		 * @param a : ArrayList of Integers.
 		 * @return element
 		 */
 		
@@ -596,7 +604,7 @@ import java.util.Collections;
 		}
 		
 		/**
-		 * Checks if the each player still has cards. 
+		 * Checks if each player still has cards. 
 		 * If they do, the top card is added to the currentCardsInRound ArrayLists
 		 * @return {@link PlayGame#currentCardsInRound}
 		 */
