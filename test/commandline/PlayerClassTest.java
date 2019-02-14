@@ -12,7 +12,9 @@ class PlayerClassTest {
 	//when
 	Player player = new Player(playerName, playerNumber);
 	
-	
+	/*
+	 * to test that the expected name: player 1, is the same as the player name returned.
+	 */
 	@Test
 	void testToGetPlayerName() {
 		//then
@@ -20,6 +22,9 @@ class PlayerClassTest {
 		
 	}
 	
+	/*
+	 * to test that the expected number: 1, is the same as the player number returned.
+	 */
 	@Test
 	void testToGetPlayerNumber() {
 		

@@ -13,6 +13,7 @@ import org.junit.BeforeClass;
 import org.junit.jupiter.api.Test;
 
 class CLModeTest {
+	
 	/*
 	 * declaration of objects and arraylists that will be needed for the testing.
 	 */
@@ -67,21 +68,19 @@ class CLModeTest {
 		for(int i=counter; i> 0; i--) {
 			if(categoryValues.get(cb).equals(categoryValues.get(cb-1))) {
 				pg.checkDuplicate();
-				isDuplicate = true;
-				assertTrue("there are not duplicates", isDuplicate);
+				isDuplicate = true;		
 			}
-
+			assertFalse("there are duplicates", isDuplicate);
 		}
-		
-		//System.out.println("The values of the selected category:" + categoryValues);
 				
+		System.out.println(categoryValues);
 	}
 	
 	/*
 	 * test to check that cards are added to the communal pile when it is empty.
 	 */
 	@Test
-	public void testAddToCommunalPile() {
+	public void testAddToCommunalPileFirstTime() {
 		beforeTest();
 		
 		assertEquals(0, communalPile.size());
@@ -97,7 +96,7 @@ class CLModeTest {
 	 * test to check that more cards the second time can be added to the communal pile when it is not empty.
 	 */
 	@Test
-	public void testAddToCommunalPile2() {
+	public void testAddToCommunalPileSecondTime() {
 		beforeTest();
 		for(int i = 0; i < 5; i++) {
 			communalPile.add(i, currentCardsInRound.get(i));
@@ -115,15 +114,12 @@ class CLModeTest {
 	 */
 	@Test
 	public void testQuitGameOption() {
-		System.out.println("\nenter input 'q' or 'Q' to quit game");
-		Scanner inp = new Scanner(System.in);
-		String input = inp.nextLine();
+		String input = "q";
 		boolean isQuit = false;
 		
 			if((input.equals("q"))) {
 				isQuit = true;
 				assertTrue(isQuit);
-				
 			}
 			else {
 				assertTrue("to quit game, expected input is: 'q' or 'Q', but was: " +input , isQuit);
@@ -132,17 +128,39 @@ class CLModeTest {
 	}
 	
 	/*
-	 * test that the returned value for category selection by human player is not null.
+	 * test the quit game option
+	 */
+	@Test
+	public void testGameOption() {
+		String input1 = "1";
+		String input2 = "2";
+		boolean isPlay = false;
+		boolean isView = false;
+			if((input1.equals("1"))) {
+				isView = true;
+				assertTrue(isView);
+				
+			}
+			if((input2.equals("2"))) {
+				isPlay = true;
+				assertTrue(isPlay);
+			}
+
+			assertTrue("to play game, expected input is: '2', but was: " +input2 , isPlay);
+			assertTrue("to view game statistics, expected input is: '1', but was: " +input1 , isView);
+			
+
+	}
+	
+	/*
+	 * test that the returned value for the index of category selection by human player is not null and is 1.
 	 */
 	@Test
 	public void testCategorySelectionForHumanPlayer() {
-		System.out.println("\nselect a category: " );
-
-		//int indx = 3;
-		int cate = pg.selectCategory();
-		assertNotNull(cate);
-		System.out.println("Human player: " +  " \nselected the category: " + cate);
-
+		//expected
+		pg.selectedCat = 1;
+		assertEquals(1, pg.selectedCat);
+		assertNotNull(pg.selectedCat);
 	}
 	
 }

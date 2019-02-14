@@ -14,9 +14,7 @@ import java.util.Collections;
 		private Card c = new Card();
 		private final int maxSize = 40; //size of the ArrayList
 		protected ArrayList<Card> deck =  (ArrayList<Card>) c.getDeck().clone();
-		private ArrayList<Card> unshuffledDeck = new ArrayList<Card>(maxSize);
 		private ArrayList<Card> shuffledDeck = new ArrayList<Card>(maxSize);
-		private ArrayList<Card> playerDeck = new ArrayList<Card>(maxSize);
 		private ArrayList<Card> communalPile = new ArrayList<Card>(maxSize);
 		protected ArrayList<Card> p1Hand = new ArrayList<Card>();
 		protected ArrayList<Card> p2Hand = new ArrayList<Card>();
@@ -37,11 +35,8 @@ import java.util.Collections;
 		protected boolean start = false;
 		protected boolean keepPlaying = true;
 		private String selectedCategoryName;		
-		private int numOfGamesPlayed =0; // number of games a player played.
-		private int totalScore; 	// total score of each game for a player.
 		private int drawRound;
 		protected static int totalRounds;
-		private boolean playNewGame, quitGame; // when user select to play again/new game
 		private int humanRounds, ai1Rounds, ai2Rounds, ai3Rounds, ai4Rounds;
 		protected int totalDrawRounds;
 		protected int indx = 0; // this will be used in selectStartingPlayer method and selectCategory method.
@@ -52,10 +47,10 @@ import java.util.Collections;
 		protected String selectedCategory;
 		protected int selectedCategoryValue;
 		protected static Player winnerPlayer;		
-		private int selectedCat;
+		protected int selectedCat;
 		
 	//---------------------------------------------------------------------------------------------------------------------------------------------//
-		/*
+		/**
 		 * Method to display the welcoming message and the options provided for the uesr to input and select.
 		 */
 		public void openApplication() {
@@ -115,57 +110,6 @@ import java.util.Collections;
 		 */
 		public int setAi4Rounds(int ai4) {
 			return this.ai4Rounds = ai4;
-		}
-		
-		
-		/**
-		 * totalRounds getter for database tests
-		 * @return totalRounds 
-		 */	
-		public int getTotalRound() {
-			return totalRounds;
-		}
-		
-		/**
-		 * humanRounds getter for database tests
-		 * @return humanRounds
-		 */
-		
-		public int getHumanRounds() {
-			return humanRounds;
-		}
-		
-		/**
-		 * ai1Rounds getter  for database tests
-		 * @return ai1Rounds
-		 */
-		
-		public int getAi1Rounds() {
-			return ai1Rounds;
-		}
-		
-		/**
-		 * ai2Rounds getter for database tests
-		 * @return ai2Rounds
-		 */
-		public int getAi2Rounds() {
-			return ai2Rounds;
-		}
-		
-		/**
-		 * ai3Rounds getter for database tests
-		 * @return ai3Rounds
-		 */
-		public int getAi3Rounds() {
-			return ai3Rounds;
-		}
-		
-		/**
-		 * ai4Rounds getter for database tests
-		 * @return ai4Rounds
-		 */
-		public int getAi4Rounds() {
-			return ai4Rounds;
 		}
 		
 		/**
@@ -288,6 +232,7 @@ import java.util.Collections;
 				in.close();
 				System.exit(1);
 			}
+		
 		/**
 		 * Method to select starting player at random
 		 * @return startPlayer
@@ -850,26 +795,6 @@ import java.util.Collections;
 		
 		public static Player getWinningPlayer() {
 			return winnerPlayer;
-		}
-		
-		/**
-		 * Method to set t he winning player's number
-		 * @param playerNumber
-		 * @return winnerPlayer.setPlayerNumber(playerNumber)
-		 */
-
-		public int setWinningPlayerNumber(int playerNumber) {
-			return winnerPlayer.setPlayerNumber(playerNumber);
-		}
-		
-		
-		/**
-		 * Getter for the winning player's number
-		 * @return winnerPlayer.getPlayerNumber()
-		 */
-		
-		public int getWinningPlayerNumber() {
-			return winnerPlayer.getPlayerNumber();
 		}
 		
 		/**

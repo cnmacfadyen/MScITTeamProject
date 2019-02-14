@@ -22,7 +22,9 @@ public class Database {
 //	private String dbPassword = "0602452b";
 
 
-	
+	/**
+	 *  Default constructor for Database
+	 */
 	public Database() {
 		createTable();
 	}
@@ -43,21 +45,10 @@ public class Database {
 		return null;
 	}
 
-	public int getAverageDraws() {
-		return (int) totalAverageDraws;
-	}
 	
-	public int setAverageDraws(int avg) {
-		return (int) (totalAverageDraws =  avg);
-	}
-	
-	public int setTotalGames(int tgame) {
-		return totalGames = tgame;
-	}
-	
-	public int getTotalGames() {
-		return totalGames;
-	}
+	/**
+	 * Method to return and display the games statistics on the console.
+	 */
 	public void displayResults() {
 		System.out.println("Game statistics: ");
 		System.out.println("Number of Games: " + totalGames());
@@ -68,6 +59,10 @@ public class Database {
 		connectionClosed();
 	}
 
+	/**
+	 * method to calculate the total games played and saved in the database.
+	 * @return totalGames
+	 */
 	public int totalGames() {
 		Statement statement = null;
 		try {
@@ -83,6 +78,10 @@ public class Database {
 		return totalGames;
 	}
 
+	/**
+	 * Method to calculate the total AI player win through out all the games playes.
+	 * @return computerWon
+	 */
 	public int computerWon() {
 		Statement statement = null;
 		try {
@@ -99,6 +98,10 @@ public class Database {
 		return computerWon;
 	}
 
+	/**
+	 * Method to calculate the total human player win through out all the games playes.
+	 * @return humanWon
+	 */
 	public int humanWon() {
 		Statement statement = null;
 		try {
@@ -114,6 +117,10 @@ public class Database {
 		return humanWon;
 	}
 
+	/**
+	 * Method to calculate the average draws through out the games played.
+	 * @return totalAverageDraws
+	 */
 	public double avgDraws() {
 		Statement statement = null;
 		try {
@@ -129,6 +136,10 @@ public class Database {
 		return totalAverageDraws;
 	}
 
+	/**
+	 * Method to calculate the highest rounds through out the games played.
+	 * @return highestRounds
+	 */
 	public int highestRoundsInAGame() {
 		Statement statement = null;
 		try {
@@ -144,6 +155,17 @@ public class Database {
 		return highestRounds;
 	}
 
+	/**
+	 * Method to insert the input into the database.
+	 * @param drawsPerGame
+	 * @param winner : player number of the winner
+	 * @param totalRoundsInAGame
+	 * @param humanRounds
+	 * @param ai1 : AI player 1 rounds
+	 * @param ai2 : AI player 2 rounds
+	 * @param ai3 : AI player 3 rounds
+	 * @param ai4 : AI player 4 rounds
+	 */
 	public void postResultsToDatabase( int drawsPerGame, int winner, int totalRoundsInAGame, int humanRounds, int ai1,
 			int ai2, int ai3, int ai4) {
 		try {
@@ -161,6 +183,9 @@ public class Database {
 		}
 	}
 
+	/**
+	 * Method to create the table in the database server.
+	 */
 	public void createTable() {
 		try {
 			Connection c = getConnection();
@@ -176,8 +201,8 @@ public class Database {
 
 
 	
-	/**Delete the row from the TopTrumps game results database
-	 * 
+	/**
+	 * Delete the row from the TopTrumps game results database
 	 * @param num the row to be deleted
 	 */
 	public void deleteRow(int num) {

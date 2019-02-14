@@ -21,20 +21,35 @@ class CardClassTest {
 	ArrayList<Card> player4Deck = c.dealCards(nPlayers, 4, deck);
 	ArrayList<Card> player5Deck = c.dealCards(nPlayers, 5, deck);
 	
-	
+	/**
+	 * this is to test that the deck is not empty.
+	 */
 	@Test
 	void testDeckHasCards() {
 		assertNotNull("there are no cards in deck", deck);
 	}
 	
+	/**
+	 * this is to test that the getDeck() method is not returning null. 
+	 */
+	@Test
+	void testGettingDeck() {
+		assertNotNull(c.getDeck());
+	}
 	
+	/**
+	 * this is to test that a card in a deck is being returned.
+	 */
 	@Test
 	void testToGetCategoryNameAndValue() {	
 			for(int i =0; i < deck.size(); i++) {
 				assertNotNull(deck.get(i));
 			}	
 	}
-		
+	
+	/**
+	 * this is to test that the cards in deck are shuffled.
+	 */
 	@Test
 	void TestDeckIsShuffled() {
 		Collections.shuffle(deck);
@@ -42,7 +57,12 @@ class CardClassTest {
 
 		assertFalse("deck is not shuffled", deck.equals(shuffledDeck));
 	}
-		
+	
+	/**
+	 * this is to check that the cards are being evenly distributed between the players.
+	 * 40 cards in deck.
+	 * expected: 8 cards for each player
+	 */
 	@Test
 	void TestDealingCards() {
 		assertEquals(deck.size()/nPlayers, player1Deck.size() );
@@ -53,9 +73,5 @@ class CardClassTest {
 	}
 
 	
-	@Test
-	void testGettingDeck() {
-		//System.out.println(c.getDeck());
-		assertNotNull(c.getDeck());
-	}
+	
 }

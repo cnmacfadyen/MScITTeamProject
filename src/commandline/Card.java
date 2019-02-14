@@ -12,7 +12,7 @@ public class Card {
 	private int c1, c2, c3, c4, c5;
 	
 	/**
-	 * empty Card constructor
+	 *  Default constructor for Card
 	 */
 	public Card() {		
 	}

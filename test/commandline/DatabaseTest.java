@@ -18,45 +18,35 @@ import java.sql.SQLException;
 	import com.mysql.jdbc.Statement;
 	
 	class DatabaseTest {
+		/*
+		 * Declaration of objects for Database and PlayGame classes.
+		 */
 		Database dbBefore = new Database();
 		PlayGame pg = new PlayGame();
-		Player p = new Player();
-		
-		Scanner inp = new Scanner(System.in);
-		
-//		@AfterClass
-//		void toDeleteTable() throws SQLException {
-//			java.sql.Connection c = dbBefore.getConnection();
-//			c.setAutoCommit(false);
-//			try {
-////				
-//				PreparedStatement create1 = c.prepareStatement( "DELETE FROM gameresults WHERE gameNumber=1");
-//				PreparedStatement create2 = c.prepareStatement( "DELETE FROM gameresults WHERE gameNumber=2");
-//				
-//				create1.executeQuery();
-//				create2.executeQuery();
-//				//create1.getUpdateCount();
-//			}
-//			
-//			finally {
-//				c.rollback();
-//				c.close();
-//			}
-//		}
-	
-
-
+				
+		/**
+		 * fixed data to be saved in the database:
+		 * number of draws =2
+		 * winner player number = 1 : the human player
+		 * total rounds = 15; human rounds =2; Ai1 Rounds =4; Ai2 Rounds =2; Ai3 Rounds=3; Ai4 Rounds=2
+		 * 
+		 */
 		@Before
 		void insertOneGameWithThirdteenRounds() {
 			
 			dbBefore.postResultsToDatabase(2, 1, pg.setTotalRound(15), pg.setHumanRounds(2), pg.setAi1Rounds(4), pg.setAi2Rounds(2), pg.setAi3Rounds(3), pg.setAi4Rounds(2));
 		}
 	
+		
+		/**
+		 * check if the expected results are the same as from the data retreived from the database.
+		 * 
+		 */
 		@Test
 		void testInsertOneGameMoreRounds() throws SQLException {
-				//totalNumofRounds/totalnumberofDraw = totalavgDraw
 				insertOneGameWithThirdteenRounds();
-				dbBefore.displayResults();
+				//dbBefore.displayResults();
+				
 				assertEquals(2.0, dbBefore.avgDraws()/dbBefore.totalGames(),0);
 				assertEquals(1, dbBefore.totalGames());
 				assertEquals(15, dbBefore.highestRoundsInAGame());
@@ -65,52 +55,66 @@ import java.sql.SQLException;
 		}
 		
 		
+		/**
+		 * fixed data to be saved in the database:
+		 * number of draws =5
+		 * winner player number = 4 : Ai4 Player
+		 * total rounds = 33; human rounds =7; Ai1 Rounds =6; Ai2 Rounds =3; Ai3 Rounds=5; Ai4 Rounds=7
+		 * 
+		 */
 		@Before
 		void insertTWoGamesWithMoreRounds() {
 			
 			dbBefore.postResultsToDatabase(5, 4, pg.setTotalRound(33), pg.setHumanRounds(7), pg.setAi1Rounds(6), pg.setAi2Rounds(3), pg.setAi3Rounds(5), pg.setAi4Rounds(7));
 		}
-	
+		
+		/**
+		 * check if the expected results are the same as from the data retreived from the database.
+		 * 
+		 */	
 		@Test
-		void testInsertTwoGamesMoreRounds() throws SQLException {
-			
-			//getAvgofallgames/totalnumofgames
-				
+		void testInsertTwoGamesMoreRounds() throws SQLException {				
 				insertTWoGamesWithMoreRounds();
-				dbBefore.displayResults();
-				//check the statisctics displayed are correct.
+				//dbBefore.displayResults();
+				
 				assertEquals(1.0, dbBefore.avgDraws()/dbBefore.totalGames(),0);
 				assertEquals(3, dbBefore.totalGames());
 				assertEquals(33, dbBefore.highestRoundsInAGame());
 				assertEquals(1, dbBefore.humanWon());
 				assertEquals(2, dbBefore.computerWon());
 
-//				System.out.println(dbBefore.avgDraws()/dbBefore.totalGames());
 
 		}
 		
+		/**
+		 * fixed data to be saved in the database:
+		 * number of draws =2
+		 * winner player number = 3 : Ai3 Player
+		 * total rounds = 10; human rounds =3; Ai1 Rounds =2; Ai2 Rounds =1; Ai3 Rounds=1; Ai4 Rounds=2
+		 * 
+		 */
 		@Before
 		void insertTWoGamesWithLessRounds() {
 			
-			dbBefore.postResultsToDatabase(2, 4, pg.setTotalRound(10), pg.setHumanRounds(3), pg.setAi1Rounds(2), pg.setAi2Rounds(1), pg.setAi3Rounds(1), pg.setAi4Rounds(2));
+			dbBefore.postResultsToDatabase(2, 3, pg.setTotalRound(10), pg.setHumanRounds(3), pg.setAi1Rounds(2), pg.setAi2Rounds(1), pg.setAi3Rounds(1), pg.setAi4Rounds(2));
 		}
 	
+		
+		/**
+		 * check if the expected results are the same as from the data retreived from the database.
+		 * 
+		 */	
 		@Test
 		void testInsertTwoGamesLessRounds() throws SQLException {
-			
-			//getAvgofallgames/totalnumofgames
-				
+					
 				insertTWoGamesWithLessRounds();
-				dbBefore.displayResults();
-				//check the statisctics displayed are correct.
+				//dbBefore.displayResults();
+				
 				assertEquals(1.0, dbBefore.avgDraws()/dbBefore.totalGames(),0);
 				assertEquals(2, dbBefore.totalGames());
 				assertEquals(15, dbBefore.highestRoundsInAGame());
 				assertEquals(1, dbBefore.humanWon());
 				assertEquals(1, dbBefore.computerWon());
-
-//				System.out.println(dbBefore.avgDraws()/dbBefore.totalGames());
-
 		}
 
 }
