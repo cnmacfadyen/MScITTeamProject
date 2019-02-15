@@ -95,7 +95,15 @@ public class Card {
 	 */
 	public String getCat5Name() {
 		return cat5;
-	}	
+	}
+	
+	/**
+	 * category 1 name setter
+	 * @param String - name of the category
+	 */
+	public void setCat1Name(String name) {
+		cat1 = name;
+	}
 	
 	/**
 	 * category 1 value getter
