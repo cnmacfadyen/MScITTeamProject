@@ -95,23 +95,7 @@ public class Card {
 	 */
 	public String getCat5Name() {
 		return cat5;
-	}
-	
-	/**
-	 * category 1 name setter
-	 * @param String - name of the category
-	 */
-	public void setCat1Name(String name) {
-		cat1 = name;
-	}
-	
-	/**
-	 * category 1 value setter
-	 * @param int - value of the category
-	 */
-	public void setC1(int num) {
-		c1 = num;
-	}
+	}	
 	
 	/**
 	 * category 1 value getter
@@ -151,32 +135,6 @@ public class Card {
 	 */
 	public int getC5() {
 		return c5;
-	}
-	
-	
-	/**
-	 * temporary method, to get the selected category with the corresponding value ... for testing 
-	 * @param indx
-	 * @return String s - category name and value
-	 */
-	public String getCatInfo(int indx) {
-		String s = "";
-		if(indx == 0) {
-			s = "category: " + getCat1Name() + " " + getC1();
-		}
-		else if(indx == 1) {
-			s = "category: " + getCat2Name() + " " + getC2();
-		}
-		else if(indx == 2) {
-			s = "category: " + getCat3Name() + " " + getC3();
-		}
-		else if(indx == 3) {
-			s = "category: " + getCat4Name() + " " + getC4();
-		}
-		else if(indx == 4) {
-			s = "category: " + getCat5Name() + " " + getC5();
-		}
-		return s;
 	}
 	
 	/**

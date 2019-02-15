@@ -2,6 +2,7 @@ package online.dwResources;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -37,17 +38,21 @@ public class TopTrumpsRESTAPI {
 	/** A Jackson Object writer. It allows us to turn Java objects
 	 * into JSON strings easily. */
 	ObjectWriter oWriter = new ObjectMapper().writerWithDefaultPrettyPrinter();
-	
+	List<String> cardList  = new ArrayList<String>();
+	List<String> shuffledCardList  = new ArrayList<String>();
 	/**
 	 * Contructor method for the REST API. This is called first. It provides
 	 * a TopTrumpsJSONConfiguration from which you can get the location of
 	 * the deck file and the number of AI players.
 	 * @param conf
+	 * @throws JsonProcessingException 
 	 */
-	public TopTrumpsRESTAPI(TopTrumpsJSONConfiguration conf) {
+	public TopTrumpsRESTAPI(TopTrumpsJSONConfiguration conf) throws JsonProcessingException {
 		// ----------------------------------------------------
 		// Add relevant initalization here
 		// ----------------------------------------------------
+//		Card card = new Card();
+//		oWriter.writeValueAsString(card.getDeck());
 	}
 	
 	// ----------------------------------------------------
@@ -63,10 +68,14 @@ public class TopTrumpsRESTAPI {
 	 * @throws IOException
 	 */
 	public String helloJSONList() throws IOException {
-		
+		Card card = new Card();
+		card.setAttNames();
 		List<String> listOfWords = new ArrayList<String>();
-		listOfWords.add("Hello");
-		listOfWords.add("World!");
+		listOfWords.add(card.getCat1Name());
+		listOfWords.add(card.getCat2Name());
+		listOfWords.add(card.getCat3Name());
+		listOfWords.add(card.getCat4Name());
+		listOfWords.add(card.getCat2Name());
 		
 		// We can turn arbatory Java objects directly into JSON strings using
 		// Jackson seralization, assuming that the Java objects are not too complex.
@@ -74,6 +83,50 @@ public class TopTrumpsRESTAPI {
 		
 		return listAsJSONString;
 	}
+	
+	@GET
+	@Path("/cardsasstrings")
+	public List<String> cardsAsStrings() throws IOException {
+		Card card = new Card();
+		String card1 = oWriter.writeValueAsString(""+card.getDeck().get(0));
+		String card2 = oWriter.writeValueAsString("" +card.getDeck().get(1));
+		String card3 = oWriter.writeValueAsString("" +card.getDeck().get(2));
+		String card4 = oWriter.writeValueAsString("" +card.getDeck().get(3));
+		String card5 = oWriter.writeValueAsString("" +card.getDeck().get(4));
+		String card6 = oWriter.writeValueAsString("" +card.getDeck().get(5));
+		String card7 = oWriter.writeValueAsString("" +card.getDeck().get(6));
+		String card8 = oWriter.writeValueAsString("" +card.getDeck().get(7));
+		String card9 = oWriter.writeValueAsString("" +card.getDeck().get(8));
+		String card10 = oWriter.writeValueAsString("" +card.getDeck().get(9));
+		String card11 = oWriter.writeValueAsString("" +card.getDeck().get(10));
+		String card12 = oWriter.writeValueAsString("" +card.getDeck().get(11));
+		String card13 = oWriter.writeValueAsString("" +card.getDeck().get(12));
+		for (int  i = 0; i<3;  i ++) {
+			cardList.add(card1);
+			cardList.add(card2);
+			cardList.add(card3);
+			cardList.add(card4);
+			cardList.add(card5);
+			cardList.add(card6);
+			cardList.add(card7);
+			cardList.add(card8);
+			cardList.add(card9);
+			cardList.add(card10);
+			cardList.add(card11);
+			cardList.add(card12);
+			cardList.add(card13);
+		}
+		cardList.add(card2);
+		return cardList;
+	}
+	@GET
+	@Path("/shuffled")
+	public List<String> shuffledDeck() throws IOException {
+		Collections.shuffle(cardsAsStrings());
+		shuffledCardList = cardList;
+		return shuffledCardList;
+	}
+	
 	@GET
 	@Path("/readd")
 	public String readd() throws IOException{
@@ -82,6 +135,16 @@ public class TopTrumpsRESTAPI {
 		return stringCard;
 	}
 	
+	@GET
+	@Path("/test")
+	public String readFirstCard() throws IOException {
+			Card card = new Card();
+			card.getDeck();
+			String complete = ("I have got past the getDeck() method! The deck is as follows: " + card.getDeck());
+//								"\n The second card is: " + card.getDeck().get(1));
+			return complete;
+		
+	}
 	
 	@GET
 	@Path("/helloWord")

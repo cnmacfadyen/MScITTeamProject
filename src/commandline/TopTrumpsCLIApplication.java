@@ -30,8 +30,7 @@ public class TopTrumpsCLIApplication {
 //			
 //			userWantsToQuit=true; // use this when the user wants to exit the game
 		
-		PlayGame game = new PlayGame();
-		  
+		PlayGame game = new PlayGame();	  
 		   game.openApplication();
 		   while (game.keepPlaying) {
 		   if (game.start == true) {
